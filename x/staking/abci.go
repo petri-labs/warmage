@@ -6,7 +6,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/merlion-zone/merlion/x/staking/keeper"
+	"github.com/petri-labs/warmage/x/staking/keeper"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

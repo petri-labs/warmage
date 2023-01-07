@@ -12,7 +12,7 @@ import (
 	// "github.com/cosmos/cosmos-sdk/client/flags"
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/merlion-zone/merlion/x/voter/types"
+	"github.com/petri-labs/warmage/x/voter/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

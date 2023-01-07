@@ -5,8 +5,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/ve/keeper"
-	"github.com/merlion-zone/merlion/x/ve/types"
+	"github.com/petri-labs/warmage/x/ve/keeper"
+	"github.com/petri-labs/warmage/x/ve/types"
 )
 
 // EndBlocker is called at the end of every block

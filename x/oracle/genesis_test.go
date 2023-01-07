@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/oracle"
-	"github.com/merlion-zone/merlion/x/oracle/keeper"
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	"github.com/petri-labs/warmage/x/oracle"
+	"github.com/petri-labs/warmage/x/oracle/keeper"
+	"github.com/petri-labs/warmage/x/oracle/types"
 	"github.com/stretchr/testify/require"
 )
 

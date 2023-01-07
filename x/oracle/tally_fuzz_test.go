@@ -7,8 +7,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keys/secp256k1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	fuzz "github.com/google/gofuzz"
-	"github.com/merlion-zone/merlion/x/oracle"
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	"github.com/petri-labs/warmage/x/oracle"
+	"github.com/petri-labs/warmage/x/oracle/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -70,7 +70,7 @@ func TestFuzz_Tally(t *testing.T) {
 	})
 }
 
-func TestFuzz_PickReferenceMer(t *testing.T) {
+func TestFuzz_PickReferenceWar(t *testing.T) {
 	var denoms []string
 
 	f := fuzz.New().NilChance(0).Funcs(
@@ -132,6 +132,6 @@ func TestFuzz_PickReferenceMer(t *testing.T) {
 	f.Fuzz(&voteMap)
 
 	require.NotPanics(t, func() {
-		oracle.PickReferenceMer(input.Ctx, input.OracleKeeper, voteTargets, voteMap)
+		oracle.PickReferenceWar(input.Ctx, input.OracleKeeper, voteTargets, voteMap)
 	})
 }

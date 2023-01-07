@@ -1,6 +1,6 @@
 module.exports = {
   theme: 'cosmos',
-  title: 'Merlion Documentation',
+  title: 'Warmage Documentation',
   locales: {
     '/': {
       lang: 'en-US',
@@ -50,14 +50,14 @@ module.exports = {
     '!cosmos-sdk/**',
     '!ibc-go/**'],
   themeConfig: {
-    repo: 'merlion-zone/merlion',
-    docsRepo: 'merlion-zone/merlion',
+    repo: 'petri-labs/warmage',
+    docsRepo: 'petri-labs/warmage',
     docsBranch: 'main',
     docsDir: 'docs',
     editLinks: true,
     custom: true,
     logo: {
-      src: '/merlion-black.svg',
+      src: '/warmage-black.svg',
     },
     topbar: {
       banner: false,
@@ -110,14 +110,14 @@ module.exports = {
       title: 'Help & Support',
       chat: {
         title: 'Developer Chat',
-        text: 'Chat with Merlion developers on Discord.',
-        url: 'https://discord.gg/merlion',
+        text: 'Chat with Warmage developers on Discord.',
+        url: 'https://discord.gg/warmage',
         bg: 'linear-gradient(103.75deg, #1B1E36 0%, #22253F 100%)',
       },
       forum: {
-        title: 'Merlion Developer Forum',
-        text: 'Join the Merlion Developer Forum to learn more.',
-        url: 'https://forum.cosmos.network/c/merlion', // TODO: replace with commonwealth link
+        title: 'Warmage Developer Forum',
+        text: 'Join the Warmage Developer Forum to learn more.',
+        url: 'https://forum.cosmos.network/c/warmage', // TODO: replace with commonwealth link
         bg: 'linear-gradient(221.79deg, #3D6B99 -1.08%, #336699 95.88%)',
         logo: 'ethereum-white',
       },
@@ -128,19 +128,19 @@ module.exports = {
       },
     },
     footer: {
-      logo: '/merlion-black.svg',
+      logo: '/warmage-black.svg',
       textLink: {
-        text: 'merlion.zone',
-        url: 'https://merlion.zone',
+        text: 'warmage.zone',
+        url: 'https://warmage.zone',
       },
       services: [
         {
           service: 'github',
-          url: 'https://github.com/merlion-zone/merlion',
+          url: 'https://github.com/petri-labs/warmage',
         },
         {
           service: 'medium',
-          url: 'https://blog.merlion.zone',
+          url: 'https://blog.warmage.zone',
         },
         {
           service: 'twitter',
@@ -152,10 +152,10 @@ module.exports = {
         },
         {
           service: 'discord',
-          url: 'https://discord.gg/merlion',
+          url: 'https://discord.gg/warmage',
         },
       ],
-      smallprint: 'This website is maintained by Merlion Dev Team',
+      smallprint: 'This website is maintained by Warmage Dev Team',
     },
   },
 }

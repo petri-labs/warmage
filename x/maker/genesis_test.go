@@ -7,15 +7,15 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/merlion-zone/merlion/app"
-	"github.com/merlion-zone/merlion/x/maker"
-	"github.com/merlion-zone/merlion/x/maker/types"
+	"github.com/petri-labs/warmage/app"
+	"github.com/petri-labs/warmage/x/maker"
+	"github.com/petri-labs/warmage/x/maker/types"
 )
 
 type GenesisTestSuite struct {
 	suite.Suite
 	ctx sdk.Context
-	app *app.Merlion
+	app *app.Warmage
 }
 
 func (suite *GenesisTestSuite) SetupTest() {

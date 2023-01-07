@@ -3,7 +3,7 @@ package keeper
 import (
 	"sort"
 
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	"github.com/petri-labs/warmage/x/oracle/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

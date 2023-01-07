@@ -47,7 +47,7 @@ found [here](https://docs.cosmos.network/master/basics/gas-fees.html).
 
 ## Matching EVM Gas consumption
 
-Merlion is an EVM compatible chain that supports Ethereum Web3 tooling. For this reason, gas consumption must be
+Warmage is an EVM compatible chain that supports Ethereum Web3 tooling. For this reason, gas consumption must be
 equitable with other EVMs, most importantly Ethereum.
 
 The main difference between EVM and Cosmos state transitions, is that the EVM uses
@@ -86,10 +86,10 @@ validator can specify a different minimum value for their fees. This potentially
 transactions if there is at least one single validator that is willing to include transactions with `0` gas price in
 their blocks proposed.
 
-For this same reason, in Merlion it is possible to send transactions with `0` fees for transaction types other than the
+For this same reason, in Warmage it is possible to send transactions with `0` fees for transaction types other than the
 ones defined by the `evm` module. EVM module transactions cannot have `0` fees as gas is required inherently by the EVM.
 This check is done by the EVM transactions stateless validation
-(i.e. `ValidateBasic`) function as well as on the custom `AnteHandler` defined by Merlion.
+(i.e. `ValidateBasic`) function as well as on the custom `AnteHandler` defined by Warmage.
 
 ## Gas estimation
 
@@ -99,7 +99,7 @@ Unfortunately, we cannot make use of the SDK `tx simulation` for gas estimation 
 Handlers would require a valid signature, and the sender balance to be enough to pay for the gas. But in Ethereum, _this
 endpoint can be called without specifying any sender address_.
 
-For that reason, a specific query API `EstimateGas` is implemented in Merlion. It will apply the transaction against the
+For that reason, a specific query API `EstimateGas` is implemented in Warmage. It will apply the transaction against the
 current block/state and perform a binary search in order to find the optimal gas value to return to the user (the same
 transaction will be applied over and over until we find the minimum gas needed before it fails). The reason we need to
 use a binary search is that the gas required for the transaction might be higher than the value returned by the EVM

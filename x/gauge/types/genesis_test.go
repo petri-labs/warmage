@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/merlion-zone/merlion/x/gauge/types"
+	"github.com/petri-labs/warmage/x/gauge/types"
 	"github.com/stretchr/testify/require"
 )
 

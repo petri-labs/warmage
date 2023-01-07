@@ -2,7 +2,7 @@ package keeper_test
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/ve/types"
+	"github.com/petri-labs/warmage/x/ve/types"
 )
 
 func (suite *KeeperTestSuite) TestKeeper_SetTotalLockedAmount_GetTotalLockedAmount() {

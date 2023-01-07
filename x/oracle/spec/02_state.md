@@ -50,7 +50,7 @@ An `sdk.Dec` that stores the current exchange rate of a given denom against USD,
 
 ## FeederDelegation
 
-An `sdk.AccAddress` (`mer-` account) address of `operator`'s delegated price feeder.
+An `sdk.AccAddress` (`war-` account) address of `operator`'s delegated price feeder.
 
 - FeederDelegation: `0x04<valAddress_Bytes> -> ProtocolBuffer(sdk.AccAddress)`
 

@@ -1,6 +1,6 @@
 package types
 
-import merlion "github.com/merlion-zone/merlion/types"
+import warmage "github.com/petri-labs/warmage/types"
 
 const (
 	StakingRewardVestingName = "staking_reward_vesting"
@@ -11,9 +11,9 @@ const (
 	// Not used now, maybe future.
 	StrategicReservePoolName = "strategic_reserve_pool"
 
-	StakingRewardVestingTime = merlion.SecondsPer4Years
-	CommunityPoolVestingTime = merlion.SecondsPer4Years
-	TeamVestingTime          = merlion.SecondsPer4Years
+	StakingRewardVestingTime = warmage.SecondsPer4Years
+	CommunityPoolVestingTime = warmage.SecondsPer4Years
+	TeamVestingTime          = warmage.SecondsPer4Years
 
 	ClaimVestedPeriod = 10
 )

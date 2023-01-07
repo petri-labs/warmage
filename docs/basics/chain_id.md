@@ -4,18 +4,18 @@ order: 1
 
 # Chain ID
 
-Learn about the Merlion chain-id format {synopsis}
+Learn about the Warmage chain-id format {synopsis}
 
 ## The Chain Identifier
 
 Every chain must have a unique identifier or `chain-id`. Tendermint requires each application to define its
 own `chain-id` in the [genesis.json fields](https://docs.tendermint.com/master/spec/core/genesis.html#genesis-fields).
-However, in order to comply with both EIP155 and Cosmos standard for chain upgrades, Merlion must implement a special
+However, in order to comply with both EIP155 and Cosmos standard for chain upgrades, Warmage must implement a special
 structure for its chain identifier.
 
 ### Structure
 
-The Merlion Chain ID contains 3 main components
+The Warmage Chain ID contains 3 main components
 
 - **Identifier**: Unstructured string that defines the name of the application.
 - **EIP155 Number**: Immutable [EIP155](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-155.md) `CHAIN_ID` that
@@ -25,7 +25,7 @@ The Merlion Chain ID contains 3 main components
 
 ### Format
 
-The format for specifying Merlion's chain-id in genesis is the following:
+The format for specifying Warmage's chain-id in genesis is the following:
 
 ```
 {identifier}_{EIP155}-{version}
@@ -35,7 +35,7 @@ The following table provides an example where the second row corresponds to an u
 
 | ChainID          | Identifier | EIP155 Number | Version Number |
 |------------------|------------|---------------|----------------|
-| `merlion_5000-1` | merlion    | 5000          | 1              |
-| `merlion_5000-2` | merlion    | 5000          | 2              |
+| `warmage_5000-1` | warmage    | 5000          | 1              |
+| `warmage_5000-2` | warmage    | 5000          | 2              |
 | `...`            | ...        | ...           | ...            |
-| `merlion_5000-N` | merlion    | 5000          | N              |
+| `warmage_5000-N` | warmage    | 5000          | N              |

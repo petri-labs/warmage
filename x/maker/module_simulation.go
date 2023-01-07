@@ -9,8 +9,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/x/simulation"
-	"github.com/merlion-zone/merlion/testutil/sample"
-	"github.com/merlion-zone/merlion/x/maker/types"
+	"github.com/petri-labs/warmage/testutil/sample"
+	"github.com/petri-labs/warmage/x/maker/types"
 )
 
 // avoid unused import issue

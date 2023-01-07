@@ -3,8 +3,8 @@ package keeper_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
-	merlion "github.com/merlion-zone/merlion/types"
-	erc20types "github.com/merlion-zone/merlion/x/erc20/types"
+	warmage "github.com/petri-labs/warmage/types"
+	erc20types "github.com/petri-labs/warmage/x/erc20/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -12,8 +12,8 @@ func (suite *KeeperTestSuite) TestKeeper_RegisterCoin() {
 	suite.SetupTest()
 	t := suite.T()
 
-	_, err := suite.app.Erc20Keeper.RegisterCoin(suite.ctx, merlion.DisplayDenom)
-	require.Error(t, err, sdkerrors.Wrapf(erc20types.ErrEVMDenom, "cannot register the EVM denomination %s", merlion.DisplayDenom))
+	_, err := suite.app.Erc20Keeper.RegisterCoin(suite.ctx, warmage.DisplayDenom)
+	require.Error(t, err, sdkerrors.Wrapf(erc20types.ErrEVMDenom, "cannot register the EVM denomination %s", warmage.DisplayDenom))
 
 	_, err = suite.app.Erc20Keeper.RegisterCoin(suite.ctx, "USDT")
 	require.Error(t, err, sdkerrors.Wrapf(erc20types.ErrEVMDenom, "cannot get metadata of denom %s", "USDT"))

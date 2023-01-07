@@ -3,7 +3,7 @@ package keeper
 import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/maker/types"
+	"github.com/petri-labs/warmage/x/maker/types"
 )
 
 func (k Keeper) SetBackingRiskParams(ctx sdk.Context, params types.BackingRiskParams) {

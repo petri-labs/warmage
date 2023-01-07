@@ -2,11 +2,11 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	merlion "github.com/merlion-zone/merlion/types"
-	"github.com/merlion-zone/merlion/x/maker/types"
+	warmage "github.com/petri-labs/warmage/types"
+	"github.com/petri-labs/warmage/x/maker/types"
 )
 
-// AdjustBackingRatio dynamically adjusts the backing ratio, according to mer price change.
+// AdjustBackingRatio dynamically adjusts the backing ratio, according to war price change.
 func (k Keeper) AdjustBackingRatio(ctx sdk.Context) {
 	// check cooldown period since last update
 	if ctx.BlockHeight()-k.GetBackingRatioLastBlock(ctx) < k.BackingRatioCooldownPeriod(ctx) {
@@ -18,24 +18,24 @@ func (k Keeper) AdjustBackingRatio(ctx sdk.Context) {
 		return
 	}
 	backingRatio := k.GetBackingRatio(ctx)
-	priceBand := merlion.MicroUSMTarget.Mul(k.BackingRatioPriceBand(ctx))
+	priceBand := warmage.MicroUSWTarget.Mul(k.BackingRatioPriceBand(ctx))
 
-	merPrice, err := k.oracleKeeper.GetExchangeRate(ctx, merlion.MicroUSMDenom)
+	warPrice, err := k.oracleKeeper.GetExchangeRate(ctx, warmage.MicroUSWDenom)
 	if err != nil {
 		panic(err)
 	}
 
-	if merPrice.GT(merlion.MicroUSMTarget.Add(priceBand)) {
-		// mer price is too high
+	if warPrice.GT(warmage.MicroUSWTarget.Add(priceBand)) {
+		// war price is too high
 		// decrease backing ratio; min 0%
 		backingRatio = sdk.MaxDec(backingRatio.Sub(ratioStep), sdk.ZeroDec())
-	} else if merPrice.LT(merlion.MicroUSMTarget.Sub(priceBand)) {
-		// mer price is too low
+	} else if warPrice.LT(warmage.MicroUSWTarget.Sub(priceBand)) {
+		// war price is too low
 		// increase backing ratio; max 100%
 		backingRatio = sdk.MinDec(backingRatio.Add(ratioStep), sdk.OneDec())
 	}
 
-	// TODO: consider adjusting BR based on total minted Mer, even though Mer price is within the band
+	// TODO: consider adjusting BR based on total minted War, even though War price is within the band
 
 	k.SetBackingRatio(ctx, backingRatio)
 	k.SetBackingRatioLastBlock(ctx, ctx.BlockHeight())

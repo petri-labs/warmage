@@ -9,14 +9,14 @@ parent:
 
 ## Abstract
 
-This document specifies the ve module of Merlion.
+This document specifies the ve module of Warmage.
 
-The ve module is responsible for providing voting escrow capability and distributing LION to ve holders and gauge target
+The ve module is responsible for providing voting escrow capability and distributing MAGE to ve holders and gauge target
 audiences each cycle according to the established distribution algorithm.
 
 ### ve NFT and veID
 
-LION holders lock their LION amount to the ve module account for a specific duration, and create a **NFT** token (or
+MAGE holders lock their MAGE amount to the ve module account for a specific duration, and create a **NFT** token (or
 namely **ve**) which represents their locked amount and locking time. Every user can own several ve NFTs, each with its
 own locked amount and locking time.
 
@@ -35,7 +35,7 @@ The locked amount and the **remaining** locking time together determine the voti
 VotingPower = LockedAmount * RemainingLockingTime / <209 Weeks>
 ```
 
-That is, if a user locks 100 $LION for 209 weeks, he will gain a voting power of 100. If he only locks for 1 week, the
+That is, if a user locks 100 $MAGE for 209 weeks, he will gain a voting power of 100. If he only locks for 1 week, the
 voting power will be `100 / 209 = 0.478469`.
 
 As time elapse, the voting power will decay continuously. For the above example, if the locking time is 209 weeks and

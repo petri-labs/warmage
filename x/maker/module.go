@@ -16,9 +16,9 @@ import (
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
-	"github.com/merlion-zone/merlion/x/maker/client/cli"
-	"github.com/merlion-zone/merlion/x/maker/keeper"
-	"github.com/merlion-zone/merlion/x/maker/types"
+	"github.com/petri-labs/warmage/x/maker/client/cli"
+	"github.com/petri-labs/warmage/x/maker/keeper"
+	"github.com/petri-labs/warmage/x/maker/types"
 )
 
 var (

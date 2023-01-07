@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/merlion-zone/merlion/testutil/keeper"
-	"github.com/merlion-zone/merlion/x/erc20/types"
+	testkeeper "github.com/petri-labs/warmage/testutil/keeper"
+	"github.com/petri-labs/warmage/x/erc20/types"
 	"github.com/stretchr/testify/require"
 )
 

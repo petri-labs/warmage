@@ -2,7 +2,7 @@ package keeper
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/gauge/types"
+	"github.com/petri-labs/warmage/x/gauge/types"
 )
 
 // GetParams get all parameters as types.Params

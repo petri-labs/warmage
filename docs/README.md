@@ -1,1 +1,1 @@
-# Merlion Documentation
+# Warmage Documentation

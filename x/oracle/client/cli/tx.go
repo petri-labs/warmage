@@ -16,7 +16,7 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	"github.com/petri-labs/warmage/x/oracle/types"
 )
 
 // GetTxCmd returns the transaction commands for this module
@@ -51,12 +51,12 @@ The purpose of aggregate prevote is to hide aggregate exchange rate vote with ha
 as hex string in SHA256("{salt};{denom}:{exchange_rate},...,{denom}:{exchange_rate};{voter}")
 
 # Aggregate Prevote
-$ merliond tx oracle aggregate-prevote 1234 alion:1.234,uusm:0.99
+$ maged tx oracle aggregate-prevote 1234 amage:1.234,uusw:0.99
 
-where "alion,uusm" is the denominating currencies, and "1.234,0.99" is the exchange rates of these currencies in $uUSD from the voter's point of view.
+where "amage,uusw" is the denominating currencies, and "1.234,0.99" is the exchange rates of these currencies in $uUSD from the voter's point of view.
 
 If voting from a voting delegate, set "validator" to the address of the validator to vote on behalf of:
-$ merliond tx oracle aggregate-prevote 1234 alion:1.234,uusm:0.99 mervaloper1...
+$ maged tx oracle aggregate-prevote 1234 amage:1.234,uusw:0.99 warvaloper1...
 `),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)
@@ -110,14 +110,14 @@ func CmdAggregateExchangeRateVote() *cobra.Command {
 		Long: strings.TrimSpace(`
 Submit a aggregate vote for the exchange_rates of various assets w.r.t $uUSD. Companion to a prevote submitted in the previous vote period. 
 
-$ merliond tx oracle aggregate-vote 1234 alion:1.234,uusm:0.99
+$ maged tx oracle aggregate-vote 1234 amage:1.234,uusw:0.99
 
-where "alion,uusm" is the denominating currencies, and "1.234,0.99" is the exchange rates of these currencies in $uUSD from the voter's point of view.
+where "amage,uusw" is the denominating currencies, and "1.234,0.99" is the exchange rates of these currencies in $uUSD from the voter's point of view.
 
 "salt" should match the salt used to generate the SHA256 hex in the aggregated pre-vote. 
 
 If voting from a voting delegate, set "validator" to the address of the validator to vote on behalf of:
-$ merliond tx oracle aggregate-vote 1234 alion:1.234,uusm:0.99 mervaloper1...
+$ maged tx oracle aggregate-vote 1234 amage:1.234,uusw:0.99 warvaloper1...
 `),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)
@@ -172,9 +172,9 @@ Delegate the permission to submit exchange rate votes for the oracle to an addre
 
 Delegation can keep your validator operator key offline and use a separate replaceable key online.
 
-$ merliond tx oracle set-feeder mer1...
+$ maged tx oracle set-feeder war1...
 
-where "mer1..." is the address you want to delegate your voting rights to.
+where "war1..." is the address you want to delegate your voting rights to.
 `),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)
@@ -294,7 +294,7 @@ func getProposalArgs(cmd *cobra.Command) (title, description string, deposit sdk
 func addProposalTxFlagsToCmd(cmd *cobra.Command) {
 	cmd.Flags().String(cli.FlagTitle, "", "title of proposal")
 	cmd.Flags().String(cli.FlagDescription, "", "description of proposal")
-	cmd.Flags().String(cli.FlagDeposit, "1ulion", "deposit of proposal")
+	cmd.Flags().String(cli.FlagDeposit, "1umage", "deposit of proposal")
 	if err := cmd.MarkFlagRequired(cli.FlagTitle); err != nil {
 		panic(err)
 	}

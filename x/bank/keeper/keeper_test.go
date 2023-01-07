@@ -15,10 +15,10 @@ import (
 	nfttypes "github.com/cosmos/cosmos-sdk/x/nft"
 	"github.com/cosmos/cosmos-sdk/x/staking/teststaking"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/merlion-zone/merlion/app"
-	"github.com/merlion-zone/merlion/types"
-	mertypes "github.com/merlion-zone/merlion/types"
-	erc20types "github.com/merlion-zone/merlion/x/erc20/types"
+	"github.com/petri-labs/warmage/app"
+	"github.com/petri-labs/warmage/types"
+	wartypes "github.com/petri-labs/warmage/types"
+	erc20types "github.com/petri-labs/warmage/x/erc20/types"
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
@@ -29,7 +29,7 @@ import (
 type KeeperTestSuite struct {
 	suite.Suite
 	ctx   sdk.Context
-	app   *app.Merlion
+	app   *app.Warmage
 	addrs []sdk.AccAddress
 }
 
@@ -64,7 +64,7 @@ func (suite *KeeperTestSuite) SetupTest() {
 		Version: tmversion.Consensus{
 			Block: version.BlockProtocol,
 		},
-		ChainID:         "merlion_5000-101",
+		ChainID:         "warmage_5000-101",
 		Height:          1,
 		Time:            time.Now().UTC(),
 		ProposerAddress: addrs[0].Bytes(),
@@ -72,7 +72,7 @@ func (suite *KeeperTestSuite) SetupTest() {
 
 	// setup validator
 	tstaking := teststaking.NewHelper(suite.T(), suite.ctx, suite.app.StakingKeeper.Keeper)
-	tstaking.Denom = mertypes.AttoLionDenom
+	tstaking.Denom = wartypes.AttoMageDenom
 
 	// create validator with 50% commission
 	tstaking.Commission = stakingtypes.NewCommissionRates(sdk.NewDecWithPrec(5, 1), sdk.NewDecWithPrec(5, 1), sdk.NewDec(0))
@@ -131,7 +131,7 @@ func (suite *KeeperTestSuite) TestKeeper_UndelegateCoins() {
 	require.Error(t, err, sdkerrors.Wrapf(sdkerrors.ErrInvalidCoins, "erc20 native tokens unqualified for delegation"))
 
 	err = k.UndelegateCoins(suite.ctx, moduleAccAddr, delegatorAddr, sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(1000))))
-	require.Error(t, err, "0alion is smaller than 1000alion: insufficient funds")
+	require.Error(t, err, "0amage is smaller than 1000amage: insufficient funds")
 
 	k.DelegateCoins(suite.ctx, delegatorAddr, moduleAccAddr, sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(1000))))
 	err = k.UndelegateCoins(suite.ctx, moduleAccAddr, delegatorAddr, sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100))))
@@ -185,20 +185,20 @@ func (suite *KeeperTestSuite) TestKeeper_GetDenomMetaData() {
 	var (
 		t        = suite.T()
 		k        = suite.app.BankKeeper
-		denom    = types.MicroUSMDenom
+		denom    = types.MicroUSWDenom
 		base     = denom
 		display  = base[1:]
-		uusmMeta = banktypes.Metadata{
-			Description: "The native stable token of the Merlion.",
+		uuswMeta = banktypes.Metadata{
+			Description: "The native stable token of the Warmage.",
 			DenomUnits: []*banktypes.DenomUnit{
-				{Denom: "u" + display, Exponent: uint32(0), Aliases: []string{"micro" + display}}, // e.g., uusm
-				{Denom: "m" + display, Exponent: uint32(3), Aliases: []string{"milli" + display}}, // e.g., musm
-				{Denom: display, Exponent: uint32(6), Aliases: []string{""}},                      // e.g., usm
+				{Denom: "u" + display, Exponent: uint32(0), Aliases: []string{"micro" + display}}, // e.g., uusw
+				{Denom: "m" + display, Exponent: uint32(3), Aliases: []string{"milli" + display}}, // e.g., musw
+				{Denom: display, Exponent: uint32(6), Aliases: []string{""}},                      // e.g., usw
 			},
 			Base:    base,
 			Display: display,
-			Name:    strings.ToUpper(display), // e.g., USM
-			Symbol:  strings.ToUpper(display), // e.g., USM
+			Name:    strings.ToUpper(display), // e.g., USW
+			Symbol:  strings.ToUpper(display), // e.g., USW
 		}
 	)
 	meta, ok := k.GetDenomMetaData(suite.ctx, "uusd")
@@ -207,13 +207,13 @@ func (suite *KeeperTestSuite) TestKeeper_GetDenomMetaData() {
 
 	meta, ok = k.GetDenomMetaData(suite.ctx, denom)
 	require.Equal(t, true, ok)
-	require.Equal(t, uusmMeta.Description, meta.Description)
-	require.Equal(t, uusmMeta.Base, meta.Base)
-	require.Equal(t, uusmMeta.Display, meta.Display)
-	require.Equal(t, uusmMeta.Name, meta.Name)
-	require.Equal(t, uusmMeta.Symbol, meta.Symbol)
-	require.Equal(t, uusmMeta.DenomUnits[0], meta.DenomUnits[0])
-	require.Equal(t, uusmMeta.DenomUnits[1], meta.DenomUnits[1])
+	require.Equal(t, uuswMeta.Description, meta.Description)
+	require.Equal(t, uuswMeta.Base, meta.Base)
+	require.Equal(t, uuswMeta.Display, meta.Display)
+	require.Equal(t, uuswMeta.Name, meta.Name)
+	require.Equal(t, uuswMeta.Symbol, meta.Symbol)
+	require.Equal(t, uuswMeta.DenomUnits[0], meta.DenomUnits[0])
+	require.Equal(t, uuswMeta.DenomUnits[1], meta.DenomUnits[1])
 }
 
 func (suite *KeeperTestSuite) TestKeeper_SendCoinsFromModuleToAccount() {
@@ -222,7 +222,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendCoinsFromModuleToAccount() {
 		t            = suite.T()
 		k            = suite.app.BankKeeper
 		senderModule = erc20types.ModuleName
-		denom        = types.AttoLionDenom
+		denom        = types.AttoMageDenom
 		amt1         = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(200)))
 		amt2         = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100)))
 	)
@@ -253,7 +253,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendCoinsFromModuleToModule() {
 		k            = suite.app.BankKeeper
 		senderModule = erc20types.ModuleName
 		recvModule   = nfttypes.ModuleName
-		denom        = types.AttoLionDenom
+		denom        = types.AttoMageDenom
 		amt1         = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(200)))
 		amt2         = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100)))
 	)
@@ -283,7 +283,7 @@ func (suite *KeeperTestSuite) TestKeeper_SendCoinsFromAccountToModule() {
 	var (
 		t     = suite.T()
 		k     = suite.app.BankKeeper
-		denom = types.AttoLionDenom
+		denom = types.AttoMageDenom
 		amt   = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100)))
 	)
 	// Raw balance check
@@ -305,7 +305,7 @@ func (suite *KeeperTestSuite) TestKeeper_DelegateCoinsFromAccountToModule() {
 	var (
 		t        = suite.T()
 		k        = suite.app.BankKeeper
-		denom    = types.AttoLionDenom
+		denom    = types.AttoMageDenom
 		recvAddr = stakingtypes.BondedPoolName
 		amt      = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100)))
 	)
@@ -327,7 +327,7 @@ func (suite *KeeperTestSuite) TestKeeper_UndelegateCoinsFromModuleToAccount() {
 	var (
 		t        = suite.T()
 		k        = suite.app.BankKeeper
-		denom    = types.AttoLionDenom
+		denom    = types.AttoMageDenom
 		recvAddr = stakingtypes.BondedPoolName
 		amt1     = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(200)))
 		amt2     = sdk.NewCoins(sdk.NewCoin(denom, sdk.NewInt(100)))
@@ -353,7 +353,7 @@ func (suite *KeeperTestSuite) TestKeeper_MintCoins() {
 	var (
 		t          = suite.T()
 		k          = suite.app.BankKeeper
-		denom      = types.AttoLionDenom
+		denom      = types.AttoMageDenom
 		moduleName = erc20types.ModuleName
 		erc20Denom = "erc20/0xd567B3d7B8FE3C79a1AD8dA978812cfC4Fa05e75"
 	)
@@ -370,7 +370,7 @@ func (suite *KeeperTestSuite) TestKeeper_BurnCoins() {
 	var (
 		t          = suite.T()
 		k          = suite.app.BankKeeper
-		denom      = types.AttoLionDenom
+		denom      = types.AttoMageDenom
 		moduleName = erc20types.ModuleName
 		erc20Denom = "erc20/0xd567B3d7B8FE3C79a1AD8dA978812cfC4Fa05e75"
 	)

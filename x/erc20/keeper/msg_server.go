@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/merlion-zone/merlion/x/erc20/types"
+	"github.com/petri-labs/warmage/x/erc20/types"
 )
 
 type msgServer struct {

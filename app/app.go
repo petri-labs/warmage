@@ -103,36 +103,36 @@ import (
 	feemarkettypes "github.com/tharsis/ethermint/x/feemarket/types"
 	"github.com/tharsis/evmos/v4/app/ante"
 
-	_ "github.com/merlion-zone/merlion/client/docs/statik"
-	custombank "github.com/merlion-zone/merlion/x/bank"
-	custombankclient "github.com/merlion-zone/merlion/x/bank/client"
-	custombankkeeper "github.com/merlion-zone/merlion/x/bank/keeper"
-	custombanktypes "github.com/merlion-zone/merlion/x/bank/types"
-	"github.com/merlion-zone/merlion/x/erc20"
-	erc20keeper "github.com/merlion-zone/merlion/x/erc20/keeper"
-	erc20types "github.com/merlion-zone/merlion/x/erc20/types"
-	"github.com/merlion-zone/merlion/x/gauge"
-	gaugekeeper "github.com/merlion-zone/merlion/x/gauge/keeper"
-	gaugetypes "github.com/merlion-zone/merlion/x/gauge/types"
-	"github.com/merlion-zone/merlion/x/maker"
-	makerclient "github.com/merlion-zone/merlion/x/maker/client"
-	makerkeeper "github.com/merlion-zone/merlion/x/maker/keeper"
-	makertypes "github.com/merlion-zone/merlion/x/maker/types"
-	"github.com/merlion-zone/merlion/x/oracle"
-	oracleclient "github.com/merlion-zone/merlion/x/oracle/client"
-	oraclekeeper "github.com/merlion-zone/merlion/x/oracle/keeper"
-	oracletypes "github.com/merlion-zone/merlion/x/oracle/types"
-	customstaking "github.com/merlion-zone/merlion/x/staking"
-	customstakingkeeper "github.com/merlion-zone/merlion/x/staking/keeper"
-	"github.com/merlion-zone/merlion/x/ve"
-	vekeeper "github.com/merlion-zone/merlion/x/ve/keeper"
-	vetypes "github.com/merlion-zone/merlion/x/ve/types"
-	customvesting "github.com/merlion-zone/merlion/x/vesting"
-	customvestingkeeper "github.com/merlion-zone/merlion/x/vesting/keeper"
-	customvestingtypes "github.com/merlion-zone/merlion/x/vesting/types"
-	"github.com/merlion-zone/merlion/x/voter"
-	voterkeeper "github.com/merlion-zone/merlion/x/voter/keeper"
-	votertypes "github.com/merlion-zone/merlion/x/voter/types"
+	_ "github.com/petri-labs/warmage/client/docs/statik"
+	custombank "github.com/petri-labs/warmage/x/bank"
+	custombankclient "github.com/petri-labs/warmage/x/bank/client"
+	custombankkeeper "github.com/petri-labs/warmage/x/bank/keeper"
+	custombanktypes "github.com/petri-labs/warmage/x/bank/types"
+	"github.com/petri-labs/warmage/x/erc20"
+	erc20keeper "github.com/petri-labs/warmage/x/erc20/keeper"
+	erc20types "github.com/petri-labs/warmage/x/erc20/types"
+	"github.com/petri-labs/warmage/x/gauge"
+	gaugekeeper "github.com/petri-labs/warmage/x/gauge/keeper"
+	gaugetypes "github.com/petri-labs/warmage/x/gauge/types"
+	"github.com/petri-labs/warmage/x/maker"
+	makerclient "github.com/petri-labs/warmage/x/maker/client"
+	makerkeeper "github.com/petri-labs/warmage/x/maker/keeper"
+	makertypes "github.com/petri-labs/warmage/x/maker/types"
+	"github.com/petri-labs/warmage/x/oracle"
+	oracleclient "github.com/petri-labs/warmage/x/oracle/client"
+	oraclekeeper "github.com/petri-labs/warmage/x/oracle/keeper"
+	oracletypes "github.com/petri-labs/warmage/x/oracle/types"
+	customstaking "github.com/petri-labs/warmage/x/staking"
+	customstakingkeeper "github.com/petri-labs/warmage/x/staking/keeper"
+	"github.com/petri-labs/warmage/x/ve"
+	vekeeper "github.com/petri-labs/warmage/x/ve/keeper"
+	vetypes "github.com/petri-labs/warmage/x/ve/types"
+	customvesting "github.com/petri-labs/warmage/x/vesting"
+	customvestingkeeper "github.com/petri-labs/warmage/x/vesting/keeper"
+	customvestingtypes "github.com/petri-labs/warmage/x/vesting/types"
+	"github.com/petri-labs/warmage/x/voter"
+	voterkeeper "github.com/petri-labs/warmage/x/voter/keeper"
+	votertypes "github.com/petri-labs/warmage/x/voter/types"
 )
 
 // App represents a Cosmos SDK application that can be run as a server and with an exportable state
@@ -151,7 +151,7 @@ type ExportableApp interface {
 }
 
 const (
-	Name = "merlion"
+	Name = "warmage"
 )
 
 func getGovProposalHandlers() []govclient.ProposalHandler {
@@ -244,9 +244,9 @@ var (
 )
 
 var (
-	_ App                     = (*Merlion)(nil)
-	_ servertypes.Application = (*Merlion)(nil)
-	_ simapp.App              = (*Merlion)(nil)
+	_ App                     = (*Warmage)(nil)
+	_ servertypes.Application = (*Warmage)(nil)
+	_ simapp.App              = (*Warmage)(nil)
 )
 
 func init() {
@@ -261,10 +261,10 @@ func init() {
 	sdk.DefaultPowerReduction = ethermint.PowerReduction
 }
 
-// Merlion extends an ABCI application, but with most of its parameters exported.
+// Warmage extends an ABCI application, but with most of its parameters exported.
 // They are exported for convenience in creating helper functions, as object
 // capabilities aren't needed for testing.
-type Merlion struct {
+type Warmage struct {
 	*baseapp.BaseApp
 
 	cdc               *codec.LegacyAmino
@@ -326,8 +326,8 @@ type Merlion struct {
 	tpsCounter *tpsCounter
 }
 
-// NewMerlion returns a reference to an initialized blockchain app
-func NewMerlion(
+// NewWarmage returns a reference to an initialized blockchain app
+func NewWarmage(
 	logger log.Logger,
 	db dbm.DB,
 	traceStore io.Writer,
@@ -368,7 +368,7 @@ func NewMerlion(
 	tkeys := sdk.NewTransientStoreKeys(paramstypes.TStoreKey, evmtypes.TransientKey)
 	memKeys := sdk.NewMemoryStoreKeys(capabilitytypes.MemStoreKey)
 
-	app := &Merlion{
+	app := &Warmage{
 		BaseApp:           bApp,
 		cdc:               cdc,
 		appCodec:          appCodec,
@@ -807,23 +807,23 @@ func NewMerlion(
 	return app
 }
 
-// Name returns the name of the Merlion
-func (app *Merlion) Name() string { return app.BaseApp.Name() }
+// Name returns the name of the Warmage
+func (app *Warmage) Name() string { return app.BaseApp.Name() }
 
 // GetBaseApp returns the base app of the application
-func (app Merlion) GetBaseApp() *baseapp.BaseApp { return app.BaseApp }
+func (app Warmage) GetBaseApp() *baseapp.BaseApp { return app.BaseApp }
 
 // BeginBlocker application updates every begin block
-func (app *Merlion) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
+func (app *Warmage) BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock) abci.ResponseBeginBlock {
 	return app.mm.BeginBlock(ctx, req)
 }
 
 // EndBlocker application updates every end block
-func (app *Merlion) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
+func (app *Warmage) EndBlocker(ctx sdk.Context, req abci.RequestEndBlock) abci.ResponseEndBlock {
 	return app.mm.EndBlock(ctx, req)
 }
 
-func (app *Merlion) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliverTx) {
+func (app *Warmage) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliverTx) {
 	defer func() {
 		// TODO: Record the count along with the code and or reason so as to display
 		// in the transactions per second live dashboards.
@@ -838,7 +838,7 @@ func (app *Merlion) DeliverTx(req abci.RequestDeliverTx) (res abci.ResponseDeliv
 }
 
 // InitChainer application update at chain initialization
-func (app *Merlion) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
+func (app *Warmage) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci.ResponseInitChain {
 	var genesisState GenesisState
 	if err := tmjson.Unmarshal(req.AppStateBytes, &genesisState); err != nil {
 		panic(err)
@@ -848,12 +848,12 @@ func (app *Merlion) InitChainer(ctx sdk.Context, req abci.RequestInitChain) abci
 }
 
 // LoadHeight loads a particular height
-func (app *Merlion) LoadHeight(height int64) error {
+func (app *Warmage) LoadHeight(height int64) error {
 	return app.LoadVersion(height)
 }
 
 // ModuleAccountAddrs returns all the app's module account addresses.
-func (app *Merlion) ModuleAccountAddrs() map[string]bool {
+func (app *Warmage) ModuleAccountAddrs() map[string]bool {
 	modAccAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		modAccAddrs[authtypes.NewModuleAddress(acc).String()] = true
@@ -864,7 +864,7 @@ func (app *Merlion) ModuleAccountAddrs() map[string]bool {
 
 // BlockedAddrs returns all the app's module account addresses that are not
 // allowed to receive tokens.
-func (app *Merlion) BlockedAddrs() map[string]bool {
+func (app *Warmage) BlockedAddrs() map[string]bool {
 	blockedAddrs := make(map[string]bool)
 	for acc := range maccPerms {
 		blockedAddrs[authtypes.NewModuleAddress(acc).String()] = !allowedReceivingModAcc[acc]
@@ -877,7 +877,7 @@ func (app *Merlion) BlockedAddrs() map[string]bool {
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Merlion) LegacyAmino() *codec.LegacyAmino {
+func (app *Warmage) LegacyAmino() *codec.LegacyAmino {
 	return app.cdc
 }
 
@@ -885,47 +885,47 @@ func (app *Merlion) LegacyAmino() *codec.LegacyAmino {
 //
 // NOTE: This is solely to be used for testing purposes as it may be desirable
 // for modules to register their own custom testing types.
-func (app *Merlion) AppCodec() codec.Codec {
+func (app *Warmage) AppCodec() codec.Codec {
 	return app.appCodec
 }
 
 // InterfaceRegistry returns an InterfaceRegistry
-func (app *Merlion) InterfaceRegistry() types.InterfaceRegistry {
+func (app *Warmage) InterfaceRegistry() types.InterfaceRegistry {
 	return app.interfaceRegistry
 }
 
 // GetKey returns the KVStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Merlion) GetKey(storeKey string) *sdk.KVStoreKey {
+func (app *Warmage) GetKey(storeKey string) *sdk.KVStoreKey {
 	return app.keys[storeKey]
 }
 
 // GetTKey returns the TransientStoreKey for the provided store key.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Merlion) GetTKey(storeKey string) *sdk.TransientStoreKey {
+func (app *Warmage) GetTKey(storeKey string) *sdk.TransientStoreKey {
 	return app.tkeys[storeKey]
 }
 
 // GetMemKey returns the MemStoreKey for the provided mem key.
 //
 // NOTE: This is solely used for testing purposes.
-func (app *Merlion) GetMemKey(storeKey string) *sdk.MemoryStoreKey {
+func (app *Warmage) GetMemKey(storeKey string) *sdk.MemoryStoreKey {
 	return app.memKeys[storeKey]
 }
 
 // GetSubspace returns a param subspace for a given module name.
 //
 // NOTE: This is solely to be used for testing purposes.
-func (app *Merlion) GetSubspace(moduleName string) paramstypes.Subspace {
+func (app *Warmage) GetSubspace(moduleName string) paramstypes.Subspace {
 	subspace, _ := app.ParamsKeeper.GetSubspace(moduleName)
 	return subspace
 }
 
 // RegisterAPIRoutes registers all application module routes with the provided
 // API server.
-func (app *Merlion) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
+func (app *Warmage) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APIConfig) {
 	clientCtx := apiSvr.ClientCtx
 	rpc.RegisterRoutes(clientCtx, apiSvr.Router)
 	// Register legacy tx routes.
@@ -949,12 +949,12 @@ func (app *Merlion) RegisterAPIRoutes(apiSvr *api.Server, apiConfig config.APICo
 }
 
 // RegisterTxService implements the Application.RegisterTxService method.
-func (app *Merlion) RegisterTxService(clientCtx client.Context) {
+func (app *Warmage) RegisterTxService(clientCtx client.Context) {
 	authtx.RegisterTxService(app.BaseApp.GRPCQueryRouter(), clientCtx, app.BaseApp.Simulate, app.interfaceRegistry)
 }
 
 // RegisterTendermintService implements the Application.RegisterTendermintService method.
-func (app *Merlion) RegisterTendermintService(clientCtx client.Context) {
+func (app *Warmage) RegisterTendermintService(clientCtx client.Context) {
 	tmservice.RegisterTendermintService(app.BaseApp.GRPCQueryRouter(), clientCtx, app.interfaceRegistry)
 }
 
@@ -996,6 +996,6 @@ func initParamsKeeper(appCodec codec.BinaryCodec, legacyAmino *codec.LegacyAmino
 }
 
 // SimulationManager implements the SimulationApp interface
-func (app *Merlion) SimulationManager() *module.SimulationManager {
+func (app *Warmage) SimulationManager() *module.SimulationManager {
 	return app.sm
 }

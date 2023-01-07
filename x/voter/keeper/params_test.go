@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/merlion-zone/merlion/testutil/keeper"
-	"github.com/merlion-zone/merlion/x/voter/types"
+	testkeeper "github.com/petri-labs/warmage/testutil/keeper"
+	"github.com/petri-labs/warmage/x/voter/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -8,15 +8,15 @@ import (
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
-	merlion "github.com/merlion-zone/merlion/types"
-	"github.com/merlion-zone/merlion/x/erc20/types"
+	warmage "github.com/petri-labs/warmage/types"
+	"github.com/petri-labs/warmage/x/erc20/types"
 	"github.com/tharsis/evmos/v4/contracts"
 )
 
 // RegisterCoin deploys an erc20 contract and creates the token pair for the existing cosmos coin
 func (k Keeper) RegisterCoin(ctx sdk.Context, denom string) (*types.TokenPair, error) {
-	// Prohibit denominations that contain the "lion" denom
-	if strings.Contains(denom, merlion.DisplayDenom) {
+	// Prohibit denominations that contain the "mage" denom
+	if strings.Contains(denom, warmage.DisplayDenom) {
 		return nil, sdkerrors.Wrapf(types.ErrEVMDenom, "cannot register the EVM denomination %s", denom)
 	}
 

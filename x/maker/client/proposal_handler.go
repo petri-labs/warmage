@@ -2,8 +2,8 @@ package client
 
 import (
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
-	"github.com/merlion-zone/merlion/x/maker/client/cli"
-	"github.com/merlion-zone/merlion/x/maker/client/rest"
+	"github.com/petri-labs/warmage/x/maker/client/cli"
+	"github.com/petri-labs/warmage/x/maker/client/rest"
 )
 
 var (

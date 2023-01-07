@@ -3,9 +3,9 @@ package oracle
 import (
 	"time"
 
-	merlion "github.com/merlion-zone/merlion/types"
-	"github.com/merlion-zone/merlion/x/oracle/keeper"
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	warmage "github.com/petri-labs/warmage/types"
+	"github.com/petri-labs/warmage/x/oracle/keeper"
+	"github.com/petri-labs/warmage/x/oracle/types"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -16,7 +16,7 @@ func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
 	defer telemetry.ModuleMeasureSince(types.ModuleName, time.Now(), telemetry.MetricKeyEndBlocker)
 
 	params := k.GetParams(ctx)
-	if merlion.IsPeriodLastBlock(ctx, params.VotePeriod) {
+	if warmage.IsPeriodLastBlock(ctx, params.VotePeriod) {
 		stakingKeeper := k.StakingKeeper()
 
 		// Build claim map over all validators in active set
@@ -59,9 +59,9 @@ func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
 		voteMap := k.OrganizeBallotByDenom(ctx, validatorClaimMap)
 		ctx.Logger().Debug("organized ballot by denom", "voteMap", voteMap)
 
-		if referenceMer := PickReferenceMer(ctx, k, voteTargets, voteMap); referenceMer != "" {
-			// make voteMap of Reference Mer to calculate cross exchange rates
-			ballotRM := voteMap[referenceMer]
+		if referenceWar := PickReferenceWar(ctx, k, voteTargets, voteMap); referenceWar != "" {
+			// make voteMap of Reference War to calculate cross exchange rates
+			ballotRM := voteMap[referenceWar]
 			voteMapRM := ballotRM.ToMap()
 
 			var exchangeRateRM sdk.Dec
@@ -72,7 +72,7 @@ func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
 			for denom, ballot := range voteMap {
 
 				// Convert ballot to cross exchange rates
-				if denom != referenceMer {
+				if denom != referenceWar {
 					ballot = ballot.ToCrossRateWithSort(voteMapRM)
 				}
 
@@ -80,7 +80,7 @@ func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
 				exchangeRate := Tally(ctx, ballot, params.RewardBand, validatorClaimMap)
 
 				// Transform into the original form {denom}/uUSD
-				if denom != referenceMer {
+				if denom != referenceWar {
 					if exchangeRate.IsZero() {
 						k.Logger(ctx).Error("invalid tallied cross exchange rate", "denom", denom, "exchangeRate", exchangeRate)
 						// Do not set exchange rate
@@ -123,7 +123,7 @@ func EndBlocker(ctx sdk.Context, k keeper.Keeper) {
 	// Do slash who did miss voting over threshold and
 	// reset miss counters of all validators
 	// at the last block of slash window
-	if merlion.IsPeriodLastBlock(ctx, params.SlashWindow) {
+	if warmage.IsPeriodLastBlock(ctx, params.SlashWindow) {
 		k.SlashAndResetMissCounters(ctx)
 	}
 

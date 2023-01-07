@@ -3,11 +3,11 @@ package types
 import (
 	"testing"
 
-	merlion "github.com/merlion-zone/merlion/types"
+	warmage "github.com/petri-labs/warmage/types"
 	"github.com/stretchr/testify/require"
 )
 
 func TestDefaultParams(t *testing.T) {
 	params := DefaultParams()
-	require.Equal(t, merlion.BaseDenom, params.LockDenom)
+	require.Equal(t, warmage.BaseDenom, params.LockDenom)
 }

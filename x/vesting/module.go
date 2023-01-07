@@ -14,9 +14,9 @@ import (
 	vestingtypes "github.com/cosmos/cosmos-sdk/x/auth/vesting/types"
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
-	"github.com/merlion-zone/merlion/x/vesting/client/cli"
-	"github.com/merlion-zone/merlion/x/vesting/keeper"
-	"github.com/merlion-zone/merlion/x/vesting/types"
+	"github.com/petri-labs/warmage/x/vesting/client/cli"
+	"github.com/petri-labs/warmage/x/vesting/keeper"
+	"github.com/petri-labs/warmage/x/vesting/types"
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 )

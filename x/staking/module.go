@@ -10,8 +10,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/staking"
 	stakingkeeper "github.com/cosmos/cosmos-sdk/x/staking/keeper"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	"github.com/merlion-zone/merlion/x/staking/keeper"
-	"github.com/merlion-zone/merlion/x/staking/types"
+	"github.com/petri-labs/warmage/x/staking/keeper"
+	"github.com/petri-labs/warmage/x/staking/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 )
 

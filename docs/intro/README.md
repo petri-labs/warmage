@@ -6,7 +6,7 @@ parent:
 
 # Introduction
 
-This folder contains introduction material for Merlion.
+This folder contains introduction material for Warmage.
 
 1. [Overview](./overview)
 1. [Architecture](./architecture)
@@ -15,4 +15,4 @@ After reading the introduction material, head over to the [basics](../basics/REA
 
 ## Next {hide}
 
-Get a high-level [overview](./overview) of Merlion {hide}
+Get a high-level [overview](./overview) of Warmage {hide}

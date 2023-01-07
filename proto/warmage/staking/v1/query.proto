@@ -1,0 +1,4 @@
+syntax = "proto3";
+package warmage.staking.v1;
+
+option go_package = "github.com/petri-labs/warmage/x/staking/types";

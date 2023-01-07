@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/app"
-	"github.com/merlion-zone/merlion/x/vesting/types"
+	"github.com/petri-labs/warmage/app"
+	"github.com/petri-labs/warmage/x/vesting/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -22,7 +22,7 @@ func TestAirdropsTotalAmountKey(t *testing.T) {
 
 func TestAirdropsKey(t *testing.T) {
 	app.Setup(false)
-	addrStr := "mer1mnfm9c7cdgqnkk66sganp78m0ydmcr4ppeaeg5"
+	addrStr := "war1mnfm9c7cdgqnkk66sganp78m0ydmcr4ppeaeg5"
 	addr, err := sdk.AccAddressFromBech32(addrStr)
 	require.NoError(t, err)
 
@@ -32,7 +32,7 @@ func TestAirdropsKey(t *testing.T) {
 
 func TestAirdropsCompletedKey(t *testing.T) {
 	app.Setup(false)
-	addrStr := "mer1mnfm9c7cdgqnkk66sganp78m0ydmcr4ppeaeg5"
+	addrStr := "war1mnfm9c7cdgqnkk66sganp78m0ydmcr4ppeaeg5"
 	addr, err := sdk.AccAddressFromBech32(addrStr)
 	require.NoError(t, err)
 

@@ -4,30 +4,30 @@ order: 5
 
 # Tokens
 
-Learn about the different types of native tokens/coins available in Merlion. {synopsis}
+Learn about the different types of native tokens/coins available in Warmage. {synopsis}
 
 ## Native Coins
 
-The two native coin types of Merlion are **Mer** and **Lion**:
+The two native coin types of Warmage are **War** and **Mage**:
 
-- **Mer**: Stablecoins that track the price of fiat currencies, and they are named for their fiat counterparts. In the
-  early stage of the mainnet launch, it will mainly issue **MerUSD**, or **USM**, which tracks/pegs the price of $USD.
-- **Lion**: Native staking coin that partially absorbs the price volatility of Mer. Users stake Lion to validators to
-  add blocks of transactions to the blockchain, and earn various fees and rewards. Holders of Lion also can vote on
-  proposals and participate in on-chain governance. And Lion is also used for gas consumption for running smart
+- **War**: Stablecoins that track the price of fiat currencies, and they are named for their fiat counterparts. In the
+  early stage of the mainnet launch, it will mainly issue **WarUSD**, or **USW**, which tracks/pegs the price of $USD.
+- **Mage**: Native staking coin that partially absorbs the price volatility of War. Users stake Mage to validators to
+  add blocks of transactions to the blockchain, and earn various fees and rewards. Holders of Mage also can vote on
+  proposals and participate in on-chain governance. And Mage is also used for gas consumption for running smart
   contracts on the EVM.
 
-Merlion uses [Atto](https://en.wikipedia.org/wiki/Atto-) Lion or `alion` as the base denomination to maintain parity
+Warmage uses [Atto](https://en.wikipedia.org/wiki/Atto-) Mage or `amage` as the base denomination to maintain parity
 with Ethereum.
 
 ```
-1 lion = 1 * 1e18 alion
+1 mage = 1 * 1e18 amage
 ```
 
-And the base denomination of Mer is `uusd`.
+And the base denomination of War is `uusd`.
 
 ```
-1 MerUSD = 1 USM = 1 * 1e6 uusd
+1 WarUSD = 1 USW = 1 * 1e6 uusd
 ```
 
 ## Other Cosmos Coins
@@ -37,4 +37,4 @@ transactions. Example of these are IBC vouchers.
 
 ## ERC-20 Tokens
 
-Any ERC-20 tokens are natively supported by the EVM of Merlion.
+Any ERC-20 tokens are natively supported by the EVM of Warmage.

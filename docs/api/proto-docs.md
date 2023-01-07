@@ -4,305 +4,305 @@
 
 ## Table of Contents
 
-- [merlion/bank/v1beta1/bank.proto](#merlion/bank/v1beta1/bank.proto)
-    - [SetDenomMetadataProposal](#merlion.bank.v1beta1.SetDenomMetadataProposal)
+- [warmage/bank/v1beta1/bank.proto](#warmage/bank/v1beta1/bank.proto)
+    - [SetDenomMetadataProposal](#warmage.bank.v1beta1.SetDenomMetadataProposal)
   
-- [merlion/erc20/v1/erc20.proto](#merlion/erc20/v1/erc20.proto)
-    - [TokenPair](#merlion.erc20.v1.TokenPair)
+- [warmage/erc20/v1/erc20.proto](#warmage/erc20/v1/erc20.proto)
+    - [TokenPair](#warmage.erc20.v1.TokenPair)
   
-    - [Owner](#merlion.erc20.v1.Owner)
+    - [Owner](#warmage.erc20.v1.Owner)
   
-- [merlion/erc20/v1/genesis.proto](#merlion/erc20/v1/genesis.proto)
-    - [GenesisState](#merlion.erc20.v1.GenesisState)
-    - [Params](#merlion.erc20.v1.Params)
+- [warmage/erc20/v1/genesis.proto](#warmage/erc20/v1/genesis.proto)
+    - [GenesisState](#warmage.erc20.v1.GenesisState)
+    - [Params](#warmage.erc20.v1.Params)
   
-- [merlion/erc20/v1/query.proto](#merlion/erc20/v1/query.proto)
-    - [QueryParamsRequest](#merlion.erc20.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.erc20.v1.QueryParamsResponse)
-    - [QueryTokenPairRequest](#merlion.erc20.v1.QueryTokenPairRequest)
-    - [QueryTokenPairResponse](#merlion.erc20.v1.QueryTokenPairResponse)
-    - [QueryTokenPairsRequest](#merlion.erc20.v1.QueryTokenPairsRequest)
-    - [QueryTokenPairsResponse](#merlion.erc20.v1.QueryTokenPairsResponse)
+- [warmage/erc20/v1/query.proto](#warmage/erc20/v1/query.proto)
+    - [QueryParamsRequest](#warmage.erc20.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.erc20.v1.QueryParamsResponse)
+    - [QueryTokenPairRequest](#warmage.erc20.v1.QueryTokenPairRequest)
+    - [QueryTokenPairResponse](#warmage.erc20.v1.QueryTokenPairResponse)
+    - [QueryTokenPairsRequest](#warmage.erc20.v1.QueryTokenPairsRequest)
+    - [QueryTokenPairsResponse](#warmage.erc20.v1.QueryTokenPairsResponse)
   
-    - [Query](#merlion.erc20.v1.Query)
+    - [Query](#warmage.erc20.v1.Query)
   
-- [merlion/erc20/v1/tx.proto](#merlion/erc20/v1/tx.proto)
-    - [Msg](#merlion.erc20.v1.Msg)
+- [warmage/erc20/v1/tx.proto](#warmage/erc20/v1/tx.proto)
+    - [Msg](#warmage.erc20.v1.Msg)
   
-- [merlion/gauge/v1/event.proto](#merlion/gauge/v1/event.proto)
-- [merlion/gauge/v1/gauge.proto](#merlion/gauge/v1/gauge.proto)
-    - [Checkpoint](#merlion.gauge.v1.Checkpoint)
-    - [Reward](#merlion.gauge.v1.Reward)
-    - [UserReward](#merlion.gauge.v1.UserReward)
+- [warmage/gauge/v1/event.proto](#warmage/gauge/v1/event.proto)
+- [warmage/gauge/v1/gauge.proto](#warmage/gauge/v1/gauge.proto)
+    - [Checkpoint](#warmage.gauge.v1.Checkpoint)
+    - [Reward](#warmage.gauge.v1.Reward)
+    - [UserReward](#warmage.gauge.v1.UserReward)
   
-- [merlion/gauge/v1/genesis.proto](#merlion/gauge/v1/genesis.proto)
-    - [GenesisState](#merlion.gauge.v1.GenesisState)
-    - [Params](#merlion.gauge.v1.Params)
+- [warmage/gauge/v1/genesis.proto](#warmage/gauge/v1/genesis.proto)
+    - [GenesisState](#warmage.gauge.v1.GenesisState)
+    - [Params](#warmage.gauge.v1.Params)
   
-- [merlion/gauge/v1/query.proto](#merlion/gauge/v1/query.proto)
-    - [QueryParamsRequest](#merlion.gauge.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.gauge.v1.QueryParamsResponse)
+- [warmage/gauge/v1/query.proto](#warmage/gauge/v1/query.proto)
+    - [QueryParamsRequest](#warmage.gauge.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.gauge.v1.QueryParamsResponse)
   
-    - [Query](#merlion.gauge.v1.Query)
+    - [Query](#warmage.gauge.v1.Query)
   
-- [merlion/gauge/v1/tx.proto](#merlion/gauge/v1/tx.proto)
-    - [Msg](#merlion.gauge.v1.Msg)
+- [warmage/gauge/v1/tx.proto](#warmage/gauge/v1/tx.proto)
+    - [Msg](#warmage.gauge.v1.Msg)
   
-- [merlion/maker/v1/genesis.proto](#merlion/maker/v1/genesis.proto)
-    - [GenesisState](#merlion.maker.v1.GenesisState)
-    - [Params](#merlion.maker.v1.Params)
+- [warmage/maker/v1/genesis.proto](#warmage/maker/v1/genesis.proto)
+    - [GenesisState](#warmage.maker.v1.GenesisState)
+    - [Params](#warmage.maker.v1.Params)
   
-- [merlion/maker/v1/maker.proto](#merlion/maker/v1/maker.proto)
-    - [AccountBacking](#merlion.maker.v1.AccountBacking)
-    - [AccountCollateral](#merlion.maker.v1.AccountCollateral)
-    - [BackingRiskParams](#merlion.maker.v1.BackingRiskParams)
-    - [BatchBackingRiskParams](#merlion.maker.v1.BatchBackingRiskParams)
-    - [BatchCollateralRiskParams](#merlion.maker.v1.BatchCollateralRiskParams)
-    - [BatchSetBackingRiskParamsProposal](#merlion.maker.v1.BatchSetBackingRiskParamsProposal)
-    - [BatchSetCollateralRiskParamsProposal](#merlion.maker.v1.BatchSetCollateralRiskParamsProposal)
-    - [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams)
-    - [PoolBacking](#merlion.maker.v1.PoolBacking)
-    - [PoolCollateral](#merlion.maker.v1.PoolCollateral)
-    - [RegisterBackingProposal](#merlion.maker.v1.RegisterBackingProposal)
-    - [RegisterCollateralProposal](#merlion.maker.v1.RegisterCollateralProposal)
-    - [SetBackingRiskParamsProposal](#merlion.maker.v1.SetBackingRiskParamsProposal)
-    - [SetCollateralRiskParamsProposal](#merlion.maker.v1.SetCollateralRiskParamsProposal)
-    - [TotalBacking](#merlion.maker.v1.TotalBacking)
-    - [TotalCollateral](#merlion.maker.v1.TotalCollateral)
+- [warmage/maker/v1/maker.proto](#warmage/maker/v1/maker.proto)
+    - [AccountBacking](#warmage.maker.v1.AccountBacking)
+    - [AccountCollateral](#warmage.maker.v1.AccountCollateral)
+    - [BackingRiskParams](#warmage.maker.v1.BackingRiskParams)
+    - [BatchBackingRiskParams](#warmage.maker.v1.BatchBackingRiskParams)
+    - [BatchCollateralRiskParams](#warmage.maker.v1.BatchCollateralRiskParams)
+    - [BatchSetBackingRiskParamsProposal](#warmage.maker.v1.BatchSetBackingRiskParamsProposal)
+    - [BatchSetCollateralRiskParamsProposal](#warmage.maker.v1.BatchSetCollateralRiskParamsProposal)
+    - [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams)
+    - [PoolBacking](#warmage.maker.v1.PoolBacking)
+    - [PoolCollateral](#warmage.maker.v1.PoolCollateral)
+    - [RegisterBackingProposal](#warmage.maker.v1.RegisterBackingProposal)
+    - [RegisterCollateralProposal](#warmage.maker.v1.RegisterCollateralProposal)
+    - [SetBackingRiskParamsProposal](#warmage.maker.v1.SetBackingRiskParamsProposal)
+    - [SetCollateralRiskParamsProposal](#warmage.maker.v1.SetCollateralRiskParamsProposal)
+    - [TotalBacking](#warmage.maker.v1.TotalBacking)
+    - [TotalCollateral](#warmage.maker.v1.TotalCollateral)
   
-- [merlion/maker/v1/query.proto](#merlion/maker/v1/query.proto)
-    - [EstimateBurnBySwapInRequest](#merlion.maker.v1.EstimateBurnBySwapInRequest)
-    - [EstimateBurnBySwapInResponse](#merlion.maker.v1.EstimateBurnBySwapInResponse)
-    - [EstimateBurnBySwapOutRequest](#merlion.maker.v1.EstimateBurnBySwapOutRequest)
-    - [EstimateBurnBySwapOutResponse](#merlion.maker.v1.EstimateBurnBySwapOutResponse)
-    - [EstimateBuyBackingInRequest](#merlion.maker.v1.EstimateBuyBackingInRequest)
-    - [EstimateBuyBackingInResponse](#merlion.maker.v1.EstimateBuyBackingInResponse)
-    - [EstimateBuyBackingOutRequest](#merlion.maker.v1.EstimateBuyBackingOutRequest)
-    - [EstimateBuyBackingOutResponse](#merlion.maker.v1.EstimateBuyBackingOutResponse)
-    - [EstimateMintBySwapInRequest](#merlion.maker.v1.EstimateMintBySwapInRequest)
-    - [EstimateMintBySwapInResponse](#merlion.maker.v1.EstimateMintBySwapInResponse)
-    - [EstimateMintBySwapOutRequest](#merlion.maker.v1.EstimateMintBySwapOutRequest)
-    - [EstimateMintBySwapOutResponse](#merlion.maker.v1.EstimateMintBySwapOutResponse)
-    - [EstimateSellBackingInRequest](#merlion.maker.v1.EstimateSellBackingInRequest)
-    - [EstimateSellBackingInResponse](#merlion.maker.v1.EstimateSellBackingInResponse)
-    - [EstimateSellBackingOutRequest](#merlion.maker.v1.EstimateSellBackingOutRequest)
-    - [EstimateSellBackingOutResponse](#merlion.maker.v1.EstimateSellBackingOutResponse)
-    - [QueryAllBackingPoolsRequest](#merlion.maker.v1.QueryAllBackingPoolsRequest)
-    - [QueryAllBackingPoolsResponse](#merlion.maker.v1.QueryAllBackingPoolsResponse)
-    - [QueryAllBackingRiskParamsRequest](#merlion.maker.v1.QueryAllBackingRiskParamsRequest)
-    - [QueryAllBackingRiskParamsResponse](#merlion.maker.v1.QueryAllBackingRiskParamsResponse)
-    - [QueryAllCollateralPoolsRequest](#merlion.maker.v1.QueryAllCollateralPoolsRequest)
-    - [QueryAllCollateralPoolsResponse](#merlion.maker.v1.QueryAllCollateralPoolsResponse)
-    - [QueryAllCollateralRiskParamsRequest](#merlion.maker.v1.QueryAllCollateralRiskParamsRequest)
-    - [QueryAllCollateralRiskParamsResponse](#merlion.maker.v1.QueryAllCollateralRiskParamsResponse)
-    - [QueryBackingPoolRequest](#merlion.maker.v1.QueryBackingPoolRequest)
-    - [QueryBackingPoolResponse](#merlion.maker.v1.QueryBackingPoolResponse)
-    - [QueryBackingRatioRequest](#merlion.maker.v1.QueryBackingRatioRequest)
-    - [QueryBackingRatioResponse](#merlion.maker.v1.QueryBackingRatioResponse)
-    - [QueryCollateralOfAccountRequest](#merlion.maker.v1.QueryCollateralOfAccountRequest)
-    - [QueryCollateralOfAccountResponse](#merlion.maker.v1.QueryCollateralOfAccountResponse)
-    - [QueryCollateralPoolRequest](#merlion.maker.v1.QueryCollateralPoolRequest)
-    - [QueryCollateralPoolResponse](#merlion.maker.v1.QueryCollateralPoolResponse)
-    - [QueryParamsRequest](#merlion.maker.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.maker.v1.QueryParamsResponse)
-    - [QueryTotalBackingRequest](#merlion.maker.v1.QueryTotalBackingRequest)
-    - [QueryTotalBackingResponse](#merlion.maker.v1.QueryTotalBackingResponse)
-    - [QueryTotalCollateralRequest](#merlion.maker.v1.QueryTotalCollateralRequest)
-    - [QueryTotalCollateralResponse](#merlion.maker.v1.QueryTotalCollateralResponse)
+- [warmage/maker/v1/query.proto](#warmage/maker/v1/query.proto)
+    - [EstimateBurnBySwapInRequest](#warmage.maker.v1.EstimateBurnBySwapInRequest)
+    - [EstimateBurnBySwapInResponse](#warmage.maker.v1.EstimateBurnBySwapInResponse)
+    - [EstimateBurnBySwapOutRequest](#warmage.maker.v1.EstimateBurnBySwapOutRequest)
+    - [EstimateBurnBySwapOutResponse](#warmage.maker.v1.EstimateBurnBySwapOutResponse)
+    - [EstimateBuyBackingInRequest](#warmage.maker.v1.EstimateBuyBackingInRequest)
+    - [EstimateBuyBackingInResponse](#warmage.maker.v1.EstimateBuyBackingInResponse)
+    - [EstimateBuyBackingOutRequest](#warmage.maker.v1.EstimateBuyBackingOutRequest)
+    - [EstimateBuyBackingOutResponse](#warmage.maker.v1.EstimateBuyBackingOutResponse)
+    - [EstimateMintBySwapInRequest](#warmage.maker.v1.EstimateMintBySwapInRequest)
+    - [EstimateMintBySwapInResponse](#warmage.maker.v1.EstimateMintBySwapInResponse)
+    - [EstimateMintBySwapOutRequest](#warmage.maker.v1.EstimateMintBySwapOutRequest)
+    - [EstimateMintBySwapOutResponse](#warmage.maker.v1.EstimateMintBySwapOutResponse)
+    - [EstimateSellBackingInRequest](#warmage.maker.v1.EstimateSellBackingInRequest)
+    - [EstimateSellBackingInResponse](#warmage.maker.v1.EstimateSellBackingInResponse)
+    - [EstimateSellBackingOutRequest](#warmage.maker.v1.EstimateSellBackingOutRequest)
+    - [EstimateSellBackingOutResponse](#warmage.maker.v1.EstimateSellBackingOutResponse)
+    - [QueryAllBackingPoolsRequest](#warmage.maker.v1.QueryAllBackingPoolsRequest)
+    - [QueryAllBackingPoolsResponse](#warmage.maker.v1.QueryAllBackingPoolsResponse)
+    - [QueryAllBackingRiskParamsRequest](#warmage.maker.v1.QueryAllBackingRiskParamsRequest)
+    - [QueryAllBackingRiskParamsResponse](#warmage.maker.v1.QueryAllBackingRiskParamsResponse)
+    - [QueryAllCollateralPoolsRequest](#warmage.maker.v1.QueryAllCollateralPoolsRequest)
+    - [QueryAllCollateralPoolsResponse](#warmage.maker.v1.QueryAllCollateralPoolsResponse)
+    - [QueryAllCollateralRiskParamsRequest](#warmage.maker.v1.QueryAllCollateralRiskParamsRequest)
+    - [QueryAllCollateralRiskParamsResponse](#warmage.maker.v1.QueryAllCollateralRiskParamsResponse)
+    - [QueryBackingPoolRequest](#warmage.maker.v1.QueryBackingPoolRequest)
+    - [QueryBackingPoolResponse](#warmage.maker.v1.QueryBackingPoolResponse)
+    - [QueryBackingRatioRequest](#warmage.maker.v1.QueryBackingRatioRequest)
+    - [QueryBackingRatioResponse](#warmage.maker.v1.QueryBackingRatioResponse)
+    - [QueryCollateralOfAccountRequest](#warmage.maker.v1.QueryCollateralOfAccountRequest)
+    - [QueryCollateralOfAccountResponse](#warmage.maker.v1.QueryCollateralOfAccountResponse)
+    - [QueryCollateralPoolRequest](#warmage.maker.v1.QueryCollateralPoolRequest)
+    - [QueryCollateralPoolResponse](#warmage.maker.v1.QueryCollateralPoolResponse)
+    - [QueryParamsRequest](#warmage.maker.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.maker.v1.QueryParamsResponse)
+    - [QueryTotalBackingRequest](#warmage.maker.v1.QueryTotalBackingRequest)
+    - [QueryTotalBackingResponse](#warmage.maker.v1.QueryTotalBackingResponse)
+    - [QueryTotalCollateralRequest](#warmage.maker.v1.QueryTotalCollateralRequest)
+    - [QueryTotalCollateralResponse](#warmage.maker.v1.QueryTotalCollateralResponse)
   
-    - [Query](#merlion.maker.v1.Query)
+    - [Query](#warmage.maker.v1.Query)
   
-- [merlion/maker/v1/tx.proto](#merlion/maker/v1/tx.proto)
-    - [MsgBurnByCollateral](#merlion.maker.v1.MsgBurnByCollateral)
-    - [MsgBurnByCollateralResponse](#merlion.maker.v1.MsgBurnByCollateralResponse)
-    - [MsgBurnBySwap](#merlion.maker.v1.MsgBurnBySwap)
-    - [MsgBurnBySwapResponse](#merlion.maker.v1.MsgBurnBySwapResponse)
-    - [MsgBuyBacking](#merlion.maker.v1.MsgBuyBacking)
-    - [MsgBuyBackingResponse](#merlion.maker.v1.MsgBuyBackingResponse)
-    - [MsgDepositCollateral](#merlion.maker.v1.MsgDepositCollateral)
-    - [MsgDepositCollateralResponse](#merlion.maker.v1.MsgDepositCollateralResponse)
-    - [MsgLiquidateCollateral](#merlion.maker.v1.MsgLiquidateCollateral)
-    - [MsgLiquidateCollateralResponse](#merlion.maker.v1.MsgLiquidateCollateralResponse)
-    - [MsgMintByCollateral](#merlion.maker.v1.MsgMintByCollateral)
-    - [MsgMintByCollateralResponse](#merlion.maker.v1.MsgMintByCollateralResponse)
-    - [MsgMintBySwap](#merlion.maker.v1.MsgMintBySwap)
-    - [MsgMintBySwapResponse](#merlion.maker.v1.MsgMintBySwapResponse)
-    - [MsgRedeemCollateral](#merlion.maker.v1.MsgRedeemCollateral)
-    - [MsgRedeemCollateralResponse](#merlion.maker.v1.MsgRedeemCollateralResponse)
-    - [MsgSellBacking](#merlion.maker.v1.MsgSellBacking)
-    - [MsgSellBackingResponse](#merlion.maker.v1.MsgSellBackingResponse)
+- [warmage/maker/v1/tx.proto](#warmage/maker/v1/tx.proto)
+    - [MsgBurnByCollateral](#warmage.maker.v1.MsgBurnByCollateral)
+    - [MsgBurnByCollateralResponse](#warmage.maker.v1.MsgBurnByCollateralResponse)
+    - [MsgBurnBySwap](#warmage.maker.v1.MsgBurnBySwap)
+    - [MsgBurnBySwapResponse](#warmage.maker.v1.MsgBurnBySwapResponse)
+    - [MsgBuyBacking](#warmage.maker.v1.MsgBuyBacking)
+    - [MsgBuyBackingResponse](#warmage.maker.v1.MsgBuyBackingResponse)
+    - [MsgDepositCollateral](#warmage.maker.v1.MsgDepositCollateral)
+    - [MsgDepositCollateralResponse](#warmage.maker.v1.MsgDepositCollateralResponse)
+    - [MsgLiquidateCollateral](#warmage.maker.v1.MsgLiquidateCollateral)
+    - [MsgLiquidateCollateralResponse](#warmage.maker.v1.MsgLiquidateCollateralResponse)
+    - [MsgMintByCollateral](#warmage.maker.v1.MsgMintByCollateral)
+    - [MsgMintByCollateralResponse](#warmage.maker.v1.MsgMintByCollateralResponse)
+    - [MsgMintBySwap](#warmage.maker.v1.MsgMintBySwap)
+    - [MsgMintBySwapResponse](#warmage.maker.v1.MsgMintBySwapResponse)
+    - [MsgRedeemCollateral](#warmage.maker.v1.MsgRedeemCollateral)
+    - [MsgRedeemCollateralResponse](#warmage.maker.v1.MsgRedeemCollateralResponse)
+    - [MsgSellBacking](#warmage.maker.v1.MsgSellBacking)
+    - [MsgSellBackingResponse](#warmage.maker.v1.MsgSellBackingResponse)
   
-    - [Msg](#merlion.maker.v1.Msg)
+    - [Msg](#warmage.maker.v1.Msg)
   
-- [merlion/oracle/v1/oracle.proto](#merlion/oracle/v1/oracle.proto)
-    - [AggregateExchangeRatePrevote](#merlion.oracle.v1.AggregateExchangeRatePrevote)
-    - [AggregateExchangeRateVote](#merlion.oracle.v1.AggregateExchangeRateVote)
-    - [ExchangeRateTuple](#merlion.oracle.v1.ExchangeRateTuple)
-    - [Params](#merlion.oracle.v1.Params)
-    - [RegisterTargetProposal](#merlion.oracle.v1.RegisterTargetProposal)
-    - [TargetParams](#merlion.oracle.v1.TargetParams)
+- [warmage/oracle/v1/oracle.proto](#warmage/oracle/v1/oracle.proto)
+    - [AggregateExchangeRatePrevote](#warmage.oracle.v1.AggregateExchangeRatePrevote)
+    - [AggregateExchangeRateVote](#warmage.oracle.v1.AggregateExchangeRateVote)
+    - [ExchangeRateTuple](#warmage.oracle.v1.ExchangeRateTuple)
+    - [Params](#warmage.oracle.v1.Params)
+    - [RegisterTargetProposal](#warmage.oracle.v1.RegisterTargetProposal)
+    - [TargetParams](#warmage.oracle.v1.TargetParams)
   
-    - [TargetSource](#merlion.oracle.v1.TargetSource)
+    - [TargetSource](#warmage.oracle.v1.TargetSource)
   
-- [merlion/oracle/v1/genesis.proto](#merlion/oracle/v1/genesis.proto)
-    - [FeederDelegation](#merlion.oracle.v1.FeederDelegation)
-    - [GenesisState](#merlion.oracle.v1.GenesisState)
-    - [MissCounter](#merlion.oracle.v1.MissCounter)
+- [warmage/oracle/v1/genesis.proto](#warmage/oracle/v1/genesis.proto)
+    - [FeederDelegation](#warmage.oracle.v1.FeederDelegation)
+    - [GenesisState](#warmage.oracle.v1.GenesisState)
+    - [MissCounter](#warmage.oracle.v1.MissCounter)
   
-- [merlion/oracle/v1/query.proto](#merlion/oracle/v1/query.proto)
-    - [QueryActivesRequest](#merlion.oracle.v1.QueryActivesRequest)
-    - [QueryActivesResponse](#merlion.oracle.v1.QueryActivesResponse)
-    - [QueryAggregatePrevoteRequest](#merlion.oracle.v1.QueryAggregatePrevoteRequest)
-    - [QueryAggregatePrevoteResponse](#merlion.oracle.v1.QueryAggregatePrevoteResponse)
-    - [QueryAggregatePrevotesRequest](#merlion.oracle.v1.QueryAggregatePrevotesRequest)
-    - [QueryAggregatePrevotesResponse](#merlion.oracle.v1.QueryAggregatePrevotesResponse)
-    - [QueryAggregateVoteRequest](#merlion.oracle.v1.QueryAggregateVoteRequest)
-    - [QueryAggregateVoteResponse](#merlion.oracle.v1.QueryAggregateVoteResponse)
-    - [QueryAggregateVotesRequest](#merlion.oracle.v1.QueryAggregateVotesRequest)
-    - [QueryAggregateVotesResponse](#merlion.oracle.v1.QueryAggregateVotesResponse)
-    - [QueryExchangeRateRequest](#merlion.oracle.v1.QueryExchangeRateRequest)
-    - [QueryExchangeRateResponse](#merlion.oracle.v1.QueryExchangeRateResponse)
-    - [QueryExchangeRatesRequest](#merlion.oracle.v1.QueryExchangeRatesRequest)
-    - [QueryExchangeRatesResponse](#merlion.oracle.v1.QueryExchangeRatesResponse)
-    - [QueryFeederDelegationRequest](#merlion.oracle.v1.QueryFeederDelegationRequest)
-    - [QueryFeederDelegationResponse](#merlion.oracle.v1.QueryFeederDelegationResponse)
-    - [QueryMissCounterRequest](#merlion.oracle.v1.QueryMissCounterRequest)
-    - [QueryMissCounterResponse](#merlion.oracle.v1.QueryMissCounterResponse)
-    - [QueryParamsRequest](#merlion.oracle.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.oracle.v1.QueryParamsResponse)
-    - [QueryTargetsRequest](#merlion.oracle.v1.QueryTargetsRequest)
-    - [QueryTargetsResponse](#merlion.oracle.v1.QueryTargetsResponse)
-    - [QueryVoteTargetsRequest](#merlion.oracle.v1.QueryVoteTargetsRequest)
-    - [QueryVoteTargetsResponse](#merlion.oracle.v1.QueryVoteTargetsResponse)
+- [warmage/oracle/v1/query.proto](#warmage/oracle/v1/query.proto)
+    - [QueryActivesRequest](#warmage.oracle.v1.QueryActivesRequest)
+    - [QueryActivesResponse](#warmage.oracle.v1.QueryActivesResponse)
+    - [QueryAggregatePrevoteRequest](#warmage.oracle.v1.QueryAggregatePrevoteRequest)
+    - [QueryAggregatePrevoteResponse](#warmage.oracle.v1.QueryAggregatePrevoteResponse)
+    - [QueryAggregatePrevotesRequest](#warmage.oracle.v1.QueryAggregatePrevotesRequest)
+    - [QueryAggregatePrevotesResponse](#warmage.oracle.v1.QueryAggregatePrevotesResponse)
+    - [QueryAggregateVoteRequest](#warmage.oracle.v1.QueryAggregateVoteRequest)
+    - [QueryAggregateVoteResponse](#warmage.oracle.v1.QueryAggregateVoteResponse)
+    - [QueryAggregateVotesRequest](#warmage.oracle.v1.QueryAggregateVotesRequest)
+    - [QueryAggregateVotesResponse](#warmage.oracle.v1.QueryAggregateVotesResponse)
+    - [QueryExchangeRateRequest](#warmage.oracle.v1.QueryExchangeRateRequest)
+    - [QueryExchangeRateResponse](#warmage.oracle.v1.QueryExchangeRateResponse)
+    - [QueryExchangeRatesRequest](#warmage.oracle.v1.QueryExchangeRatesRequest)
+    - [QueryExchangeRatesResponse](#warmage.oracle.v1.QueryExchangeRatesResponse)
+    - [QueryFeederDelegationRequest](#warmage.oracle.v1.QueryFeederDelegationRequest)
+    - [QueryFeederDelegationResponse](#warmage.oracle.v1.QueryFeederDelegationResponse)
+    - [QueryMissCounterRequest](#warmage.oracle.v1.QueryMissCounterRequest)
+    - [QueryMissCounterResponse](#warmage.oracle.v1.QueryMissCounterResponse)
+    - [QueryParamsRequest](#warmage.oracle.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.oracle.v1.QueryParamsResponse)
+    - [QueryTargetsRequest](#warmage.oracle.v1.QueryTargetsRequest)
+    - [QueryTargetsResponse](#warmage.oracle.v1.QueryTargetsResponse)
+    - [QueryVoteTargetsRequest](#warmage.oracle.v1.QueryVoteTargetsRequest)
+    - [QueryVoteTargetsResponse](#warmage.oracle.v1.QueryVoteTargetsResponse)
   
-    - [Query](#merlion.oracle.v1.Query)
+    - [Query](#warmage.oracle.v1.Query)
   
-- [merlion/oracle/v1/tx.proto](#merlion/oracle/v1/tx.proto)
-    - [MsgAggregateExchangeRatePrevote](#merlion.oracle.v1.MsgAggregateExchangeRatePrevote)
-    - [MsgAggregateExchangeRatePrevoteResponse](#merlion.oracle.v1.MsgAggregateExchangeRatePrevoteResponse)
-    - [MsgAggregateExchangeRateVote](#merlion.oracle.v1.MsgAggregateExchangeRateVote)
-    - [MsgAggregateExchangeRateVoteResponse](#merlion.oracle.v1.MsgAggregateExchangeRateVoteResponse)
-    - [MsgDelegateFeedConsent](#merlion.oracle.v1.MsgDelegateFeedConsent)
-    - [MsgDelegateFeedConsentResponse](#merlion.oracle.v1.MsgDelegateFeedConsentResponse)
+- [warmage/oracle/v1/tx.proto](#warmage/oracle/v1/tx.proto)
+    - [MsgAggregateExchangeRatePrevote](#warmage.oracle.v1.MsgAggregateExchangeRatePrevote)
+    - [MsgAggregateExchangeRatePrevoteResponse](#warmage.oracle.v1.MsgAggregateExchangeRatePrevoteResponse)
+    - [MsgAggregateExchangeRateVote](#warmage.oracle.v1.MsgAggregateExchangeRateVote)
+    - [MsgAggregateExchangeRateVoteResponse](#warmage.oracle.v1.MsgAggregateExchangeRateVoteResponse)
+    - [MsgDelegateFeedConsent](#warmage.oracle.v1.MsgDelegateFeedConsent)
+    - [MsgDelegateFeedConsentResponse](#warmage.oracle.v1.MsgDelegateFeedConsentResponse)
   
-    - [Msg](#merlion.oracle.v1.Msg)
+    - [Msg](#warmage.oracle.v1.Msg)
   
-- [merlion/staking/v1/query.proto](#merlion/staking/v1/query.proto)
-- [merlion/staking/v1/staking.proto](#merlion/staking/v1/staking.proto)
-    - [VeDelegation](#merlion.staking.v1.VeDelegation)
-    - [VeRedelegation](#merlion.staking.v1.VeRedelegation)
-    - [VeRedelegationEntry](#merlion.staking.v1.VeRedelegationEntry)
-    - [VeRedelegationEntryShares](#merlion.staking.v1.VeRedelegationEntryShares)
-    - [VeShares](#merlion.staking.v1.VeShares)
-    - [VeTokens](#merlion.staking.v1.VeTokens)
-    - [VeUnbondingDelegation](#merlion.staking.v1.VeUnbondingDelegation)
-    - [VeUnbondingDelegationEntry](#merlion.staking.v1.VeUnbondingDelegationEntry)
-    - [VeUnbondingDelegationEntryBalances](#merlion.staking.v1.VeUnbondingDelegationEntryBalances)
-    - [VeValidator](#merlion.staking.v1.VeValidator)
+- [warmage/staking/v1/query.proto](#warmage/staking/v1/query.proto)
+- [warmage/staking/v1/staking.proto](#warmage/staking/v1/staking.proto)
+    - [VeDelegation](#warmage.staking.v1.VeDelegation)
+    - [VeRedelegation](#warmage.staking.v1.VeRedelegation)
+    - [VeRedelegationEntry](#warmage.staking.v1.VeRedelegationEntry)
+    - [VeRedelegationEntryShares](#warmage.staking.v1.VeRedelegationEntryShares)
+    - [VeShares](#warmage.staking.v1.VeShares)
+    - [VeTokens](#warmage.staking.v1.VeTokens)
+    - [VeUnbondingDelegation](#warmage.staking.v1.VeUnbondingDelegation)
+    - [VeUnbondingDelegationEntry](#warmage.staking.v1.VeUnbondingDelegationEntry)
+    - [VeUnbondingDelegationEntryBalances](#warmage.staking.v1.VeUnbondingDelegationEntryBalances)
+    - [VeValidator](#warmage.staking.v1.VeValidator)
   
-- [merlion/staking/v1/tx.proto](#merlion/staking/v1/tx.proto)
-    - [MsgVeDelegate](#merlion.staking.v1.MsgVeDelegate)
-    - [MsgVeDelegateResponse](#merlion.staking.v1.MsgVeDelegateResponse)
+- [warmage/staking/v1/tx.proto](#warmage/staking/v1/tx.proto)
+    - [MsgVeDelegate](#warmage.staking.v1.MsgVeDelegate)
+    - [MsgVeDelegateResponse](#warmage.staking.v1.MsgVeDelegateResponse)
   
-    - [Msg](#merlion.staking.v1.Msg)
+    - [Msg](#warmage.staking.v1.Msg)
   
-- [merlion/ve/v1/event.proto](#merlion/ve/v1/event.proto)
-    - [EventCreate](#merlion.ve.v1.EventCreate)
-    - [EventDeposit](#merlion.ve.v1.EventDeposit)
-    - [EventExtendTime](#merlion.ve.v1.EventExtendTime)
-    - [EventMerge](#merlion.ve.v1.EventMerge)
-    - [EventWithdraw](#merlion.ve.v1.EventWithdraw)
+- [warmage/ve/v1/event.proto](#warmage/ve/v1/event.proto)
+    - [EventCreate](#warmage.ve.v1.EventCreate)
+    - [EventDeposit](#warmage.ve.v1.EventDeposit)
+    - [EventExtendTime](#warmage.ve.v1.EventExtendTime)
+    - [EventMerge](#warmage.ve.v1.EventMerge)
+    - [EventWithdraw](#warmage.ve.v1.EventWithdraw)
   
-- [merlion/ve/v1/genesis.proto](#merlion/ve/v1/genesis.proto)
-    - [GenesisState](#merlion.ve.v1.GenesisState)
-    - [Params](#merlion.ve.v1.Params)
+- [warmage/ve/v1/genesis.proto](#warmage/ve/v1/genesis.proto)
+    - [GenesisState](#warmage.ve.v1.GenesisState)
+    - [Params](#warmage.ve.v1.Params)
   
-- [merlion/ve/v1/query.proto](#merlion/ve/v1/query.proto)
-    - [QueryParamsRequest](#merlion.ve.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.ve.v1.QueryParamsResponse)
-    - [QueryTotalVotingPowerRequest](#merlion.ve.v1.QueryTotalVotingPowerRequest)
-    - [QueryTotalVotingPowerResponse](#merlion.ve.v1.QueryTotalVotingPowerResponse)
-    - [QueryVeNftRequest](#merlion.ve.v1.QueryVeNftRequest)
-    - [QueryVeNftResponse](#merlion.ve.v1.QueryVeNftResponse)
-    - [QueryVeNftsRequest](#merlion.ve.v1.QueryVeNftsRequest)
-    - [QueryVeNftsResponse](#merlion.ve.v1.QueryVeNftsResponse)
-    - [QueryVotingPowerRequest](#merlion.ve.v1.QueryVotingPowerRequest)
-    - [QueryVotingPowerResponse](#merlion.ve.v1.QueryVotingPowerResponse)
+- [warmage/ve/v1/query.proto](#warmage/ve/v1/query.proto)
+    - [QueryParamsRequest](#warmage.ve.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.ve.v1.QueryParamsResponse)
+    - [QueryTotalVotingPowerRequest](#warmage.ve.v1.QueryTotalVotingPowerRequest)
+    - [QueryTotalVotingPowerResponse](#warmage.ve.v1.QueryTotalVotingPowerResponse)
+    - [QueryVeNftRequest](#warmage.ve.v1.QueryVeNftRequest)
+    - [QueryVeNftResponse](#warmage.ve.v1.QueryVeNftResponse)
+    - [QueryVeNftsRequest](#warmage.ve.v1.QueryVeNftsRequest)
+    - [QueryVeNftsResponse](#warmage.ve.v1.QueryVeNftsResponse)
+    - [QueryVotingPowerRequest](#warmage.ve.v1.QueryVotingPowerRequest)
+    - [QueryVotingPowerResponse](#warmage.ve.v1.QueryVotingPowerResponse)
   
-    - [Query](#merlion.ve.v1.Query)
+    - [Query](#warmage.ve.v1.Query)
   
-- [merlion/ve/v1/tx.proto](#merlion/ve/v1/tx.proto)
-    - [MsgCreate](#merlion.ve.v1.MsgCreate)
-    - [MsgCreateResponse](#merlion.ve.v1.MsgCreateResponse)
-    - [MsgDeposit](#merlion.ve.v1.MsgDeposit)
-    - [MsgDepositResponse](#merlion.ve.v1.MsgDepositResponse)
-    - [MsgExtendTime](#merlion.ve.v1.MsgExtendTime)
-    - [MsgExtendTimeResponse](#merlion.ve.v1.MsgExtendTimeResponse)
-    - [MsgMerge](#merlion.ve.v1.MsgMerge)
-    - [MsgMergeResponse](#merlion.ve.v1.MsgMergeResponse)
-    - [MsgWithdraw](#merlion.ve.v1.MsgWithdraw)
-    - [MsgWithdrawResponse](#merlion.ve.v1.MsgWithdrawResponse)
+- [warmage/ve/v1/tx.proto](#warmage/ve/v1/tx.proto)
+    - [MsgCreate](#warmage.ve.v1.MsgCreate)
+    - [MsgCreateResponse](#warmage.ve.v1.MsgCreateResponse)
+    - [MsgDeposit](#warmage.ve.v1.MsgDeposit)
+    - [MsgDepositResponse](#warmage.ve.v1.MsgDepositResponse)
+    - [MsgExtendTime](#warmage.ve.v1.MsgExtendTime)
+    - [MsgExtendTimeResponse](#warmage.ve.v1.MsgExtendTimeResponse)
+    - [MsgMerge](#warmage.ve.v1.MsgMerge)
+    - [MsgMergeResponse](#warmage.ve.v1.MsgMergeResponse)
+    - [MsgWithdraw](#warmage.ve.v1.MsgWithdraw)
+    - [MsgWithdrawResponse](#warmage.ve.v1.MsgWithdrawResponse)
   
-    - [Msg](#merlion.ve.v1.Msg)
+    - [Msg](#warmage.ve.v1.Msg)
   
-- [merlion/ve/v1/ve.proto](#merlion/ve/v1/ve.proto)
-    - [Checkpoint](#merlion.ve.v1.Checkpoint)
-    - [LockedBalance](#merlion.ve.v1.LockedBalance)
+- [warmage/ve/v1/ve.proto](#warmage/ve/v1/ve.proto)
+    - [Checkpoint](#warmage.ve.v1.Checkpoint)
+    - [LockedBalance](#warmage.ve.v1.LockedBalance)
   
-- [merlion/vesting/v1/genesis.proto](#merlion/vesting/v1/genesis.proto)
-    - [AllocationAddresses](#merlion.vesting.v1.AllocationAddresses)
-    - [AllocationAmounts](#merlion.vesting.v1.AllocationAmounts)
-    - [GenesisState](#merlion.vesting.v1.GenesisState)
-    - [Params](#merlion.vesting.v1.Params)
+- [warmage/vesting/v1/genesis.proto](#warmage/vesting/v1/genesis.proto)
+    - [AllocationAddresses](#warmage.vesting.v1.AllocationAddresses)
+    - [AllocationAmounts](#warmage.vesting.v1.AllocationAmounts)
+    - [GenesisState](#warmage.vesting.v1.GenesisState)
+    - [Params](#warmage.vesting.v1.Params)
   
-- [merlion/vesting/v1/vesting.proto](#merlion/vesting/v1/vesting.proto)
-    - [Airdrop](#merlion.vesting.v1.Airdrop)
+- [warmage/vesting/v1/vesting.proto](#warmage/vesting/v1/vesting.proto)
+    - [Airdrop](#warmage.vesting.v1.Airdrop)
   
-- [merlion/vesting/v1/query.proto](#merlion/vesting/v1/query.proto)
-    - [QueryAirdropRequest](#merlion.vesting.v1.QueryAirdropRequest)
-    - [QueryAirdropResponse](#merlion.vesting.v1.QueryAirdropResponse)
-    - [QueryAirdropsRequest](#merlion.vesting.v1.QueryAirdropsRequest)
-    - [QueryAirdropsResponse](#merlion.vesting.v1.QueryAirdropsResponse)
-    - [QueryParamsRequest](#merlion.vesting.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.vesting.v1.QueryParamsResponse)
+- [warmage/vesting/v1/query.proto](#warmage/vesting/v1/query.proto)
+    - [QueryAirdropRequest](#warmage.vesting.v1.QueryAirdropRequest)
+    - [QueryAirdropResponse](#warmage.vesting.v1.QueryAirdropResponse)
+    - [QueryAirdropsRequest](#warmage.vesting.v1.QueryAirdropsRequest)
+    - [QueryAirdropsResponse](#warmage.vesting.v1.QueryAirdropsResponse)
+    - [QueryParamsRequest](#warmage.vesting.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.vesting.v1.QueryParamsResponse)
   
-    - [Query](#merlion.vesting.v1.Query)
+    - [Query](#warmage.vesting.v1.Query)
   
-- [merlion/vesting/v1/tx.proto](#merlion/vesting/v1/tx.proto)
-    - [MsgAddAirdrops](#merlion.vesting.v1.MsgAddAirdrops)
-    - [MsgAddAirdropsResponse](#merlion.vesting.v1.MsgAddAirdropsResponse)
-    - [MsgExecuteAirdrops](#merlion.vesting.v1.MsgExecuteAirdrops)
-    - [MsgExecuteAirdropsResponse](#merlion.vesting.v1.MsgExecuteAirdropsResponse)
-    - [MsgSetAllocationAddress](#merlion.vesting.v1.MsgSetAllocationAddress)
-    - [MsgSetAllocationAddressResponse](#merlion.vesting.v1.MsgSetAllocationAddressResponse)
+- [warmage/vesting/v1/tx.proto](#warmage/vesting/v1/tx.proto)
+    - [MsgAddAirdrops](#warmage.vesting.v1.MsgAddAirdrops)
+    - [MsgAddAirdropsResponse](#warmage.vesting.v1.MsgAddAirdropsResponse)
+    - [MsgExecuteAirdrops](#warmage.vesting.v1.MsgExecuteAirdrops)
+    - [MsgExecuteAirdropsResponse](#warmage.vesting.v1.MsgExecuteAirdropsResponse)
+    - [MsgSetAllocationAddress](#warmage.vesting.v1.MsgSetAllocationAddress)
+    - [MsgSetAllocationAddressResponse](#warmage.vesting.v1.MsgSetAllocationAddressResponse)
   
-    - [Msg](#merlion.vesting.v1.Msg)
+    - [Msg](#warmage.vesting.v1.Msg)
   
-- [merlion/voter/v1/genesis.proto](#merlion/voter/v1/genesis.proto)
-    - [GenesisState](#merlion.voter.v1.GenesisState)
-    - [Params](#merlion.voter.v1.Params)
+- [warmage/voter/v1/genesis.proto](#warmage/voter/v1/genesis.proto)
+    - [GenesisState](#warmage.voter.v1.GenesisState)
+    - [Params](#warmage.voter.v1.Params)
   
-- [merlion/voter/v1/query.proto](#merlion/voter/v1/query.proto)
-    - [QueryParamsRequest](#merlion.voter.v1.QueryParamsRequest)
-    - [QueryParamsResponse](#merlion.voter.v1.QueryParamsResponse)
+- [warmage/voter/v1/query.proto](#warmage/voter/v1/query.proto)
+    - [QueryParamsRequest](#warmage.voter.v1.QueryParamsRequest)
+    - [QueryParamsResponse](#warmage.voter.v1.QueryParamsResponse)
   
-    - [Query](#merlion.voter.v1.Query)
+    - [Query](#warmage.voter.v1.Query)
   
-- [merlion/voter/v1/tx.proto](#merlion/voter/v1/tx.proto)
-    - [Msg](#merlion.voter.v1.Msg)
+- [warmage/voter/v1/tx.proto](#warmage/voter/v1/tx.proto)
+    - [Msg](#warmage.voter.v1.Msg)
   
 - [Scalar Value Types](#scalar-value-types)
 
 
 
-<a name="merlion/bank/v1beta1/bank.proto"></a>
+<a name="warmage/bank/v1beta1/bank.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/bank/v1beta1/bank.proto
+## warmage/bank/v1beta1/bank.proto
 
 
 
-<a name="merlion.bank.v1beta1.SetDenomMetadataProposal"></a>
+<a name="warmage.bank.v1beta1.SetDenomMetadataProposal"></a>
 
 ### SetDenomMetadataProposal
 SetDenomMetaDataProposal is a gov Content type to register a DenomMetaData
@@ -328,14 +328,14 @@ SetDenomMetaDataProposal is a gov Content type to register a DenomMetaData
 
 
 
-<a name="merlion/erc20/v1/erc20.proto"></a>
+<a name="warmage/erc20/v1/erc20.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/erc20/v1/erc20.proto
+## warmage/erc20/v1/erc20.proto
 
 
 
-<a name="merlion.erc20.v1.TokenPair"></a>
+<a name="warmage.erc20.v1.TokenPair"></a>
 
 ### TokenPair
 TokenPair defines an instance that records pairing consisting of a Cosmos
@@ -346,7 +346,7 @@ native Coin and an ERC20 token address.
 | ----- | ---- | ----- | ----------- |
 | `erc20_address` | [string](#string) |  | address of ERC20 contract token |
 | `denom` | [string](#string) |  | cosmos base denomination to be mapped to |
-| `contract_owner` | [Owner](#merlion.erc20.v1.Owner) |  | ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address) |
+| `contract_owner` | [Owner](#warmage.erc20.v1.Owner) |  | ERC20 owner address ENUM (0 invalid, 1 ModuleAccount, 2 external address) |
 
 
 
@@ -355,7 +355,7 @@ native Coin and an ERC20 token address.
  <!-- end messages -->
 
 
-<a name="merlion.erc20.v1.Owner"></a>
+<a name="warmage.erc20.v1.Owner"></a>
 
 ### Owner
 Owner enumerates the ownership of a ERC20 contract.
@@ -375,14 +375,14 @@ Owner enumerates the ownership of a ERC20 contract.
 
 
 
-<a name="merlion/erc20/v1/genesis.proto"></a>
+<a name="warmage/erc20/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/erc20/v1/genesis.proto
+## warmage/erc20/v1/genesis.proto
 
 
 
-<a name="merlion.erc20.v1.GenesisState"></a>
+<a name="warmage.erc20.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the module's genesis state.
@@ -390,15 +390,15 @@ GenesisState defines the module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.erc20.v1.Params) |  | module parameters |
-| `token_pairs` | [TokenPair](#merlion.erc20.v1.TokenPair) | repeated | registered token pairs |
+| `params` | [Params](#warmage.erc20.v1.Params) |  | module parameters |
+| `token_pairs` | [TokenPair](#warmage.erc20.v1.TokenPair) | repeated | registered token pairs |
 
 
 
 
 
 
-<a name="merlion.erc20.v1.Params"></a>
+<a name="warmage.erc20.v1.Params"></a>
 
 ### Params
 Params defines the erc20 module params
@@ -417,14 +417,14 @@ Params defines the erc20 module params
 
 
 
-<a name="merlion/erc20/v1/query.proto"></a>
+<a name="warmage/erc20/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/erc20/v1/query.proto
+## warmage/erc20/v1/query.proto
 
 
 
-<a name="merlion.erc20.v1.QueryParamsRequest"></a>
+<a name="warmage.erc20.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is the request type for the Query/Params RPC method.
@@ -434,7 +434,7 @@ QueryParamsRequest is the request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.erc20.v1.QueryParamsResponse"></a>
+<a name="warmage.erc20.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is the response type for the Query/Params RPC
@@ -443,14 +443,14 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.erc20.v1.Params) |  |  |
+| `params` | [Params](#warmage.erc20.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="merlion.erc20.v1.QueryTokenPairRequest"></a>
+<a name="warmage.erc20.v1.QueryTokenPairRequest"></a>
 
 ### QueryTokenPairRequest
 QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
@@ -465,7 +465,7 @@ QueryTokenPairRequest is the request type for the Query/TokenPair RPC method.
 
 
 
-<a name="merlion.erc20.v1.QueryTokenPairResponse"></a>
+<a name="warmage.erc20.v1.QueryTokenPairResponse"></a>
 
 ### QueryTokenPairResponse
 QueryTokenPairResponse is the response type for the Query/TokenPair RPC
@@ -474,14 +474,14 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `token_pair` | [TokenPair](#merlion.erc20.v1.TokenPair) |  |  |
+| `token_pair` | [TokenPair](#warmage.erc20.v1.TokenPair) |  |  |
 
 
 
 
 
 
-<a name="merlion.erc20.v1.QueryTokenPairsRequest"></a>
+<a name="warmage.erc20.v1.QueryTokenPairsRequest"></a>
 
 ### QueryTokenPairsRequest
 QueryTokenPairsRequest is the request type for the Query/TokenPairs RPC
@@ -497,7 +497,7 @@ method.
 
 
 
-<a name="merlion.erc20.v1.QueryTokenPairsResponse"></a>
+<a name="warmage.erc20.v1.QueryTokenPairsResponse"></a>
 
 ### QueryTokenPairsResponse
 QueryTokenPairsResponse is the response type for the Query/TokenPairs RPC
@@ -506,7 +506,7 @@ method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `token_pairs` | [TokenPair](#merlion.erc20.v1.TokenPair) | repeated |  |
+| `token_pairs` | [TokenPair](#warmage.erc20.v1.TokenPair) | repeated |  |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -520,25 +520,25 @@ method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.erc20.v1.Query"></a>
+<a name="warmage.erc20.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `TokenPairs` | [QueryTokenPairsRequest](#merlion.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#merlion.erc20.v1.QueryTokenPairsResponse) | Retrieves registered token pairs | GET|/merlion/erc20/v1/token_pairs|
-| `TokenPair` | [QueryTokenPairRequest](#merlion.erc20.v1.QueryTokenPairRequest) | [QueryTokenPairResponse](#merlion.erc20.v1.QueryTokenPairResponse) | Retrieves a registered token pair | GET|/merlion/erc20/v1/token_pairs/{token}|
-| `Params` | [QueryParamsRequest](#merlion.erc20.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.erc20.v1.QueryParamsResponse) | Params retrieves the erc20 module params | GET|/merlion/erc20/v1/params|
+| `TokenPairs` | [QueryTokenPairsRequest](#warmage.erc20.v1.QueryTokenPairsRequest) | [QueryTokenPairsResponse](#warmage.erc20.v1.QueryTokenPairsResponse) | Retrieves registered token pairs | GET|/warmage/erc20/v1/token_pairs|
+| `TokenPair` | [QueryTokenPairRequest](#warmage.erc20.v1.QueryTokenPairRequest) | [QueryTokenPairResponse](#warmage.erc20.v1.QueryTokenPairResponse) | Retrieves a registered token pair | GET|/warmage/erc20/v1/token_pairs/{token}|
+| `Params` | [QueryParamsRequest](#warmage.erc20.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.erc20.v1.QueryParamsResponse) | Params retrieves the erc20 module params | GET|/warmage/erc20/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/erc20/v1/tx.proto"></a>
+<a name="warmage/erc20/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/erc20/v1/tx.proto
+## warmage/erc20/v1/tx.proto
 
 
  <!-- end messages -->
@@ -548,7 +548,7 @@ Query defines the gRPC querier service.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.erc20.v1.Msg"></a>
+<a name="warmage.erc20.v1.Msg"></a>
 
 ### Msg
 Msg defines the erc20 Msg service.
@@ -560,10 +560,10 @@ Msg defines the erc20 Msg service.
 
 
 
-<a name="merlion/gauge/v1/event.proto"></a>
+<a name="warmage/gauge/v1/event.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/gauge/v1/event.proto
+## warmage/gauge/v1/event.proto
 
 
  <!-- end messages -->
@@ -576,14 +576,14 @@ Msg defines the erc20 Msg service.
 
 
 
-<a name="merlion/gauge/v1/gauge.proto"></a>
+<a name="warmage/gauge/v1/gauge.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/gauge/v1/gauge.proto
+## warmage/gauge/v1/gauge.proto
 
 
 
-<a name="merlion.gauge.v1.Checkpoint"></a>
+<a name="warmage.gauge.v1.Checkpoint"></a>
 
 ### Checkpoint
 
@@ -599,7 +599,7 @@ Msg defines the erc20 Msg service.
 
 
 
-<a name="merlion.gauge.v1.Reward"></a>
+<a name="warmage.gauge.v1.Reward"></a>
 
 ### Reward
 
@@ -619,7 +619,7 @@ Msg defines the erc20 Msg service.
 
 
 
-<a name="merlion.gauge.v1.UserReward"></a>
+<a name="warmage.gauge.v1.UserReward"></a>
 
 ### UserReward
 
@@ -646,14 +646,14 @@ Msg defines the erc20 Msg service.
 
 
 
-<a name="merlion/gauge/v1/genesis.proto"></a>
+<a name="warmage/gauge/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/gauge/v1/genesis.proto
+## warmage/gauge/v1/genesis.proto
 
 
 
-<a name="merlion.gauge.v1.GenesisState"></a>
+<a name="warmage.gauge.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the gauge module's genesis state.
@@ -661,14 +661,14 @@ GenesisState defines the gauge module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.gauge.v1.Params) |  |  |
+| `params` | [Params](#warmage.gauge.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="merlion.gauge.v1.Params"></a>
+<a name="warmage.gauge.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the module.
@@ -687,14 +687,14 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion/gauge/v1/query.proto"></a>
+<a name="warmage/gauge/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/gauge/v1/query.proto
+## warmage/gauge/v1/query.proto
 
 
 
-<a name="merlion.gauge.v1.QueryParamsRequest"></a>
+<a name="warmage.gauge.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -704,7 +704,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.gauge.v1.QueryParamsResponse"></a>
+<a name="warmage.gauge.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -712,7 +712,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.gauge.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.gauge.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
@@ -725,23 +725,23 @@ QueryParamsResponse is response type for the Query/Params RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.gauge.v1.Query"></a>
+<a name="warmage.gauge.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Params` | [QueryParamsRequest](#merlion.gauge.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.gauge.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlionzone/merlion/gauge/params|
+| `Params` | [QueryParamsRequest](#warmage.gauge.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.gauge.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmagezone/warmage/gauge/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/gauge/v1/tx.proto"></a>
+<a name="warmage/gauge/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/gauge/v1/tx.proto
+## warmage/gauge/v1/tx.proto
 
 
  <!-- end messages -->
@@ -751,7 +751,7 @@ Query defines the gRPC querier service.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.gauge.v1.Msg"></a>
+<a name="warmage.gauge.v1.Msg"></a>
 
 ### Msg
 Msg defines the Msg service.
@@ -763,14 +763,14 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion/maker/v1/genesis.proto"></a>
+<a name="warmage/maker/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/maker/v1/genesis.proto
+## warmage/maker/v1/genesis.proto
 
 
 
-<a name="merlion.maker.v1.GenesisState"></a>
+<a name="warmage.maker.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the maker module's genesis state.
@@ -778,7 +778,7 @@ GenesisState defines the maker module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.maker.v1.Params) |  |  |
+| `params` | [Params](#warmage.maker.v1.Params) |  |  |
 | `backing_ratio` | [string](#string) |  |  |
 
 
@@ -786,7 +786,7 @@ GenesisState defines the maker module's genesis state.
 
 
 
-<a name="merlion.maker.v1.Params"></a>
+<a name="warmage.maker.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the maker module.
@@ -797,8 +797,8 @@ Params defines the parameters for the maker module.
 | `backing_ratio_step` | [string](#string) |  | step of adjusting backing ratio |
 | `backing_ratio_price_band` | [string](#string) |  | price band for adjusting backing ratio |
 | `backing_ratio_cooldown_period` | [int64](#int64) |  | cooldown period for adjusting backing ratio |
-| `mint_price_bias` | [string](#string) |  | mint Mer price bias ratio |
-| `burn_price_bias` | [string](#string) |  | burn Mer price bias ratio |
+| `mint_price_bias` | [string](#string) |  | mint War price bias ratio |
+| `burn_price_bias` | [string](#string) |  | burn War price bias ratio |
 | `reback_bonus` | [string](#string) |  | reback bonus ratio |
 | `liquidation_commission_fee` | [string](#string) |  | liquidation commission fee ratio |
 
@@ -816,14 +816,14 @@ Params defines the parameters for the maker module.
 
 
 
-<a name="merlion/maker/v1/maker.proto"></a>
+<a name="warmage/maker/v1/maker.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/maker/v1/maker.proto
+## warmage/maker/v1/maker.proto
 
 
 
-<a name="merlion.maker.v1.AccountBacking"></a>
+<a name="warmage.maker.v1.AccountBacking"></a>
 
 ### AccountBacking
 
@@ -833,7 +833,7 @@ Params defines the parameters for the maker module.
 
 
 
-<a name="merlion.maker.v1.AccountCollateral"></a>
+<a name="warmage.maker.v1.AccountCollateral"></a>
 
 ### AccountCollateral
 
@@ -843,8 +843,8 @@ Params defines the parameters for the maker module.
 | ----- | ---- | ----- | ----------- |
 | `account` | [string](#string) |  | account who owns collateral |
 | `collateral` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | existing collateral |
-| `mer_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | remaining mer debt, including minted by collateral, mint fee, last interest |
-| `lion_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized lion |
+| `war_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | remaining war debt, including minted by collateral, mint fee, last interest |
+| `mage_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized mage |
 | `last_interest` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | remaining interest debt at last settlement |
 | `last_settlement_block` | [int64](#int64) |  | the block of last settlement |
 
@@ -853,7 +853,7 @@ Params defines the parameters for the maker module.
 
 
 
-<a name="merlion.maker.v1.BackingRiskParams"></a>
+<a name="warmage.maker.v1.BackingRiskParams"></a>
 
 ### BackingRiskParams
 BackingRiskParams represents an object of backing coin risk parameters.
@@ -864,7 +864,7 @@ BackingRiskParams represents an object of backing coin risk parameters.
 | `backing_denom` | [string](#string) |  | backing coin denom |
 | `enabled` | [bool](#bool) |  | whether enabled |
 | `max_backing` | [string](#string) |  | maximum total backing amount |
-| `max_mer_mint` | [string](#string) |  | maximum mintable Mer amount |
+| `max_war_mint` | [string](#string) |  | maximum mintable War amount |
 | `mint_fee` | [string](#string) |  | mint fee rate |
 | `burn_fee` | [string](#string) |  | burn fee rate |
 | `buyback_fee` | [string](#string) |  | buyback fee rate |
@@ -875,7 +875,7 @@ BackingRiskParams represents an object of backing coin risk parameters.
 
 
 
-<a name="merlion.maker.v1.BatchBackingRiskParams"></a>
+<a name="warmage.maker.v1.BatchBackingRiskParams"></a>
 
 ### BatchBackingRiskParams
 
@@ -883,14 +883,14 @@ BackingRiskParams represents an object of backing coin risk parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `risk_params` | [BackingRiskParams](#merlion.maker.v1.BackingRiskParams) | repeated | batch of collateral risk params |
+| `risk_params` | [BackingRiskParams](#warmage.maker.v1.BackingRiskParams) | repeated | batch of collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.BatchCollateralRiskParams"></a>
+<a name="warmage.maker.v1.BatchCollateralRiskParams"></a>
 
 ### BatchCollateralRiskParams
 
@@ -898,14 +898,14 @@ BackingRiskParams represents an object of backing coin risk parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `risk_params` | [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams) | repeated | batch of collateral risk params |
+| `risk_params` | [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams) | repeated | batch of collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.BatchSetBackingRiskParamsProposal"></a>
+<a name="warmage.maker.v1.BatchSetBackingRiskParamsProposal"></a>
 
 ### BatchSetBackingRiskParamsProposal
 BatchSetBackingRiskParamsProposal is a gov Content type to batch set backing
@@ -916,14 +916,14 @@ coin risk parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [BackingRiskParams](#merlion.maker.v1.BackingRiskParams) | repeated | batch of collateral risk params |
+| `risk_params` | [BackingRiskParams](#warmage.maker.v1.BackingRiskParams) | repeated | batch of collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.BatchSetCollateralRiskParamsProposal"></a>
+<a name="warmage.maker.v1.BatchSetCollateralRiskParamsProposal"></a>
 
 ### BatchSetCollateralRiskParamsProposal
 BatchSetCollateralRiskParamsProposal is a gov Content type to batch set
@@ -934,14 +934,14 @@ collateral risk parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams) | repeated | batch of collateral risk params |
+| `risk_params` | [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams) | repeated | batch of collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.CollateralRiskParams"></a>
+<a name="warmage.maker.v1.CollateralRiskParams"></a>
 
 ### CollateralRiskParams
 CollateralRiskParams represents an object of collateral risk parameters.
@@ -952,11 +952,11 @@ CollateralRiskParams represents an object of collateral risk parameters.
 | `collateral_denom` | [string](#string) |  | collateral coin denom |
 | `enabled` | [bool](#bool) |  | whether enabled |
 | `max_collateral` | [string](#string) |  | maximum total collateral amount; empty means no limit |
-| `max_mer_mint` | [string](#string) |  | maximum total mintable Mer amount; empty means no limit |
+| `max_war_mint` | [string](#string) |  | maximum total mintable War amount; empty means no limit |
 | `liquidation_threshold` | [string](#string) |  | ratio at which a position is defined as undercollateralized |
 | `loan_to_value` | [string](#string) |  | maximum ratio of maximum amount of currency that can be borrowed with a specific collateral |
 | `basic_loan_to_value` | [string](#string) |  | basic ratio of maximum amount of currency that can be borrowed with a specific collateral |
-| `catalytic_lion_ratio` | [string](#string) |  | catalytic ratio of collateralized Lion to asset, to maximize the LTV in [basic-LTV, LTV] |
+| `catalytic_mage_ratio` | [string](#string) |  | catalytic ratio of collateralized Mage to asset, to maximize the LTV in [basic-LTV, LTV] |
 | `liquidation_fee` | [string](#string) |  | liquidation fee rate, i.e., the discount a liquidator gets when buying collateral flagged for a liquidation |
 | `mint_fee` | [string](#string) |  | mint fee rate, i.e., extra fee debt |
 | `interest_fee` | [string](#string) |  | annual interest fee rate (APR) |
@@ -966,7 +966,7 @@ CollateralRiskParams represents an object of collateral risk parameters.
 
 
 
-<a name="merlion.maker.v1.PoolBacking"></a>
+<a name="warmage.maker.v1.PoolBacking"></a>
 
 ### PoolBacking
 
@@ -974,16 +974,16 @@ CollateralRiskParams represents an object of collateral risk parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `mer_minted` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total minted mer; negative value means burned mer |
+| `war_minted` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total minted war; negative value means burned war |
 | `backing` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total backing |
-| `lion_burned` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total burned lion; negative value means minted lion |
+| `mage_burned` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total burned mage; negative value means minted mage |
 
 
 
 
 
 
-<a name="merlion.maker.v1.PoolCollateral"></a>
+<a name="warmage.maker.v1.PoolCollateral"></a>
 
 ### PoolCollateral
 
@@ -992,15 +992,15 @@ CollateralRiskParams represents an object of collateral risk parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `collateral` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateral |
-| `mer_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total existing mer debt, including minted by collateral, mint fee, last interest |
-| `lion_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized lion |
+| `war_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total existing war debt, including minted by collateral, mint fee, last interest |
+| `mage_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized mage |
 
 
 
 
 
 
-<a name="merlion.maker.v1.RegisterBackingProposal"></a>
+<a name="warmage.maker.v1.RegisterBackingProposal"></a>
 
 ### RegisterBackingProposal
 RegisterBackingProposal is a gov Content type to register eligible
@@ -1011,14 +1011,14 @@ strong-backing asset with backing risk parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [BackingRiskParams](#merlion.maker.v1.BackingRiskParams) |  | backing risk params |
+| `risk_params` | [BackingRiskParams](#warmage.maker.v1.BackingRiskParams) |  | backing risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.RegisterCollateralProposal"></a>
+<a name="warmage.maker.v1.RegisterCollateralProposal"></a>
 
 ### RegisterCollateralProposal
 RegisterCollateralProposal is a gov Content type to register eligible
@@ -1029,14 +1029,14 @@ collateral with collateral risk parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams) |  | collateral risk params |
+| `risk_params` | [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams) |  | collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.SetBackingRiskParamsProposal"></a>
+<a name="warmage.maker.v1.SetBackingRiskParamsProposal"></a>
 
 ### SetBackingRiskParamsProposal
 SetBackingRiskParamsProposal is a gov Content type to set backing coin risk
@@ -1047,14 +1047,14 @@ parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [BackingRiskParams](#merlion.maker.v1.BackingRiskParams) |  | backing risk params |
+| `risk_params` | [BackingRiskParams](#warmage.maker.v1.BackingRiskParams) |  | backing risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.SetCollateralRiskParamsProposal"></a>
+<a name="warmage.maker.v1.SetCollateralRiskParamsProposal"></a>
 
 ### SetCollateralRiskParamsProposal
 SetCollateralRiskParamsProposal is a gov Content type to set collateral risk
@@ -1065,14 +1065,14 @@ parameters.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `risk_params` | [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams) |  | collateral risk params |
+| `risk_params` | [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams) |  | collateral risk params |
 
 
 
 
 
 
-<a name="merlion.maker.v1.TotalBacking"></a>
+<a name="warmage.maker.v1.TotalBacking"></a>
 
 ### TotalBacking
 
@@ -1081,15 +1081,15 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_value` | [string](#string) |  | total backing value in uUSD |
-| `mer_minted` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total minted mer; negative value means burned mer |
-| `lion_burned` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total burned lion; negative value means minted lion |
+| `war_minted` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total minted war; negative value means burned war |
+| `mage_burned` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total burned mage; negative value means minted mage |
 
 
 
 
 
 
-<a name="merlion.maker.v1.TotalCollateral"></a>
+<a name="warmage.maker.v1.TotalCollateral"></a>
 
 ### TotalCollateral
 
@@ -1097,8 +1097,8 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `mer_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total existing mer debt, including minted by collateral, mint fee, last interest |
-| `lion_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized lion |
+| `war_debt` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total existing war debt, including minted by collateral, mint fee, last interest |
+| `mage_collateralized` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  | total collateralized mage |
 
 
 
@@ -1114,14 +1114,14 @@ parameters.
 
 
 
-<a name="merlion/maker/v1/query.proto"></a>
+<a name="warmage/maker/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/maker/v1/query.proto
+## warmage/maker/v1/query.proto
 
 
 
-<a name="merlion.maker.v1.EstimateBurnBySwapInRequest"></a>
+<a name="warmage.maker.v1.EstimateBurnBySwapInRequest"></a>
 
 ### EstimateBurnBySwapInRequest
 
@@ -1130,14 +1130,14 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_out_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.EstimateBurnBySwapInResponse"></a>
+<a name="warmage.maker.v1.EstimateBurnBySwapInResponse"></a>
 
 ### EstimateBurnBySwapInResponse
 
@@ -1147,7 +1147,7 @@ parameters.
 | ----- | ---- | ----- | ----------- |
 | `burn_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `backing_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `burn_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1155,7 +1155,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBurnBySwapOutRequest"></a>
+<a name="warmage.maker.v1.EstimateBurnBySwapOutRequest"></a>
 
 ### EstimateBurnBySwapOutRequest
 
@@ -1171,7 +1171,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBurnBySwapOutResponse"></a>
+<a name="warmage.maker.v1.EstimateBurnBySwapOutResponse"></a>
 
 ### EstimateBurnBySwapOutResponse
 
@@ -1180,7 +1180,7 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `burn_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1188,7 +1188,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBuyBackingInRequest"></a>
+<a name="warmage.maker.v1.EstimateBuyBackingInRequest"></a>
 
 ### EstimateBuyBackingInRequest
 
@@ -1203,7 +1203,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBuyBackingInResponse"></a>
+<a name="warmage.maker.v1.EstimateBuyBackingInResponse"></a>
 
 ### EstimateBuyBackingInResponse
 
@@ -1211,7 +1211,7 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `buyback_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1219,7 +1219,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBuyBackingOutRequest"></a>
+<a name="warmage.maker.v1.EstimateBuyBackingOutRequest"></a>
 
 ### EstimateBuyBackingOutRequest
 
@@ -1227,7 +1227,7 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `backing_denom` | [string](#string) |  |  |
 
 
@@ -1235,7 +1235,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateBuyBackingOutResponse"></a>
+<a name="warmage.maker.v1.EstimateBuyBackingOutResponse"></a>
 
 ### EstimateBuyBackingOutResponse
 
@@ -1251,7 +1251,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateMintBySwapInRequest"></a>
+<a name="warmage.maker.v1.EstimateMintBySwapInRequest"></a>
 
 ### EstimateMintBySwapInRequest
 
@@ -1268,7 +1268,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateMintBySwapInResponse"></a>
+<a name="warmage.maker.v1.EstimateMintBySwapInResponse"></a>
 
 ### EstimateMintBySwapInResponse
 
@@ -1277,7 +1277,7 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1285,7 +1285,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateMintBySwapOutRequest"></a>
+<a name="warmage.maker.v1.EstimateMintBySwapOutRequest"></a>
 
 ### EstimateMintBySwapOutRequest
 
@@ -1294,7 +1294,7 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `full_backing` | [bool](#bool) |  |  |
 
 
@@ -1302,7 +1302,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateMintBySwapOutResponse"></a>
+<a name="warmage.maker.v1.EstimateMintBySwapOutResponse"></a>
 
 ### EstimateMintBySwapOutResponse
 
@@ -1311,7 +1311,7 @@ parameters.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
@@ -1320,7 +1320,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateSellBackingInRequest"></a>
+<a name="warmage.maker.v1.EstimateSellBackingInRequest"></a>
 
 ### EstimateSellBackingInRequest
 
@@ -1328,7 +1328,7 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `backing_denom` | [string](#string) |  |  |
 
 
@@ -1336,7 +1336,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateSellBackingInResponse"></a>
+<a name="warmage.maker.v1.EstimateSellBackingInResponse"></a>
 
 ### EstimateSellBackingInResponse
 
@@ -1352,7 +1352,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateSellBackingOutRequest"></a>
+<a name="warmage.maker.v1.EstimateSellBackingOutRequest"></a>
 
 ### EstimateSellBackingOutRequest
 
@@ -1367,7 +1367,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.EstimateSellBackingOutResponse"></a>
+<a name="warmage.maker.v1.EstimateSellBackingOutResponse"></a>
 
 ### EstimateSellBackingOutResponse
 
@@ -1375,7 +1375,7 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `sellback_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1383,7 +1383,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryAllBackingPoolsRequest"></a>
+<a name="warmage.maker.v1.QueryAllBackingPoolsRequest"></a>
 
 ### QueryAllBackingPoolsRequest
 
@@ -1393,7 +1393,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryAllBackingPoolsResponse"></a>
+<a name="warmage.maker.v1.QueryAllBackingPoolsResponse"></a>
 
 ### QueryAllBackingPoolsResponse
 
@@ -1401,14 +1401,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `backing_pools` | [PoolBacking](#merlion.maker.v1.PoolBacking) | repeated |  |
+| `backing_pools` | [PoolBacking](#warmage.maker.v1.PoolBacking) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryAllBackingRiskParamsRequest"></a>
+<a name="warmage.maker.v1.QueryAllBackingRiskParamsRequest"></a>
 
 ### QueryAllBackingRiskParamsRequest
 
@@ -1418,7 +1418,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryAllBackingRiskParamsResponse"></a>
+<a name="warmage.maker.v1.QueryAllBackingRiskParamsResponse"></a>
 
 ### QueryAllBackingRiskParamsResponse
 
@@ -1426,14 +1426,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `risk_params` | [BackingRiskParams](#merlion.maker.v1.BackingRiskParams) | repeated |  |
+| `risk_params` | [BackingRiskParams](#warmage.maker.v1.BackingRiskParams) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryAllCollateralPoolsRequest"></a>
+<a name="warmage.maker.v1.QueryAllCollateralPoolsRequest"></a>
 
 ### QueryAllCollateralPoolsRequest
 
@@ -1443,7 +1443,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryAllCollateralPoolsResponse"></a>
+<a name="warmage.maker.v1.QueryAllCollateralPoolsResponse"></a>
 
 ### QueryAllCollateralPoolsResponse
 
@@ -1451,14 +1451,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `collateral_pools` | [PoolCollateral](#merlion.maker.v1.PoolCollateral) | repeated |  |
+| `collateral_pools` | [PoolCollateral](#warmage.maker.v1.PoolCollateral) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryAllCollateralRiskParamsRequest"></a>
+<a name="warmage.maker.v1.QueryAllCollateralRiskParamsRequest"></a>
 
 ### QueryAllCollateralRiskParamsRequest
 
@@ -1468,7 +1468,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryAllCollateralRiskParamsResponse"></a>
+<a name="warmage.maker.v1.QueryAllCollateralRiskParamsResponse"></a>
 
 ### QueryAllCollateralRiskParamsResponse
 
@@ -1476,14 +1476,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `risk_params` | [CollateralRiskParams](#merlion.maker.v1.CollateralRiskParams) | repeated |  |
+| `risk_params` | [CollateralRiskParams](#warmage.maker.v1.CollateralRiskParams) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryBackingPoolRequest"></a>
+<a name="warmage.maker.v1.QueryBackingPoolRequest"></a>
 
 ### QueryBackingPoolRequest
 
@@ -1498,7 +1498,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryBackingPoolResponse"></a>
+<a name="warmage.maker.v1.QueryBackingPoolResponse"></a>
 
 ### QueryBackingPoolResponse
 
@@ -1506,14 +1506,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `backing_pool` | [PoolBacking](#merlion.maker.v1.PoolBacking) |  |  |
+| `backing_pool` | [PoolBacking](#warmage.maker.v1.PoolBacking) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryBackingRatioRequest"></a>
+<a name="warmage.maker.v1.QueryBackingRatioRequest"></a>
 
 ### QueryBackingRatioRequest
 
@@ -1523,7 +1523,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryBackingRatioResponse"></a>
+<a name="warmage.maker.v1.QueryBackingRatioResponse"></a>
 
 ### QueryBackingRatioResponse
 
@@ -1539,7 +1539,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryCollateralOfAccountRequest"></a>
+<a name="warmage.maker.v1.QueryCollateralOfAccountRequest"></a>
 
 ### QueryCollateralOfAccountRequest
 
@@ -1555,7 +1555,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryCollateralOfAccountResponse"></a>
+<a name="warmage.maker.v1.QueryCollateralOfAccountResponse"></a>
 
 ### QueryCollateralOfAccountResponse
 
@@ -1563,14 +1563,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `account_collateral` | [AccountCollateral](#merlion.maker.v1.AccountCollateral) |  |  |
+| `account_collateral` | [AccountCollateral](#warmage.maker.v1.AccountCollateral) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryCollateralPoolRequest"></a>
+<a name="warmage.maker.v1.QueryCollateralPoolRequest"></a>
 
 ### QueryCollateralPoolRequest
 
@@ -1585,7 +1585,7 @@ parameters.
 
 
 
-<a name="merlion.maker.v1.QueryCollateralPoolResponse"></a>
+<a name="warmage.maker.v1.QueryCollateralPoolResponse"></a>
 
 ### QueryCollateralPoolResponse
 
@@ -1593,14 +1593,14 @@ parameters.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `collateral_pool` | [PoolCollateral](#merlion.maker.v1.PoolCollateral) |  |  |
+| `collateral_pool` | [PoolCollateral](#warmage.maker.v1.PoolCollateral) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryParamsRequest"></a>
+<a name="warmage.maker.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -1610,7 +1610,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.maker.v1.QueryParamsResponse"></a>
+<a name="warmage.maker.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -1618,14 +1618,14 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.maker.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.maker.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryTotalBackingRequest"></a>
+<a name="warmage.maker.v1.QueryTotalBackingRequest"></a>
 
 ### QueryTotalBackingRequest
 
@@ -1635,7 +1635,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 
 
-<a name="merlion.maker.v1.QueryTotalBackingResponse"></a>
+<a name="warmage.maker.v1.QueryTotalBackingResponse"></a>
 
 ### QueryTotalBackingResponse
 
@@ -1643,14 +1643,14 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `total_backing` | [TotalBacking](#merlion.maker.v1.TotalBacking) |  |  |
+| `total_backing` | [TotalBacking](#warmage.maker.v1.TotalBacking) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.QueryTotalCollateralRequest"></a>
+<a name="warmage.maker.v1.QueryTotalCollateralRequest"></a>
 
 ### QueryTotalCollateralRequest
 
@@ -1660,7 +1660,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 
 
-<a name="merlion.maker.v1.QueryTotalCollateralResponse"></a>
+<a name="warmage.maker.v1.QueryTotalCollateralResponse"></a>
 
 ### QueryTotalCollateralResponse
 
@@ -1668,7 +1668,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `total_collateral` | [TotalCollateral](#merlion.maker.v1.TotalCollateral) |  |  |
+| `total_collateral` | [TotalCollateral](#warmage.maker.v1.TotalCollateral) |  |  |
 
 
 
@@ -1681,48 +1681,48 @@ QueryParamsResponse is response type for the Query/Params RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.maker.v1.Query"></a>
+<a name="warmage.maker.v1.Query"></a>
 
 ### Query
 Query defines the maker gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `AllBackingRiskParams` | [QueryAllBackingRiskParamsRequest](#merlion.maker.v1.QueryAllBackingRiskParamsRequest) | [QueryAllBackingRiskParamsResponse](#merlion.maker.v1.QueryAllBackingRiskParamsResponse) | AllBackingRiskParams queries risk params of all the backing pools. | GET|/merlion/maker/v1/all_backing_risk_params|
-| `AllCollateralRiskParams` | [QueryAllCollateralRiskParamsRequest](#merlion.maker.v1.QueryAllCollateralRiskParamsRequest) | [QueryAllCollateralRiskParamsResponse](#merlion.maker.v1.QueryAllCollateralRiskParamsResponse) | AllCollateralRiskParams queries risk params of all the collateral pools. | GET|/merlion/maker/v1/all_collateral_risk_params|
-| `AllBackingPools` | [QueryAllBackingPoolsRequest](#merlion.maker.v1.QueryAllBackingPoolsRequest) | [QueryAllBackingPoolsResponse](#merlion.maker.v1.QueryAllBackingPoolsResponse) | AllBackingPools queries all the backing pools. | GET|/merlion/maker/v1/all_backing_pools|
-| `AllCollateralPools` | [QueryAllCollateralPoolsRequest](#merlion.maker.v1.QueryAllCollateralPoolsRequest) | [QueryAllCollateralPoolsResponse](#merlion.maker.v1.QueryAllCollateralPoolsResponse) | AllCollateralPools queries all the collateral pools. | GET|/merlion/maker/v1/all_collateral_pools|
-| `BackingPool` | [QueryBackingPoolRequest](#merlion.maker.v1.QueryBackingPoolRequest) | [QueryBackingPoolResponse](#merlion.maker.v1.QueryBackingPoolResponse) | BackingPool queries a backing pool. | GET|/merlion/maker/v1/backing_pool|
-| `CollateralPool` | [QueryCollateralPoolRequest](#merlion.maker.v1.QueryCollateralPoolRequest) | [QueryCollateralPoolResponse](#merlion.maker.v1.QueryCollateralPoolResponse) | CollateralPool queries a collateral pool. | GET|/merlion/maker/v1/collateral_pool|
-| `CollateralOfAccount` | [QueryCollateralOfAccountRequest](#merlion.maker.v1.QueryCollateralOfAccountRequest) | [QueryCollateralOfAccountResponse](#merlion.maker.v1.QueryCollateralOfAccountResponse) | CollateralOfAccount queries the collateral of an account. | GET|/merlion/maker/v1/collateral_account|
-| `TotalBacking` | [QueryTotalBackingRequest](#merlion.maker.v1.QueryTotalBackingRequest) | [QueryTotalBackingResponse](#merlion.maker.v1.QueryTotalBackingResponse) | TotalBacking queries the total backing. | GET|/merlion/maker/v1/total_backing|
-| `TotalCollateral` | [QueryTotalCollateralRequest](#merlion.maker.v1.QueryTotalCollateralRequest) | [QueryTotalCollateralResponse](#merlion.maker.v1.QueryTotalCollateralResponse) | TotalCollateral queries the total collateral. | GET|/merlion/maker/v1/total_collateral|
-| `BackingRatio` | [QueryBackingRatioRequest](#merlion.maker.v1.QueryBackingRatioRequest) | [QueryBackingRatioResponse](#merlion.maker.v1.QueryBackingRatioResponse) | BackingRatio queries the backing ratio. | GET|/merlion/maker/v1/backing_ratio|
-| `Params` | [QueryParamsRequest](#merlion.maker.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.maker.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlion/maker/v1/params|
-| `EstimateMintBySwapIn` | [EstimateMintBySwapInRequest](#merlion.maker.v1.EstimateMintBySwapInRequest) | [EstimateMintBySwapInResponse](#merlion.maker.v1.EstimateMintBySwapInResponse) | EstimateMintBySwapIn estimates input of minting by swap. | GET|/merlion/maker/v1/estimate_mint_by_swap_in|
-| `EstimateMintBySwapOut` | [EstimateMintBySwapOutRequest](#merlion.maker.v1.EstimateMintBySwapOutRequest) | [EstimateMintBySwapOutResponse](#merlion.maker.v1.EstimateMintBySwapOutResponse) | EstimateMintBySwapOut estimates output of minting by swap. | GET|/merlion/maker/v1/estimate_mint_by_swap_out|
-| `EstimateBurnBySwapIn` | [EstimateBurnBySwapInRequest](#merlion.maker.v1.EstimateBurnBySwapInRequest) | [EstimateBurnBySwapInResponse](#merlion.maker.v1.EstimateBurnBySwapInResponse) | EstimateBurnBySwapIn estimates input of burning by swap. | GET|/merlion/maker/v1/estimate_burn_by_swap_in|
-| `EstimateBurnBySwapOut` | [EstimateBurnBySwapOutRequest](#merlion.maker.v1.EstimateBurnBySwapOutRequest) | [EstimateBurnBySwapOutResponse](#merlion.maker.v1.EstimateBurnBySwapOutResponse) | EstimateBurnBySwapOut estimates output of burning by swap. | GET|/merlion/maker/v1/estimate_burn_by_swap_out|
-| `EstimateBuyBackingIn` | [EstimateBuyBackingInRequest](#merlion.maker.v1.EstimateBuyBackingInRequest) | [EstimateBuyBackingInResponse](#merlion.maker.v1.EstimateBuyBackingInResponse) | EstimateBuyBackingIn estimates inpput of buying backing assets. | GET|/merlion/maker/v1/estimate_buy_backing_in|
-| `EstimateBuyBackingOut` | [EstimateBuyBackingOutRequest](#merlion.maker.v1.EstimateBuyBackingOutRequest) | [EstimateBuyBackingOutResponse](#merlion.maker.v1.EstimateBuyBackingOutResponse) | EstimateBuyBackingOut estimates output of buying backing assets. | GET|/merlion/maker/v1/estimate_buy_backing_out|
-| `EstimateSellBackingIn` | [EstimateSellBackingInRequest](#merlion.maker.v1.EstimateSellBackingInRequest) | [EstimateSellBackingInResponse](#merlion.maker.v1.EstimateSellBackingInResponse) | EstimateSellBackingIn estimates input of selling backing assets. | GET|/merlion/maker/v1/estimate_sell_backing_in|
-| `EstimateSellBackingOut` | [EstimateSellBackingOutRequest](#merlion.maker.v1.EstimateSellBackingOutRequest) | [EstimateSellBackingOutResponse](#merlion.maker.v1.EstimateSellBackingOutResponse) | EstimateSellBackingOut estimates output of selling backing assets. | GET|/merlion/maker/v1/estimate_sell_backing_out|
+| `AllBackingRiskParams` | [QueryAllBackingRiskParamsRequest](#warmage.maker.v1.QueryAllBackingRiskParamsRequest) | [QueryAllBackingRiskParamsResponse](#warmage.maker.v1.QueryAllBackingRiskParamsResponse) | AllBackingRiskParams queries risk params of all the backing pools. | GET|/warmage/maker/v1/all_backing_risk_params|
+| `AllCollateralRiskParams` | [QueryAllCollateralRiskParamsRequest](#warmage.maker.v1.QueryAllCollateralRiskParamsRequest) | [QueryAllCollateralRiskParamsResponse](#warmage.maker.v1.QueryAllCollateralRiskParamsResponse) | AllCollateralRiskParams queries risk params of all the collateral pools. | GET|/warmage/maker/v1/all_collateral_risk_params|
+| `AllBackingPools` | [QueryAllBackingPoolsRequest](#warmage.maker.v1.QueryAllBackingPoolsRequest) | [QueryAllBackingPoolsResponse](#warmage.maker.v1.QueryAllBackingPoolsResponse) | AllBackingPools queries all the backing pools. | GET|/warmage/maker/v1/all_backing_pools|
+| `AllCollateralPools` | [QueryAllCollateralPoolsRequest](#warmage.maker.v1.QueryAllCollateralPoolsRequest) | [QueryAllCollateralPoolsResponse](#warmage.maker.v1.QueryAllCollateralPoolsResponse) | AllCollateralPools queries all the collateral pools. | GET|/warmage/maker/v1/all_collateral_pools|
+| `BackingPool` | [QueryBackingPoolRequest](#warmage.maker.v1.QueryBackingPoolRequest) | [QueryBackingPoolResponse](#warmage.maker.v1.QueryBackingPoolResponse) | BackingPool queries a backing pool. | GET|/warmage/maker/v1/backing_pool|
+| `CollateralPool` | [QueryCollateralPoolRequest](#warmage.maker.v1.QueryCollateralPoolRequest) | [QueryCollateralPoolResponse](#warmage.maker.v1.QueryCollateralPoolResponse) | CollateralPool queries a collateral pool. | GET|/warmage/maker/v1/collateral_pool|
+| `CollateralOfAccount` | [QueryCollateralOfAccountRequest](#warmage.maker.v1.QueryCollateralOfAccountRequest) | [QueryCollateralOfAccountResponse](#warmage.maker.v1.QueryCollateralOfAccountResponse) | CollateralOfAccount queries the collateral of an account. | GET|/warmage/maker/v1/collateral_account|
+| `TotalBacking` | [QueryTotalBackingRequest](#warmage.maker.v1.QueryTotalBackingRequest) | [QueryTotalBackingResponse](#warmage.maker.v1.QueryTotalBackingResponse) | TotalBacking queries the total backing. | GET|/warmage/maker/v1/total_backing|
+| `TotalCollateral` | [QueryTotalCollateralRequest](#warmage.maker.v1.QueryTotalCollateralRequest) | [QueryTotalCollateralResponse](#warmage.maker.v1.QueryTotalCollateralResponse) | TotalCollateral queries the total collateral. | GET|/warmage/maker/v1/total_collateral|
+| `BackingRatio` | [QueryBackingRatioRequest](#warmage.maker.v1.QueryBackingRatioRequest) | [QueryBackingRatioResponse](#warmage.maker.v1.QueryBackingRatioResponse) | BackingRatio queries the backing ratio. | GET|/warmage/maker/v1/backing_ratio|
+| `Params` | [QueryParamsRequest](#warmage.maker.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.maker.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmage/maker/v1/params|
+| `EstimateMintBySwapIn` | [EstimateMintBySwapInRequest](#warmage.maker.v1.EstimateMintBySwapInRequest) | [EstimateMintBySwapInResponse](#warmage.maker.v1.EstimateMintBySwapInResponse) | EstimateMintBySwapIn estimates input of minting by swap. | GET|/warmage/maker/v1/estimate_mint_by_swap_in|
+| `EstimateMintBySwapOut` | [EstimateMintBySwapOutRequest](#warmage.maker.v1.EstimateMintBySwapOutRequest) | [EstimateMintBySwapOutResponse](#warmage.maker.v1.EstimateMintBySwapOutResponse) | EstimateMintBySwapOut estimates output of minting by swap. | GET|/warmage/maker/v1/estimate_mint_by_swap_out|
+| `EstimateBurnBySwapIn` | [EstimateBurnBySwapInRequest](#warmage.maker.v1.EstimateBurnBySwapInRequest) | [EstimateBurnBySwapInResponse](#warmage.maker.v1.EstimateBurnBySwapInResponse) | EstimateBurnBySwapIn estimates input of burning by swap. | GET|/warmage/maker/v1/estimate_burn_by_swap_in|
+| `EstimateBurnBySwapOut` | [EstimateBurnBySwapOutRequest](#warmage.maker.v1.EstimateBurnBySwapOutRequest) | [EstimateBurnBySwapOutResponse](#warmage.maker.v1.EstimateBurnBySwapOutResponse) | EstimateBurnBySwapOut estimates output of burning by swap. | GET|/warmage/maker/v1/estimate_burn_by_swap_out|
+| `EstimateBuyBackingIn` | [EstimateBuyBackingInRequest](#warmage.maker.v1.EstimateBuyBackingInRequest) | [EstimateBuyBackingInResponse](#warmage.maker.v1.EstimateBuyBackingInResponse) | EstimateBuyBackingIn estimates inpput of buying backing assets. | GET|/warmage/maker/v1/estimate_buy_backing_in|
+| `EstimateBuyBackingOut` | [EstimateBuyBackingOutRequest](#warmage.maker.v1.EstimateBuyBackingOutRequest) | [EstimateBuyBackingOutResponse](#warmage.maker.v1.EstimateBuyBackingOutResponse) | EstimateBuyBackingOut estimates output of buying backing assets. | GET|/warmage/maker/v1/estimate_buy_backing_out|
+| `EstimateSellBackingIn` | [EstimateSellBackingInRequest](#warmage.maker.v1.EstimateSellBackingInRequest) | [EstimateSellBackingInResponse](#warmage.maker.v1.EstimateSellBackingInResponse) | EstimateSellBackingIn estimates input of selling backing assets. | GET|/warmage/maker/v1/estimate_sell_backing_in|
+| `EstimateSellBackingOut` | [EstimateSellBackingOutRequest](#warmage.maker.v1.EstimateSellBackingOutRequest) | [EstimateSellBackingOutResponse](#warmage.maker.v1.EstimateSellBackingOutResponse) | EstimateSellBackingOut estimates output of selling backing assets. | GET|/warmage/maker/v1/estimate_sell_backing_out|
 
  <!-- end services -->
 
 
 
-<a name="merlion/maker/v1/tx.proto"></a>
+<a name="warmage/maker/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/maker/v1/tx.proto
+## warmage/maker/v1/tx.proto
 
 
 
-<a name="merlion.maker.v1.MsgBurnByCollateral"></a>
+<a name="warmage.maker.v1.MsgBurnByCollateral"></a>
 
 ### MsgBurnByCollateral
-MsgBurnByCollateral represents a message to burn Mer stablecoins by unlocking
+MsgBurnByCollateral represents a message to burn War stablecoins by unlocking
 collateral.
 
 
@@ -1737,7 +1737,7 @@ collateral.
 
 
 
-<a name="merlion.maker.v1.MsgBurnByCollateralResponse"></a>
+<a name="warmage.maker.v1.MsgBurnByCollateralResponse"></a>
 
 ### MsgBurnByCollateralResponse
 MsgBurnByCollateralResponse defines the Msg/BurnByCollateral response type.
@@ -1752,10 +1752,10 @@ MsgBurnByCollateralResponse defines the Msg/BurnByCollateral response type.
 
 
 
-<a name="merlion.maker.v1.MsgBurnBySwap"></a>
+<a name="warmage.maker.v1.MsgBurnBySwap"></a>
 
 ### MsgBurnBySwap
-MsgBurnBySwap represents a message to burn Mer stablecoins by swapping.
+MsgBurnBySwap represents a message to burn War stablecoins by swapping.
 
 
 | Field | Type | Label | Description |
@@ -1764,14 +1764,14 @@ MsgBurnBySwap represents a message to burn Mer stablecoins by swapping.
 | `to` | [string](#string) |  |  |
 | `burn_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `backing_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.MsgBurnBySwapResponse"></a>
+<a name="warmage.maker.v1.MsgBurnBySwapResponse"></a>
 
 ### MsgBurnBySwapResponse
 MsgBurnBySwapResponse defines the Msg/BurnBySwap response type.
@@ -1780,7 +1780,7 @@ MsgBurnBySwapResponse defines the Msg/BurnBySwap response type.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `burn_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1788,7 +1788,7 @@ MsgBurnBySwapResponse defines the Msg/BurnBySwap response type.
 
 
 
-<a name="merlion.maker.v1.MsgBuyBacking"></a>
+<a name="warmage.maker.v1.MsgBuyBacking"></a>
 
 ### MsgBuyBacking
 MsgBuyBacking represents a message to buy strong-backing assets.
@@ -1798,7 +1798,7 @@ MsgBuyBacking represents a message to buy strong-backing assets.
 | ----- | ---- | ----- | ----------- |
 | `sender` | [string](#string) |  |  |
 | `to` | [string](#string) |  |  |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `backing_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -1806,7 +1806,7 @@ MsgBuyBacking represents a message to buy strong-backing assets.
 
 
 
-<a name="merlion.maker.v1.MsgBuyBackingResponse"></a>
+<a name="warmage.maker.v1.MsgBuyBackingResponse"></a>
 
 ### MsgBuyBackingResponse
 MsgBuyBackingResponse defines the Msg/BuyBacking response type.
@@ -1822,7 +1822,7 @@ MsgBuyBackingResponse defines the Msg/BuyBacking response type.
 
 
 
-<a name="merlion.maker.v1.MsgDepositCollateral"></a>
+<a name="warmage.maker.v1.MsgDepositCollateral"></a>
 
 ### MsgDepositCollateral
 MsgDepositCollateral represents a message to deposit collateral assets.
@@ -1833,14 +1833,14 @@ MsgDepositCollateral represents a message to deposit collateral assets.
 | `sender` | [string](#string) |  |  |
 | `to` | [string](#string) |  |  |
 | `collateral_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.MsgDepositCollateralResponse"></a>
+<a name="warmage.maker.v1.MsgDepositCollateralResponse"></a>
 
 ### MsgDepositCollateralResponse
 MsgDepositCollateralResponse defines the Msg/DepositCollateral response type.
@@ -1850,7 +1850,7 @@ MsgDepositCollateralResponse defines the Msg/DepositCollateral response type.
 
 
 
-<a name="merlion.maker.v1.MsgLiquidateCollateral"></a>
+<a name="warmage.maker.v1.MsgLiquidateCollateral"></a>
 
 ### MsgLiquidateCollateral
 MsgLiquidateCollateral represents a message to liquidates collateral assets.
@@ -1869,7 +1869,7 @@ MsgLiquidateCollateral represents a message to liquidates collateral assets.
 
 
 
-<a name="merlion.maker.v1.MsgLiquidateCollateralResponse"></a>
+<a name="warmage.maker.v1.MsgLiquidateCollateralResponse"></a>
 
 ### MsgLiquidateCollateralResponse
 MsgLiquidateCollateralResponse defines the Msg/LiquidateCollateral response
@@ -1886,10 +1886,10 @@ type.
 
 
 
-<a name="merlion.maker.v1.MsgMintByCollateral"></a>
+<a name="warmage.maker.v1.MsgMintByCollateral"></a>
 
 ### MsgMintByCollateral
-MsgMintByCollateral represents a message to mint Mer stablecoins by locking
+MsgMintByCollateral represents a message to mint War stablecoins by locking
 collateral.
 
 
@@ -1905,7 +1905,7 @@ collateral.
 
 
 
-<a name="merlion.maker.v1.MsgMintByCollateralResponse"></a>
+<a name="warmage.maker.v1.MsgMintByCollateralResponse"></a>
 
 ### MsgMintByCollateralResponse
 MsgMintByCollateralResponse defines the Msg/MintByCollateral response type.
@@ -1920,10 +1920,10 @@ MsgMintByCollateralResponse defines the Msg/MintByCollateral response type.
 
 
 
-<a name="merlion.maker.v1.MsgMintBySwap"></a>
+<a name="warmage.maker.v1.MsgMintBySwap"></a>
 
 ### MsgMintBySwap
-MsgMintBySwap represents a message to mint Mer stablecoins by swapping.
+MsgMintBySwap represents a message to mint War stablecoins by swapping.
 
 
 | Field | Type | Label | Description |
@@ -1931,7 +1931,7 @@ MsgMintBySwap represents a message to mint Mer stablecoins by swapping.
 | `sender` | [string](#string) |  |  |
 | `to` | [string](#string) |  |  |
 | `backing_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in_max` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `full_backing` | [bool](#bool) |  |  |
 
@@ -1940,7 +1940,7 @@ MsgMintBySwap represents a message to mint Mer stablecoins by swapping.
 
 
 
-<a name="merlion.maker.v1.MsgMintBySwapResponse"></a>
+<a name="warmage.maker.v1.MsgMintBySwapResponse"></a>
 
 ### MsgMintBySwapResponse
 MsgMintBySwapResponse defines the Msg/MintBySwap response type.
@@ -1949,7 +1949,7 @@ MsgMintBySwapResponse defines the Msg/MintBySwap response type.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `backing_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `mint_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
@@ -1958,11 +1958,11 @@ MsgMintBySwapResponse defines the Msg/MintBySwap response type.
 
 
 
-<a name="merlion.maker.v1.MsgRedeemCollateral"></a>
+<a name="warmage.maker.v1.MsgRedeemCollateral"></a>
 
 ### MsgRedeemCollateral
 MsgRedeemCollateral represents a message to redeem collateral assets and
-collateralized Lion coins.
+collateralized Mage coins.
 
 
 | Field | Type | Label | Description |
@@ -1970,14 +1970,14 @@ collateralized Lion coins.
 | `sender` | [string](#string) |  |  |
 | `to` | [string](#string) |  |  |
 | `collateral_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.MsgRedeemCollateralResponse"></a>
+<a name="warmage.maker.v1.MsgRedeemCollateralResponse"></a>
 
 ### MsgRedeemCollateralResponse
 MsgRedeemCollateralResponse defines the Msg/RedeemCollateral response type.
@@ -1987,7 +1987,7 @@ MsgRedeemCollateralResponse defines the Msg/RedeemCollateral response type.
 
 
 
-<a name="merlion.maker.v1.MsgSellBacking"></a>
+<a name="warmage.maker.v1.MsgSellBacking"></a>
 
 ### MsgSellBacking
 MsgSellBacking represents a message to sell strong-backing
@@ -1999,14 +1999,14 @@ assets.
 | `sender` | [string](#string) |  |  |
 | `to` | [string](#string) |  |  |
 | `backing_in` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
-| `lion_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out_min` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
 
 
 
 
-<a name="merlion.maker.v1.MsgSellBackingResponse"></a>
+<a name="warmage.maker.v1.MsgSellBackingResponse"></a>
 
 ### MsgSellBackingResponse
 MsgSellBackingResponse defines the Msg/SellBacking response type.
@@ -2014,7 +2014,7 @@ MsgSellBackingResponse defines the Msg/SellBacking response type.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `lion_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
+| `mage_out` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 | `reback_fee` | [cosmos.base.v1beta1.Coin](#cosmos.base.v1beta1.Coin) |  |  |
 
 
@@ -2028,35 +2028,35 @@ MsgSellBackingResponse defines the Msg/SellBacking response type.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.maker.v1.Msg"></a>
+<a name="warmage.maker.v1.Msg"></a>
 
 ### Msg
 Msg defines the maker Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `MintBySwap` | [MsgMintBySwap](#merlion.maker.v1.MsgMintBySwap) | [MsgMintBySwapResponse](#merlion.maker.v1.MsgMintBySwapResponse) | MintBySwap mints Mer stablecoins by swapping in strong-backing assets and Lion coins. | GET|/merlion/maker/v1/tx/mint_by_swap|
-| `BurnBySwap` | [MsgBurnBySwap](#merlion.maker.v1.MsgBurnBySwap) | [MsgBurnBySwapResponse](#merlion.maker.v1.MsgBurnBySwapResponse) | BurnBySwap burns Mer stablecoins by swapping out strong-backing assets and Lion coins. | GET|/merlion/maker/v1/tx/burn_by_swap|
-| `BuyBacking` | [MsgBuyBacking](#merlion.maker.v1.MsgBuyBacking) | [MsgBuyBackingResponse](#merlion.maker.v1.MsgBuyBackingResponse) | BuyBacking buys strong-backing assets by spending Lion coins. | GET|/merlion/maker/v1/tx/buy_backing|
-| `SellBacking` | [MsgSellBacking](#merlion.maker.v1.MsgSellBacking) | [MsgSellBackingResponse](#merlion.maker.v1.MsgSellBackingResponse) | SellBacking sells strong-backing assets by earning Lion coins. | GET|/merlion/maker/v1/tx/sell_backing|
-| `MintByCollateral` | [MsgMintByCollateral](#merlion.maker.v1.MsgMintByCollateral) | [MsgMintByCollateralResponse](#merlion.maker.v1.MsgMintByCollateralResponse) | MintByCollateral mints Mer stablecoins by locking collateral assets and spending Lion coins. | GET|/merlion/maker/v1/tx/mint_by_collateral|
-| `BurnByCollateral` | [MsgBurnByCollateral](#merlion.maker.v1.MsgBurnByCollateral) | [MsgBurnByCollateralResponse](#merlion.maker.v1.MsgBurnByCollateralResponse) | BurnByCollateral burns Mer stablecoins by unlocking collateral assets and earning Lion coins. | GET|/merlion/maker/v1/tx/burn_by_collateral|
-| `DepositCollateral` | [MsgDepositCollateral](#merlion.maker.v1.MsgDepositCollateral) | [MsgDepositCollateralResponse](#merlion.maker.v1.MsgDepositCollateralResponse) | DepositCollateral deposits collateral assets. | GET|/merlion/maker/v1/tx/deposit_collateral|
-| `RedeemCollateral` | [MsgRedeemCollateral](#merlion.maker.v1.MsgRedeemCollateral) | [MsgRedeemCollateralResponse](#merlion.maker.v1.MsgRedeemCollateralResponse) | RedeemCollateral redeems collateral assets and collateralized Lion coins. | GET|/merlion/maker/v1/tx/redeem_collateral|
-| `LiquidateCollateral` | [MsgLiquidateCollateral](#merlion.maker.v1.MsgLiquidateCollateral) | [MsgLiquidateCollateralResponse](#merlion.maker.v1.MsgLiquidateCollateralResponse) | LiquidateCollateral liquidates collateral assets which is undercollateralized. | GET|/merlion/maker/v1/tx/liquidate_collateral|
+| `MintBySwap` | [MsgMintBySwap](#warmage.maker.v1.MsgMintBySwap) | [MsgMintBySwapResponse](#warmage.maker.v1.MsgMintBySwapResponse) | MintBySwap mints War stablecoins by swapping in strong-backing assets and Mage coins. | GET|/warmage/maker/v1/tx/mint_by_swap|
+| `BurnBySwap` | [MsgBurnBySwap](#warmage.maker.v1.MsgBurnBySwap) | [MsgBurnBySwapResponse](#warmage.maker.v1.MsgBurnBySwapResponse) | BurnBySwap burns War stablecoins by swapping out strong-backing assets and Mage coins. | GET|/warmage/maker/v1/tx/burn_by_swap|
+| `BuyBacking` | [MsgBuyBacking](#warmage.maker.v1.MsgBuyBacking) | [MsgBuyBackingResponse](#warmage.maker.v1.MsgBuyBackingResponse) | BuyBacking buys strong-backing assets by spending Mage coins. | GET|/warmage/maker/v1/tx/buy_backing|
+| `SellBacking` | [MsgSellBacking](#warmage.maker.v1.MsgSellBacking) | [MsgSellBackingResponse](#warmage.maker.v1.MsgSellBackingResponse) | SellBacking sells strong-backing assets by earning Mage coins. | GET|/warmage/maker/v1/tx/sell_backing|
+| `MintByCollateral` | [MsgMintByCollateral](#warmage.maker.v1.MsgMintByCollateral) | [MsgMintByCollateralResponse](#warmage.maker.v1.MsgMintByCollateralResponse) | MintByCollateral mints War stablecoins by locking collateral assets and spending Mage coins. | GET|/warmage/maker/v1/tx/mint_by_collateral|
+| `BurnByCollateral` | [MsgBurnByCollateral](#warmage.maker.v1.MsgBurnByCollateral) | [MsgBurnByCollateralResponse](#warmage.maker.v1.MsgBurnByCollateralResponse) | BurnByCollateral burns War stablecoins by unlocking collateral assets and earning Mage coins. | GET|/warmage/maker/v1/tx/burn_by_collateral|
+| `DepositCollateral` | [MsgDepositCollateral](#warmage.maker.v1.MsgDepositCollateral) | [MsgDepositCollateralResponse](#warmage.maker.v1.MsgDepositCollateralResponse) | DepositCollateral deposits collateral assets. | GET|/warmage/maker/v1/tx/deposit_collateral|
+| `RedeemCollateral` | [MsgRedeemCollateral](#warmage.maker.v1.MsgRedeemCollateral) | [MsgRedeemCollateralResponse](#warmage.maker.v1.MsgRedeemCollateralResponse) | RedeemCollateral redeems collateral assets and collateralized Mage coins. | GET|/warmage/maker/v1/tx/redeem_collateral|
+| `LiquidateCollateral` | [MsgLiquidateCollateral](#warmage.maker.v1.MsgLiquidateCollateral) | [MsgLiquidateCollateralResponse](#warmage.maker.v1.MsgLiquidateCollateralResponse) | LiquidateCollateral liquidates collateral assets which is undercollateralized. | GET|/warmage/maker/v1/tx/liquidate_collateral|
 
  <!-- end services -->
 
 
 
-<a name="merlion/oracle/v1/oracle.proto"></a>
+<a name="warmage/oracle/v1/oracle.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/oracle/v1/oracle.proto
+## warmage/oracle/v1/oracle.proto
 
 
 
-<a name="merlion.oracle.v1.AggregateExchangeRatePrevote"></a>
+<a name="warmage.oracle.v1.AggregateExchangeRatePrevote"></a>
 
 ### AggregateExchangeRatePrevote
 AggregateExchangeRatePrevote represents the aggregate prevoting on the
@@ -2076,7 +2076,7 @@ rate}{denom},...,{exchange rate}{denom}:{voter}")
 
 
 
-<a name="merlion.oracle.v1.AggregateExchangeRateVote"></a>
+<a name="warmage.oracle.v1.AggregateExchangeRateVote"></a>
 
 ### AggregateExchangeRateVote
 AggregateExchangeRateVote represents the voting on
@@ -2085,7 +2085,7 @@ the exchange rates of various assets denominated in uUSD.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `exchange_rate_tuples` | [ExchangeRateTuple](#merlion.oracle.v1.ExchangeRateTuple) | repeated |  |
+| `exchange_rate_tuples` | [ExchangeRateTuple](#warmage.oracle.v1.ExchangeRateTuple) | repeated |  |
 | `voter` | [string](#string) |  |  |
 
 
@@ -2093,7 +2093,7 @@ the exchange rates of various assets denominated in uUSD.
 
 
 
-<a name="merlion.oracle.v1.ExchangeRateTuple"></a>
+<a name="warmage.oracle.v1.ExchangeRateTuple"></a>
 
 ### ExchangeRateTuple
 ExchangeRateTuple stores interpreted exchange rates data.
@@ -2109,7 +2109,7 @@ ExchangeRateTuple stores interpreted exchange rates data.
 
 
 
-<a name="merlion.oracle.v1.Params"></a>
+<a name="warmage.oracle.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the oracle module.
@@ -2130,7 +2130,7 @@ Params defines the parameters for the oracle module.
 
 
 
-<a name="merlion.oracle.v1.RegisterTargetProposal"></a>
+<a name="warmage.oracle.v1.RegisterTargetProposal"></a>
 
 ### RegisterTargetProposal
 RegisterTargetProposal is a gov Content type to register eligible
@@ -2141,14 +2141,14 @@ target asset which will be price quoted.
 | ----- | ---- | ----- | ----------- |
 | `title` | [string](#string) |  | title of the proposal |
 | `description` | [string](#string) |  | proposal description |
-| `target_params` | [TargetParams](#merlion.oracle.v1.TargetParams) |  | target params |
+| `target_params` | [TargetParams](#warmage.oracle.v1.TargetParams) |  | target params |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.TargetParams"></a>
+<a name="warmage.oracle.v1.TargetParams"></a>
 
 ### TargetParams
 
@@ -2157,7 +2157,7 @@ target asset which will be price quoted.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `denom` | [string](#string) |  | coin denom |
-| `source` | [TargetSource](#merlion.oracle.v1.TargetSource) |  | quotation source |
+| `source` | [TargetSource](#warmage.oracle.v1.TargetSource) |  | quotation source |
 | `source_dex_contract` | [string](#string) |  | quotation source DEX contract address |
 
 
@@ -2167,7 +2167,7 @@ target asset which will be price quoted.
  <!-- end messages -->
 
 
-<a name="merlion.oracle.v1.TargetSource"></a>
+<a name="warmage.oracle.v1.TargetSource"></a>
 
 ### TargetSource
 TargetSource enumerates the quotation source of a target asset.
@@ -2189,14 +2189,14 @@ TargetSource enumerates the quotation source of a target asset.
 
 
 
-<a name="merlion/oracle/v1/genesis.proto"></a>
+<a name="warmage/oracle/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/oracle/v1/genesis.proto
+## warmage/oracle/v1/genesis.proto
 
 
 
-<a name="merlion.oracle.v1.FeederDelegation"></a>
+<a name="warmage.oracle.v1.FeederDelegation"></a>
 
 ### FeederDelegation
 FeederDelegation is the address for where oracle feeder authority are
@@ -2214,7 +2214,7 @@ default feeder addresses.
 
 
 
-<a name="merlion.oracle.v1.GenesisState"></a>
+<a name="warmage.oracle.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the oracle module's genesis state.
@@ -2222,19 +2222,19 @@ GenesisState defines the oracle module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.oracle.v1.Params) |  |  |
-| `feeder_delegations` | [FeederDelegation](#merlion.oracle.v1.FeederDelegation) | repeated |  |
-| `exchange_rates` | [ExchangeRateTuple](#merlion.oracle.v1.ExchangeRateTuple) | repeated |  |
-| `miss_counters` | [MissCounter](#merlion.oracle.v1.MissCounter) | repeated |  |
-| `aggregate_exchange_rate_prevotes` | [AggregateExchangeRatePrevote](#merlion.oracle.v1.AggregateExchangeRatePrevote) | repeated |  |
-| `aggregate_exchange_rate_votes` | [AggregateExchangeRateVote](#merlion.oracle.v1.AggregateExchangeRateVote) | repeated |  |
+| `params` | [Params](#warmage.oracle.v1.Params) |  |  |
+| `feeder_delegations` | [FeederDelegation](#warmage.oracle.v1.FeederDelegation) | repeated |  |
+| `exchange_rates` | [ExchangeRateTuple](#warmage.oracle.v1.ExchangeRateTuple) | repeated |  |
+| `miss_counters` | [MissCounter](#warmage.oracle.v1.MissCounter) | repeated |  |
+| `aggregate_exchange_rate_prevotes` | [AggregateExchangeRatePrevote](#warmage.oracle.v1.AggregateExchangeRatePrevote) | repeated |  |
+| `aggregate_exchange_rate_votes` | [AggregateExchangeRateVote](#warmage.oracle.v1.AggregateExchangeRateVote) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.MissCounter"></a>
+<a name="warmage.oracle.v1.MissCounter"></a>
 
 ### MissCounter
 MissCounter defines an miss counter and validator address pair used in
@@ -2260,14 +2260,14 @@ oracle module's genesis state.
 
 
 
-<a name="merlion/oracle/v1/query.proto"></a>
+<a name="warmage/oracle/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/oracle/v1/query.proto
+## warmage/oracle/v1/query.proto
 
 
 
-<a name="merlion.oracle.v1.QueryActivesRequest"></a>
+<a name="warmage.oracle.v1.QueryActivesRequest"></a>
 
 ### QueryActivesRequest
 QueryActivesRequest is the request type for the Query/Actives RPC method.
@@ -2277,7 +2277,7 @@ QueryActivesRequest is the request type for the Query/Actives RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryActivesResponse"></a>
+<a name="warmage.oracle.v1.QueryActivesResponse"></a>
 
 ### QueryActivesResponse
 QueryActivesResponse is response type for the
@@ -2293,7 +2293,7 @@ Query/Actives RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryAggregatePrevoteRequest"></a>
+<a name="warmage.oracle.v1.QueryAggregatePrevoteRequest"></a>
 
 ### QueryAggregatePrevoteRequest
 QueryAggregatePrevoteRequest is the request type for the
@@ -2309,7 +2309,7 @@ Query/AggregatePrevote RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryAggregatePrevoteResponse"></a>
+<a name="warmage.oracle.v1.QueryAggregatePrevoteResponse"></a>
 
 ### QueryAggregatePrevoteResponse
 QueryAggregatePrevoteResponse is response type for the
@@ -2318,14 +2318,14 @@ Query/AggregatePrevote RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `aggregate_prevote` | [AggregateExchangeRatePrevote](#merlion.oracle.v1.AggregateExchangeRatePrevote) |  | aggregate_prevote defines oracle aggregate prevote submitted by a validator in the current vote period. |
+| `aggregate_prevote` | [AggregateExchangeRatePrevote](#warmage.oracle.v1.AggregateExchangeRatePrevote) |  | aggregate_prevote defines oracle aggregate prevote submitted by a validator in the current vote period. |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.QueryAggregatePrevotesRequest"></a>
+<a name="warmage.oracle.v1.QueryAggregatePrevotesRequest"></a>
 
 ### QueryAggregatePrevotesRequest
 QueryAggregatePrevotesRequest is the request type for the
@@ -2336,7 +2336,7 @@ Query/AggregatePrevotes RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryAggregatePrevotesResponse"></a>
+<a name="warmage.oracle.v1.QueryAggregatePrevotesResponse"></a>
 
 ### QueryAggregatePrevotesResponse
 QueryAggregatePrevotesResponse is response type for the
@@ -2345,14 +2345,14 @@ Query/AggregatePrevotes RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `aggregate_prevotes` | [AggregateExchangeRatePrevote](#merlion.oracle.v1.AggregateExchangeRatePrevote) | repeated | aggregate_prevotes defines all oracle aggregate prevotes submitted in the current vote period. |
+| `aggregate_prevotes` | [AggregateExchangeRatePrevote](#warmage.oracle.v1.AggregateExchangeRatePrevote) | repeated | aggregate_prevotes defines all oracle aggregate prevotes submitted in the current vote period. |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.QueryAggregateVoteRequest"></a>
+<a name="warmage.oracle.v1.QueryAggregateVoteRequest"></a>
 
 ### QueryAggregateVoteRequest
 QueryAggregateVoteRequest is the request type for the Query/AggregateVote RPC
@@ -2368,7 +2368,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryAggregateVoteResponse"></a>
+<a name="warmage.oracle.v1.QueryAggregateVoteResponse"></a>
 
 ### QueryAggregateVoteResponse
 QueryAggregateVoteResponse is response type for the
@@ -2377,14 +2377,14 @@ Query/AggregateVote RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `aggregate_vote` | [AggregateExchangeRateVote](#merlion.oracle.v1.AggregateExchangeRateVote) |  | aggregate_vote defines oracle aggregate vote submitted by a validator in the current vote period. |
+| `aggregate_vote` | [AggregateExchangeRateVote](#warmage.oracle.v1.AggregateExchangeRateVote) |  | aggregate_vote defines oracle aggregate vote submitted by a validator in the current vote period. |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.QueryAggregateVotesRequest"></a>
+<a name="warmage.oracle.v1.QueryAggregateVotesRequest"></a>
 
 ### QueryAggregateVotesRequest
 QueryAggregateVotesRequest is the request type for the Query/AggregateVotes
@@ -2395,7 +2395,7 @@ RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryAggregateVotesResponse"></a>
+<a name="warmage.oracle.v1.QueryAggregateVotesResponse"></a>
 
 ### QueryAggregateVotesResponse
 QueryAggregateVotesResponse is response type for the
@@ -2404,14 +2404,14 @@ Query/AggregateVotes RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `aggregate_votes` | [AggregateExchangeRateVote](#merlion.oracle.v1.AggregateExchangeRateVote) | repeated | aggregate_votes defines all oracle aggregate votes submitted in the current vote period. |
+| `aggregate_votes` | [AggregateExchangeRateVote](#warmage.oracle.v1.AggregateExchangeRateVote) | repeated | aggregate_votes defines all oracle aggregate votes submitted in the current vote period. |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.QueryExchangeRateRequest"></a>
+<a name="warmage.oracle.v1.QueryExchangeRateRequest"></a>
 
 ### QueryExchangeRateRequest
 QueryExchangeRateRequest is the request type for the Query/ExchangeRate RPC
@@ -2427,7 +2427,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryExchangeRateResponse"></a>
+<a name="warmage.oracle.v1.QueryExchangeRateResponse"></a>
 
 ### QueryExchangeRateResponse
 QueryExchangeRateResponse is response type for the
@@ -2443,7 +2443,7 @@ Query/ExchangeRate RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryExchangeRatesRequest"></a>
+<a name="warmage.oracle.v1.QueryExchangeRatesRequest"></a>
 
 ### QueryExchangeRatesRequest
 QueryExchangeRatesRequest is the request type for the Query/ExchangeRates RPC
@@ -2454,7 +2454,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryExchangeRatesResponse"></a>
+<a name="warmage.oracle.v1.QueryExchangeRatesResponse"></a>
 
 ### QueryExchangeRatesResponse
 QueryExchangeRatesResponse is response type for the
@@ -2470,7 +2470,7 @@ Query/ExchangeRates RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryFeederDelegationRequest"></a>
+<a name="warmage.oracle.v1.QueryFeederDelegationRequest"></a>
 
 ### QueryFeederDelegationRequest
 QueryFeederDelegationRequest is the request type for the
@@ -2486,7 +2486,7 @@ Query/FeederDelegation RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryFeederDelegationResponse"></a>
+<a name="warmage.oracle.v1.QueryFeederDelegationResponse"></a>
 
 ### QueryFeederDelegationResponse
 QueryFeederDelegationResponse is response type for the
@@ -2502,7 +2502,7 @@ Query/FeederDelegation RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryMissCounterRequest"></a>
+<a name="warmage.oracle.v1.QueryMissCounterRequest"></a>
 
 ### QueryMissCounterRequest
 QueryMissCounterRequest is the request type for the Query/MissCounter RPC
@@ -2518,7 +2518,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryMissCounterResponse"></a>
+<a name="warmage.oracle.v1.QueryMissCounterResponse"></a>
 
 ### QueryMissCounterResponse
 QueryMissCounterResponse is response type for the
@@ -2534,7 +2534,7 @@ Query/MissCounter RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryParamsRequest"></a>
+<a name="warmage.oracle.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -2544,7 +2544,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryParamsResponse"></a>
+<a name="warmage.oracle.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -2552,14 +2552,14 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.oracle.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.oracle.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
 
 
 
-<a name="merlion.oracle.v1.QueryTargetsRequest"></a>
+<a name="warmage.oracle.v1.QueryTargetsRequest"></a>
 
 ### QueryTargetsRequest
 QueryTargetsRequest is the request type for the Query/Targets RPC
@@ -2570,7 +2570,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryTargetsResponse"></a>
+<a name="warmage.oracle.v1.QueryTargetsResponse"></a>
 
 ### QueryTargetsResponse
 QueryTargetsResponse is response type for the
@@ -2586,7 +2586,7 @@ Query/Targets RPC method.
 
 
 
-<a name="merlion.oracle.v1.QueryVoteTargetsRequest"></a>
+<a name="warmage.oracle.v1.QueryVoteTargetsRequest"></a>
 
 ### QueryVoteTargetsRequest
 QueryVoteTargetsRequest is the request type for the Query/VoteTargets RPC
@@ -2597,7 +2597,7 @@ method.
 
 
 
-<a name="merlion.oracle.v1.QueryVoteTargetsResponse"></a>
+<a name="warmage.oracle.v1.QueryVoteTargetsResponse"></a>
 
 ### QueryVoteTargetsResponse
 QueryVoteTargetsResponse is response type for the
@@ -2619,38 +2619,38 @@ Query/VoteTargets RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.oracle.v1.Query"></a>
+<a name="warmage.oracle.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `ExchangeRate` | [QueryExchangeRateRequest](#merlion.oracle.v1.QueryExchangeRateRequest) | [QueryExchangeRateResponse](#merlion.oracle.v1.QueryExchangeRateResponse) | ExchangeRate returns exchange rate of a denom. | GET|/merlion/oracle/v1/denoms/{denom}/exchange_rate|
-| `ExchangeRates` | [QueryExchangeRatesRequest](#merlion.oracle.v1.QueryExchangeRatesRequest) | [QueryExchangeRatesResponse](#merlion.oracle.v1.QueryExchangeRatesResponse) | ExchangeRates returns exchange rates of all denoms. | GET|/merlion/oracle/v1/denoms/exchange_rates|
-| `Actives` | [QueryActivesRequest](#merlion.oracle.v1.QueryActivesRequest) | [QueryActivesResponse](#merlion.oracle.v1.QueryActivesResponse) | Actives returns all active denoms. | GET|/merlion/oracle/v1/denoms/actives|
-| `VoteTargets` | [QueryVoteTargetsRequest](#merlion.oracle.v1.QueryVoteTargetsRequest) | [QueryVoteTargetsResponse](#merlion.oracle.v1.QueryVoteTargetsResponse) | VoteTargets returns all vote target denoms. | GET|/merlion/oracle/v1/denoms/vote_targets|
-| `Targets` | [QueryTargetsRequest](#merlion.oracle.v1.QueryTargetsRequest) | [QueryTargetsResponse](#merlion.oracle.v1.QueryTargetsResponse) | Targets returns all target denoms (including vote targets). | GET|/merlion/oracle/v1/denoms/targets|
-| `FeederDelegation` | [QueryFeederDelegationRequest](#merlion.oracle.v1.QueryFeederDelegationRequest) | [QueryFeederDelegationResponse](#merlion.oracle.v1.QueryFeederDelegationResponse) | FeederDelegation returns feeder delegation of a validator. | GET|/merlion/oracle/v1/validators/{validator_addr}/feeder|
-| `MissCounter` | [QueryMissCounterRequest](#merlion.oracle.v1.QueryMissCounterRequest) | [QueryMissCounterResponse](#merlion.oracle.v1.QueryMissCounterResponse) | MissCounter returns oracle miss counter of a validator. | GET|/merlion/oracle/v1/validators/{validator_addr}/miss|
-| `AggregatePrevote` | [QueryAggregatePrevoteRequest](#merlion.oracle.v1.QueryAggregatePrevoteRequest) | [QueryAggregatePrevoteResponse](#merlion.oracle.v1.QueryAggregatePrevoteResponse) | AggregatePrevote returns an aggregate prevote of a validator. | GET|/merlion/oracle/v1/validators/{validator_addr}/aggregate_prevote|
-| `AggregatePrevotes` | [QueryAggregatePrevotesRequest](#merlion.oracle.v1.QueryAggregatePrevotesRequest) | [QueryAggregatePrevotesResponse](#merlion.oracle.v1.QueryAggregatePrevotesResponse) | AggregatePrevotes returns aggregate prevotes of all validators. | GET|/merlion/oracle/v1/validators/aggregate_prevotes|
-| `AggregateVote` | [QueryAggregateVoteRequest](#merlion.oracle.v1.QueryAggregateVoteRequest) | [QueryAggregateVoteResponse](#merlion.oracle.v1.QueryAggregateVoteResponse) | AggregateVote returns an aggregate vote of a validator. | GET|/merlion/oracle/v1/valdiators/{validator_addr}/aggregate_vote|
-| `AggregateVotes` | [QueryAggregateVotesRequest](#merlion.oracle.v1.QueryAggregateVotesRequest) | [QueryAggregateVotesResponse](#merlion.oracle.v1.QueryAggregateVotesResponse) | AggregateVotes returns aggregate votes of all validators. | GET|/merlion/oracle/v1/validators/aggregate_votes|
-| `Params` | [QueryParamsRequest](#merlion.oracle.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.oracle.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlionzone/merlion/oracle/params|
+| `ExchangeRate` | [QueryExchangeRateRequest](#warmage.oracle.v1.QueryExchangeRateRequest) | [QueryExchangeRateResponse](#warmage.oracle.v1.QueryExchangeRateResponse) | ExchangeRate returns exchange rate of a denom. | GET|/warmage/oracle/v1/denoms/{denom}/exchange_rate|
+| `ExchangeRates` | [QueryExchangeRatesRequest](#warmage.oracle.v1.QueryExchangeRatesRequest) | [QueryExchangeRatesResponse](#warmage.oracle.v1.QueryExchangeRatesResponse) | ExchangeRates returns exchange rates of all denoms. | GET|/warmage/oracle/v1/denoms/exchange_rates|
+| `Actives` | [QueryActivesRequest](#warmage.oracle.v1.QueryActivesRequest) | [QueryActivesResponse](#warmage.oracle.v1.QueryActivesResponse) | Actives returns all active denoms. | GET|/warmage/oracle/v1/denoms/actives|
+| `VoteTargets` | [QueryVoteTargetsRequest](#warmage.oracle.v1.QueryVoteTargetsRequest) | [QueryVoteTargetsResponse](#warmage.oracle.v1.QueryVoteTargetsResponse) | VoteTargets returns all vote target denoms. | GET|/warmage/oracle/v1/denoms/vote_targets|
+| `Targets` | [QueryTargetsRequest](#warmage.oracle.v1.QueryTargetsRequest) | [QueryTargetsResponse](#warmage.oracle.v1.QueryTargetsResponse) | Targets returns all target denoms (including vote targets). | GET|/warmage/oracle/v1/denoms/targets|
+| `FeederDelegation` | [QueryFeederDelegationRequest](#warmage.oracle.v1.QueryFeederDelegationRequest) | [QueryFeederDelegationResponse](#warmage.oracle.v1.QueryFeederDelegationResponse) | FeederDelegation returns feeder delegation of a validator. | GET|/warmage/oracle/v1/validators/{validator_addr}/feeder|
+| `MissCounter` | [QueryMissCounterRequest](#warmage.oracle.v1.QueryMissCounterRequest) | [QueryMissCounterResponse](#warmage.oracle.v1.QueryMissCounterResponse) | MissCounter returns oracle miss counter of a validator. | GET|/warmage/oracle/v1/validators/{validator_addr}/miss|
+| `AggregatePrevote` | [QueryAggregatePrevoteRequest](#warmage.oracle.v1.QueryAggregatePrevoteRequest) | [QueryAggregatePrevoteResponse](#warmage.oracle.v1.QueryAggregatePrevoteResponse) | AggregatePrevote returns an aggregate prevote of a validator. | GET|/warmage/oracle/v1/validators/{validator_addr}/aggregate_prevote|
+| `AggregatePrevotes` | [QueryAggregatePrevotesRequest](#warmage.oracle.v1.QueryAggregatePrevotesRequest) | [QueryAggregatePrevotesResponse](#warmage.oracle.v1.QueryAggregatePrevotesResponse) | AggregatePrevotes returns aggregate prevotes of all validators. | GET|/warmage/oracle/v1/validators/aggregate_prevotes|
+| `AggregateVote` | [QueryAggregateVoteRequest](#warmage.oracle.v1.QueryAggregateVoteRequest) | [QueryAggregateVoteResponse](#warmage.oracle.v1.QueryAggregateVoteResponse) | AggregateVote returns an aggregate vote of a validator. | GET|/warmage/oracle/v1/valdiators/{validator_addr}/aggregate_vote|
+| `AggregateVotes` | [QueryAggregateVotesRequest](#warmage.oracle.v1.QueryAggregateVotesRequest) | [QueryAggregateVotesResponse](#warmage.oracle.v1.QueryAggregateVotesResponse) | AggregateVotes returns aggregate votes of all validators. | GET|/warmage/oracle/v1/validators/aggregate_votes|
+| `Params` | [QueryParamsRequest](#warmage.oracle.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.oracle.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmagezone/warmage/oracle/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/oracle/v1/tx.proto"></a>
+<a name="warmage/oracle/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/oracle/v1/tx.proto
+## warmage/oracle/v1/tx.proto
 
 
 
-<a name="merlion.oracle.v1.MsgAggregateExchangeRatePrevote"></a>
+<a name="warmage.oracle.v1.MsgAggregateExchangeRatePrevote"></a>
 
 ### MsgAggregateExchangeRatePrevote
 MsgAggregateExchangeRatePrevote defines a message to submit
@@ -2668,7 +2668,7 @@ aggregate exchange rate prevote.
 
 
 
-<a name="merlion.oracle.v1.MsgAggregateExchangeRatePrevoteResponse"></a>
+<a name="warmage.oracle.v1.MsgAggregateExchangeRatePrevoteResponse"></a>
 
 ### MsgAggregateExchangeRatePrevoteResponse
 MsgAggregateExchangeRatePrevoteResponse defines the
@@ -2679,7 +2679,7 @@ MsgAggregateExchangeRatePrevote response type.
 
 
 
-<a name="merlion.oracle.v1.MsgAggregateExchangeRateVote"></a>
+<a name="warmage.oracle.v1.MsgAggregateExchangeRateVote"></a>
 
 ### MsgAggregateExchangeRateVote
 MsgAggregateExchangeRateVote defines a message to submit
@@ -2698,7 +2698,7 @@ aggregate exchange rate vote.
 
 
 
-<a name="merlion.oracle.v1.MsgAggregateExchangeRateVoteResponse"></a>
+<a name="warmage.oracle.v1.MsgAggregateExchangeRateVoteResponse"></a>
 
 ### MsgAggregateExchangeRateVoteResponse
 MsgAggregateExchangeRateVoteResponse defines the MsgAggregateExchangeRateVote
@@ -2709,7 +2709,7 @@ response type.
 
 
 
-<a name="merlion.oracle.v1.MsgDelegateFeedConsent"></a>
+<a name="warmage.oracle.v1.MsgDelegateFeedConsent"></a>
 
 ### MsgDelegateFeedConsent
 MsgDelegateFeedConsent defines a message to
@@ -2726,7 +2726,7 @@ delegate oracle voting rights to another address.
 
 
 
-<a name="merlion.oracle.v1.MsgDelegateFeedConsentResponse"></a>
+<a name="warmage.oracle.v1.MsgDelegateFeedConsentResponse"></a>
 
 ### MsgDelegateFeedConsentResponse
 MsgDelegateFeedConsentResponse defines the MsgDelegateFeedConsent response
@@ -2743,25 +2743,25 @@ type.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.oracle.v1.Msg"></a>
+<a name="warmage.oracle.v1.Msg"></a>
 
 ### Msg
 Msg defines the Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `AggregateExchangeRatePrevote` | [MsgAggregateExchangeRatePrevote](#merlion.oracle.v1.MsgAggregateExchangeRatePrevote) | [MsgAggregateExchangeRatePrevoteResponse](#merlion.oracle.v1.MsgAggregateExchangeRatePrevoteResponse) | AggregateExchangeRatePrevote submits aggregate exchange rate prevote. | GET|/merlion/oracle/v1/tx/aggregate_exchange_rate_prevote|
-| `AggregateExchangeRateVote` | [MsgAggregateExchangeRateVote](#merlion.oracle.v1.MsgAggregateExchangeRateVote) | [MsgAggregateExchangeRateVoteResponse](#merlion.oracle.v1.MsgAggregateExchangeRateVoteResponse) | AggregateExchangeRateVote submits aggregate exchange rate vote. | GET|/merlion/oracle/v1/tx/aggregate_exchange_rate_vote|
-| `DelegateFeedConsent` | [MsgDelegateFeedConsent](#merlion.oracle.v1.MsgDelegateFeedConsent) | [MsgDelegateFeedConsentResponse](#merlion.oracle.v1.MsgDelegateFeedConsentResponse) | DelegateFeedConsent sets the feeder delegation. | GET|/merlion/oracle/v1/tx/delegate_feed_consent|
+| `AggregateExchangeRatePrevote` | [MsgAggregateExchangeRatePrevote](#warmage.oracle.v1.MsgAggregateExchangeRatePrevote) | [MsgAggregateExchangeRatePrevoteResponse](#warmage.oracle.v1.MsgAggregateExchangeRatePrevoteResponse) | AggregateExchangeRatePrevote submits aggregate exchange rate prevote. | GET|/warmage/oracle/v1/tx/aggregate_exchange_rate_prevote|
+| `AggregateExchangeRateVote` | [MsgAggregateExchangeRateVote](#warmage.oracle.v1.MsgAggregateExchangeRateVote) | [MsgAggregateExchangeRateVoteResponse](#warmage.oracle.v1.MsgAggregateExchangeRateVoteResponse) | AggregateExchangeRateVote submits aggregate exchange rate vote. | GET|/warmage/oracle/v1/tx/aggregate_exchange_rate_vote|
+| `DelegateFeedConsent` | [MsgDelegateFeedConsent](#warmage.oracle.v1.MsgDelegateFeedConsent) | [MsgDelegateFeedConsentResponse](#warmage.oracle.v1.MsgDelegateFeedConsentResponse) | DelegateFeedConsent sets the feeder delegation. | GET|/warmage/oracle/v1/tx/delegate_feed_consent|
 
  <!-- end services -->
 
 
 
-<a name="merlion/staking/v1/query.proto"></a>
+<a name="warmage/staking/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/staking/v1/query.proto
+## warmage/staking/v1/query.proto
 
 
  <!-- end messages -->
@@ -2774,14 +2774,14 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion/staking/v1/staking.proto"></a>
+<a name="warmage/staking/v1/staking.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/staking/v1/staking.proto
+## warmage/staking/v1/staking.proto
 
 
 
-<a name="merlion.staking.v1.VeDelegation"></a>
+<a name="warmage.staking.v1.VeDelegation"></a>
 
 ### VeDelegation
 
@@ -2791,14 +2791,14 @@ Msg defines the Msg service.
 | ----- | ---- | ----- | ----------- |
 | `delegator_address` | [string](#string) |  |  |
 | `validator_address` | [string](#string) |  |  |
-| `ve_shares` | [VeShares](#merlion.staking.v1.VeShares) | repeated |  |
+| `ve_shares` | [VeShares](#warmage.staking.v1.VeShares) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.staking.v1.VeRedelegation"></a>
+<a name="warmage.staking.v1.VeRedelegation"></a>
 
 ### VeRedelegation
 
@@ -2809,14 +2809,14 @@ Msg defines the Msg service.
 | `delegator_address` | [string](#string) |  |  |
 | `validator_src_address` | [string](#string) |  |  |
 | `validator_dst_address` | [string](#string) |  |  |
-| `entries` | [VeRedelegationEntry](#merlion.staking.v1.VeRedelegationEntry) | repeated |  |
+| `entries` | [VeRedelegationEntry](#warmage.staking.v1.VeRedelegationEntry) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.staking.v1.VeRedelegationEntry"></a>
+<a name="warmage.staking.v1.VeRedelegationEntry"></a>
 
 ### VeRedelegationEntry
 
@@ -2824,14 +2824,14 @@ Msg defines the Msg service.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `ve_shares` | [VeRedelegationEntryShares](#merlion.staking.v1.VeRedelegationEntryShares) | repeated |  |
+| `ve_shares` | [VeRedelegationEntryShares](#warmage.staking.v1.VeRedelegationEntryShares) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.staking.v1.VeRedelegationEntryShares"></a>
+<a name="warmage.staking.v1.VeRedelegationEntryShares"></a>
 
 ### VeRedelegationEntryShares
 
@@ -2848,7 +2848,7 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion.staking.v1.VeShares"></a>
+<a name="warmage.staking.v1.VeShares"></a>
 
 ### VeShares
 
@@ -2865,7 +2865,7 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion.staking.v1.VeTokens"></a>
+<a name="warmage.staking.v1.VeTokens"></a>
 
 ### VeTokens
 
@@ -2881,7 +2881,7 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion.staking.v1.VeUnbondingDelegation"></a>
+<a name="warmage.staking.v1.VeUnbondingDelegation"></a>
 
 ### VeUnbondingDelegation
 
@@ -2891,14 +2891,14 @@ Msg defines the Msg service.
 | ----- | ---- | ----- | ----------- |
 | `delegator_address` | [string](#string) |  |  |
 | `validator_address` | [string](#string) |  |  |
-| `entries` | [VeUnbondingDelegationEntry](#merlion.staking.v1.VeUnbondingDelegationEntry) | repeated |  |
+| `entries` | [VeUnbondingDelegationEntry](#warmage.staking.v1.VeUnbondingDelegationEntry) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.staking.v1.VeUnbondingDelegationEntry"></a>
+<a name="warmage.staking.v1.VeUnbondingDelegationEntry"></a>
 
 ### VeUnbondingDelegationEntry
 
@@ -2906,14 +2906,14 @@ Msg defines the Msg service.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `ve_balances` | [VeUnbondingDelegationEntryBalances](#merlion.staking.v1.VeUnbondingDelegationEntryBalances) | repeated |  |
+| `ve_balances` | [VeUnbondingDelegationEntryBalances](#warmage.staking.v1.VeUnbondingDelegationEntryBalances) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.staking.v1.VeUnbondingDelegationEntryBalances"></a>
+<a name="warmage.staking.v1.VeUnbondingDelegationEntryBalances"></a>
 
 ### VeUnbondingDelegationEntryBalances
 
@@ -2930,7 +2930,7 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion.staking.v1.VeValidator"></a>
+<a name="warmage.staking.v1.VeValidator"></a>
 
 ### VeValidator
 
@@ -2955,14 +2955,14 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion/staking/v1/tx.proto"></a>
+<a name="warmage/staking/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/staking/v1/tx.proto
+## warmage/staking/v1/tx.proto
 
 
 
-<a name="merlion.staking.v1.MsgVeDelegate"></a>
+<a name="warmage.staking.v1.MsgVeDelegate"></a>
 
 ### MsgVeDelegate
 
@@ -2980,7 +2980,7 @@ Msg defines the Msg service.
 
 
 
-<a name="merlion.staking.v1.MsgVeDelegateResponse"></a>
+<a name="warmage.staking.v1.MsgVeDelegateResponse"></a>
 
 ### MsgVeDelegateResponse
 
@@ -2996,27 +2996,27 @@ Msg defines the Msg service.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.staking.v1.Msg"></a>
+<a name="warmage.staking.v1.Msg"></a>
 
 ### Msg
 Msg defines the staking Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `VeDelegate` | [MsgVeDelegate](#merlion.staking.v1.MsgVeDelegate) | [MsgVeDelegateResponse](#merlion.staking.v1.MsgVeDelegateResponse) | VeDelegate defines a method for performing a delegation of ve-locked coins from a delegator to a validator. | GET|/merlion/staking/v1/tx/ve_delegate|
+| `VeDelegate` | [MsgVeDelegate](#warmage.staking.v1.MsgVeDelegate) | [MsgVeDelegateResponse](#warmage.staking.v1.MsgVeDelegateResponse) | VeDelegate defines a method for performing a delegation of ve-locked coins from a delegator to a validator. | GET|/warmage/staking/v1/tx/ve_delegate|
 
  <!-- end services -->
 
 
 
-<a name="merlion/ve/v1/event.proto"></a>
+<a name="warmage/ve/v1/event.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/ve/v1/event.proto
+## warmage/ve/v1/event.proto
 
 
 
-<a name="merlion.ve.v1.EventCreate"></a>
+<a name="warmage.ve.v1.EventCreate"></a>
 
 ### EventCreate
 
@@ -3035,7 +3035,7 @@ Msg defines the staking Msg service.
 
 
 
-<a name="merlion.ve.v1.EventDeposit"></a>
+<a name="warmage.ve.v1.EventDeposit"></a>
 
 ### EventDeposit
 
@@ -3052,7 +3052,7 @@ Msg defines the staking Msg service.
 
 
 
-<a name="merlion.ve.v1.EventExtendTime"></a>
+<a name="warmage.ve.v1.EventExtendTime"></a>
 
 ### EventExtendTime
 
@@ -3069,7 +3069,7 @@ Msg defines the staking Msg service.
 
 
 
-<a name="merlion.ve.v1.EventMerge"></a>
+<a name="warmage.ve.v1.EventMerge"></a>
 
 ### EventMerge
 
@@ -3086,7 +3086,7 @@ Msg defines the staking Msg service.
 
 
 
-<a name="merlion.ve.v1.EventWithdraw"></a>
+<a name="warmage.ve.v1.EventWithdraw"></a>
 
 ### EventWithdraw
 
@@ -3111,14 +3111,14 @@ Msg defines the staking Msg service.
 
 
 
-<a name="merlion/ve/v1/genesis.proto"></a>
+<a name="warmage/ve/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/ve/v1/genesis.proto
+## warmage/ve/v1/genesis.proto
 
 
 
-<a name="merlion.ve.v1.GenesisState"></a>
+<a name="warmage.ve.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the ve module's genesis state.
@@ -3126,14 +3126,14 @@ GenesisState defines the ve module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.ve.v1.Params) |  |  |
+| `params` | [Params](#warmage.ve.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="merlion.ve.v1.Params"></a>
+<a name="warmage.ve.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the module.
@@ -3157,14 +3157,14 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion/ve/v1/query.proto"></a>
+<a name="warmage/ve/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/ve/v1/query.proto
+## warmage/ve/v1/query.proto
 
 
 
-<a name="merlion.ve.v1.QueryParamsRequest"></a>
+<a name="warmage.ve.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -3174,7 +3174,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.ve.v1.QueryParamsResponse"></a>
+<a name="warmage.ve.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -3182,14 +3182,14 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.ve.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.ve.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
 
 
 
-<a name="merlion.ve.v1.QueryTotalVotingPowerRequest"></a>
+<a name="warmage.ve.v1.QueryTotalVotingPowerRequest"></a>
 
 ### QueryTotalVotingPowerRequest
 
@@ -3205,7 +3205,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 
 
-<a name="merlion.ve.v1.QueryTotalVotingPowerResponse"></a>
+<a name="warmage.ve.v1.QueryTotalVotingPowerResponse"></a>
 
 ### QueryTotalVotingPowerResponse
 
@@ -3220,7 +3220,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 
 
-<a name="merlion.ve.v1.QueryVeNftRequest"></a>
+<a name="warmage.ve.v1.QueryVeNftRequest"></a>
 
 ### QueryVeNftRequest
 QueryVeNftRequest is the request type for the Query/VeNft RPC method
@@ -3235,7 +3235,7 @@ QueryVeNftRequest is the request type for the Query/VeNft RPC method
 
 
 
-<a name="merlion.ve.v1.QueryVeNftResponse"></a>
+<a name="warmage.ve.v1.QueryVeNftResponse"></a>
 
 ### QueryVeNftResponse
 QueryVeNftResponse is the response type for the Query/VeNft RPC method
@@ -3250,7 +3250,7 @@ QueryVeNftResponse is the response type for the Query/VeNft RPC method
 
 
 
-<a name="merlion.ve.v1.QueryVeNftsRequest"></a>
+<a name="warmage.ve.v1.QueryVeNftsRequest"></a>
 
 ### QueryVeNftsRequest
 QueryVeNftsRequest is the request type for the Query/VeNfts RPC method
@@ -3266,7 +3266,7 @@ QueryVeNftsRequest is the request type for the Query/VeNfts RPC method
 
 
 
-<a name="merlion.ve.v1.QueryVeNftsResponse"></a>
+<a name="warmage.ve.v1.QueryVeNftsResponse"></a>
 
 ### QueryVeNftsResponse
 QueryVeNftsResponse is the response type for the Query/VeNfts RPC methods
@@ -3282,7 +3282,7 @@ QueryVeNftsResponse is the response type for the Query/VeNfts RPC methods
 
 
 
-<a name="merlion.ve.v1.QueryVotingPowerRequest"></a>
+<a name="warmage.ve.v1.QueryVotingPowerRequest"></a>
 
 ### QueryVotingPowerRequest
 
@@ -3299,7 +3299,7 @@ QueryVeNftsResponse is the response type for the Query/VeNfts RPC methods
 
 
 
-<a name="merlion.ve.v1.QueryVotingPowerResponse"></a>
+<a name="warmage.ve.v1.QueryVotingPowerResponse"></a>
 
 ### QueryVotingPowerResponse
 
@@ -3320,31 +3320,31 @@ QueryVeNftsResponse is the response type for the Query/VeNfts RPC methods
  <!-- end HasExtensions -->
 
 
-<a name="merlion.ve.v1.Query"></a>
+<a name="warmage.ve.v1.Query"></a>
 
 ### Query
 Query defines the ve gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `TotalVotingPower` | [QueryTotalVotingPowerRequest](#merlion.ve.v1.QueryTotalVotingPowerRequest) | [QueryTotalVotingPowerResponse](#merlion.ve.v1.QueryTotalVotingPowerResponse) | TotalVotingPower queries the total voting power. | GET|/merlion/ve/v1/total_voting_power|
-| `VotingPower` | [QueryVotingPowerRequest](#merlion.ve.v1.QueryVotingPowerRequest) | [QueryVotingPowerResponse](#merlion.ve.v1.QueryVotingPowerResponse) | VotingPower queries the voting power of a veNFT. | GET|/merlion/ve/v1/voting_power/{ve_id}|
-| `VeNfts` | [QueryVeNftsRequest](#merlion.ve.v1.QueryVeNftsRequest) | [QueryVeNftsResponse](#merlion.ve.v1.QueryVeNftsResponse) | VeNfts queries all veNFTs of a given owner. | GET|/merlion/ve/v1/venfts|
-| `VeNft` | [QueryVeNftRequest](#merlion.ve.v1.QueryVeNftRequest) | [QueryVeNftResponse](#merlion.ve.v1.QueryVeNftResponse) | VeNft queries an veNFT based on its id. | GET|/merlion/ve/v1/venfts/{id}|
-| `Params` | [QueryParamsRequest](#merlion.ve.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.ve.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlion/ve/v1/params|
+| `TotalVotingPower` | [QueryTotalVotingPowerRequest](#warmage.ve.v1.QueryTotalVotingPowerRequest) | [QueryTotalVotingPowerResponse](#warmage.ve.v1.QueryTotalVotingPowerResponse) | TotalVotingPower queries the total voting power. | GET|/warmage/ve/v1/total_voting_power|
+| `VotingPower` | [QueryVotingPowerRequest](#warmage.ve.v1.QueryVotingPowerRequest) | [QueryVotingPowerResponse](#warmage.ve.v1.QueryVotingPowerResponse) | VotingPower queries the voting power of a veNFT. | GET|/warmage/ve/v1/voting_power/{ve_id}|
+| `VeNfts` | [QueryVeNftsRequest](#warmage.ve.v1.QueryVeNftsRequest) | [QueryVeNftsResponse](#warmage.ve.v1.QueryVeNftsResponse) | VeNfts queries all veNFTs of a given owner. | GET|/warmage/ve/v1/venfts|
+| `VeNft` | [QueryVeNftRequest](#warmage.ve.v1.QueryVeNftRequest) | [QueryVeNftResponse](#warmage.ve.v1.QueryVeNftResponse) | VeNft queries an veNFT based on its id. | GET|/warmage/ve/v1/venfts/{id}|
+| `Params` | [QueryParamsRequest](#warmage.ve.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.ve.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmage/ve/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/ve/v1/tx.proto"></a>
+<a name="warmage/ve/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/ve/v1/tx.proto
+## warmage/ve/v1/tx.proto
 
 
 
-<a name="merlion.ve.v1.MsgCreate"></a>
+<a name="warmage.ve.v1.MsgCreate"></a>
 
 ### MsgCreate
 
@@ -3362,7 +3362,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgCreateResponse"></a>
+<a name="warmage.ve.v1.MsgCreateResponse"></a>
 
 ### MsgCreateResponse
 
@@ -3378,7 +3378,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgDeposit"></a>
+<a name="warmage.ve.v1.MsgDeposit"></a>
 
 ### MsgDeposit
 
@@ -3395,7 +3395,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgDepositResponse"></a>
+<a name="warmage.ve.v1.MsgDepositResponse"></a>
 
 ### MsgDepositResponse
 
@@ -3405,7 +3405,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgExtendTime"></a>
+<a name="warmage.ve.v1.MsgExtendTime"></a>
 
 ### MsgExtendTime
 
@@ -3422,7 +3422,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgExtendTimeResponse"></a>
+<a name="warmage.ve.v1.MsgExtendTimeResponse"></a>
 
 ### MsgExtendTimeResponse
 
@@ -3432,7 +3432,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgMerge"></a>
+<a name="warmage.ve.v1.MsgMerge"></a>
 
 ### MsgMerge
 
@@ -3449,7 +3449,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgMergeResponse"></a>
+<a name="warmage.ve.v1.MsgMergeResponse"></a>
 
 ### MsgMergeResponse
 
@@ -3459,7 +3459,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgWithdraw"></a>
+<a name="warmage.ve.v1.MsgWithdraw"></a>
 
 ### MsgWithdraw
 
@@ -3475,7 +3475,7 @@ Query defines the ve gRPC querier service.
 
 
 
-<a name="merlion.ve.v1.MsgWithdrawResponse"></a>
+<a name="warmage.ve.v1.MsgWithdrawResponse"></a>
 
 ### MsgWithdrawResponse
 
@@ -3491,31 +3491,31 @@ Query defines the ve gRPC querier service.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.ve.v1.Msg"></a>
+<a name="warmage.ve.v1.Msg"></a>
 
 ### Msg
 Msg defines the ve Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Create` | [MsgCreate](#merlion.ve.v1.MsgCreate) | [MsgCreateResponse](#merlion.ve.v1.MsgCreateResponse) | Create creates a veNFT. | GET|/merlion/ve/v1/tx/create|
-| `Deposit` | [MsgDeposit](#merlion.ve.v1.MsgDeposit) | [MsgDepositResponse](#merlion.ve.v1.MsgDepositResponse) | Deposit deposits some coin amount for a veNFT. | GET|/merlion/ve/v1/tx/deposit|
-| `ExtendTime` | [MsgExtendTime](#merlion.ve.v1.MsgExtendTime) | [MsgExtendTimeResponse](#merlion.ve.v1.MsgExtendTimeResponse) | ExtendTime extends locking duration for a veNFT. | GET|/merlion/ve/v1/tx/extend_time|
-| `Merge` | [MsgMerge](#merlion.ve.v1.MsgMerge) | [MsgMergeResponse](#merlion.ve.v1.MsgMergeResponse) | Merge merges a veNFT (burn it) to another veNFT. | GET|/merlion/ve/v1/tx/merge|
-| `Withdraw` | [MsgWithdraw](#merlion.ve.v1.MsgWithdraw) | [MsgWithdrawResponse](#merlion.ve.v1.MsgWithdrawResponse) | Withdraw withdraws all coin amount of a veNFT. | GET|/merlion/ve/v1/tx/withdraw|
+| `Create` | [MsgCreate](#warmage.ve.v1.MsgCreate) | [MsgCreateResponse](#warmage.ve.v1.MsgCreateResponse) | Create creates a veNFT. | GET|/warmage/ve/v1/tx/create|
+| `Deposit` | [MsgDeposit](#warmage.ve.v1.MsgDeposit) | [MsgDepositResponse](#warmage.ve.v1.MsgDepositResponse) | Deposit deposits some coin amount for a veNFT. | GET|/warmage/ve/v1/tx/deposit|
+| `ExtendTime` | [MsgExtendTime](#warmage.ve.v1.MsgExtendTime) | [MsgExtendTimeResponse](#warmage.ve.v1.MsgExtendTimeResponse) | ExtendTime extends locking duration for a veNFT. | GET|/warmage/ve/v1/tx/extend_time|
+| `Merge` | [MsgMerge](#warmage.ve.v1.MsgMerge) | [MsgMergeResponse](#warmage.ve.v1.MsgMergeResponse) | Merge merges a veNFT (burn it) to another veNFT. | GET|/warmage/ve/v1/tx/merge|
+| `Withdraw` | [MsgWithdraw](#warmage.ve.v1.MsgWithdraw) | [MsgWithdrawResponse](#warmage.ve.v1.MsgWithdrawResponse) | Withdraw withdraws all coin amount of a veNFT. | GET|/warmage/ve/v1/tx/withdraw|
 
  <!-- end services -->
 
 
 
-<a name="merlion/ve/v1/ve.proto"></a>
+<a name="warmage/ve/v1/ve.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/ve/v1/ve.proto
+## warmage/ve/v1/ve.proto
 
 
 
-<a name="merlion.ve.v1.Checkpoint"></a>
+<a name="warmage.ve.v1.Checkpoint"></a>
 
 ### Checkpoint
 Checkpoint defines a checkpoint of voting power.
@@ -3533,7 +3533,7 @@ Checkpoint defines a checkpoint of voting power.
 
 
 
-<a name="merlion.ve.v1.LockedBalance"></a>
+<a name="warmage.ve.v1.LockedBalance"></a>
 
 ### LockedBalance
 LockedBalance represents locked amount and unlock time of a ve.
@@ -3558,14 +3558,14 @@ LockedBalance represents locked amount and unlock time of a ve.
 
 
 
-<a name="merlion/vesting/v1/genesis.proto"></a>
+<a name="warmage/vesting/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/vesting/v1/genesis.proto
+## warmage/vesting/v1/genesis.proto
 
 
 
-<a name="merlion.vesting.v1.AllocationAddresses"></a>
+<a name="warmage.vesting.v1.AllocationAddresses"></a>
 
 ### AllocationAddresses
 
@@ -3581,7 +3581,7 @@ LockedBalance represents locked amount and unlock time of a ve.
 
 
 
-<a name="merlion.vesting.v1.AllocationAmounts"></a>
+<a name="warmage.vesting.v1.AllocationAmounts"></a>
 
 ### AllocationAmounts
 
@@ -3602,7 +3602,7 @@ LockedBalance represents locked amount and unlock time of a ve.
 
 
 
-<a name="merlion.vesting.v1.GenesisState"></a>
+<a name="warmage.vesting.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the vesting module's genesis state.
@@ -3610,15 +3610,15 @@ GenesisState defines the vesting module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.vesting.v1.Params) |  |  |
-| `allocation_addresses` | [AllocationAddresses](#merlion.vesting.v1.AllocationAddresses) |  |  |
+| `params` | [Params](#warmage.vesting.v1.Params) |  |  |
+| `allocation_addresses` | [AllocationAddresses](#warmage.vesting.v1.AllocationAddresses) |  |  |
 
 
 
 
 
 
-<a name="merlion.vesting.v1.Params"></a>
+<a name="warmage.vesting.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the module.
@@ -3626,7 +3626,7 @@ Params defines the parameters for the module.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `allocation` | [AllocationAmounts](#merlion.vesting.v1.AllocationAmounts) |  |  |
+| `allocation` | [AllocationAmounts](#warmage.vesting.v1.AllocationAmounts) |  |  |
 
 
 
@@ -3642,14 +3642,14 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion/vesting/v1/vesting.proto"></a>
+<a name="warmage/vesting/v1/vesting.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/vesting/v1/vesting.proto
+## warmage/vesting/v1/vesting.proto
 
 
 
-<a name="merlion.vesting.v1.Airdrop"></a>
+<a name="warmage.vesting.v1.Airdrop"></a>
 
 ### Airdrop
 
@@ -3674,14 +3674,14 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion/vesting/v1/query.proto"></a>
+<a name="warmage/vesting/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/vesting/v1/query.proto
+## warmage/vesting/v1/query.proto
 
 
 
-<a name="merlion.vesting.v1.QueryAirdropRequest"></a>
+<a name="warmage.vesting.v1.QueryAirdropRequest"></a>
 
 ### QueryAirdropRequest
 
@@ -3697,7 +3697,7 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion.vesting.v1.QueryAirdropResponse"></a>
+<a name="warmage.vesting.v1.QueryAirdropResponse"></a>
 
 ### QueryAirdropResponse
 
@@ -3705,14 +3705,14 @@ Params defines the parameters for the module.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `airdrop` | [Airdrop](#merlion.vesting.v1.Airdrop) |  |  |
+| `airdrop` | [Airdrop](#warmage.vesting.v1.Airdrop) |  |  |
 
 
 
 
 
 
-<a name="merlion.vesting.v1.QueryAirdropsRequest"></a>
+<a name="warmage.vesting.v1.QueryAirdropsRequest"></a>
 
 ### QueryAirdropsRequest
 
@@ -3728,7 +3728,7 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion.vesting.v1.QueryAirdropsResponse"></a>
+<a name="warmage.vesting.v1.QueryAirdropsResponse"></a>
 
 ### QueryAirdropsResponse
 
@@ -3736,7 +3736,7 @@ Params defines the parameters for the module.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `airdrops` | [Airdrop](#merlion.vesting.v1.Airdrop) | repeated | airdrops contains all the queried airdrops. |
+| `airdrops` | [Airdrop](#warmage.vesting.v1.Airdrop) | repeated | airdrops contains all the queried airdrops. |
 | `pagination` | [cosmos.base.query.v1beta1.PageResponse](#cosmos.base.query.v1beta1.PageResponse) |  | pagination defines the pagination in the response. |
 
 
@@ -3744,7 +3744,7 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion.vesting.v1.QueryParamsRequest"></a>
+<a name="warmage.vesting.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -3754,7 +3754,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.vesting.v1.QueryParamsResponse"></a>
+<a name="warmage.vesting.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -3762,7 +3762,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.vesting.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.vesting.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
@@ -3775,29 +3775,29 @@ QueryParamsResponse is response type for the Query/Params RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.vesting.v1.Query"></a>
+<a name="warmage.vesting.v1.Query"></a>
 
 ### Query
 Query defines the vesting gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Airdrops` | [QueryAirdropsRequest](#merlion.vesting.v1.QueryAirdropsRequest) | [QueryAirdropsResponse](#merlion.vesting.v1.QueryAirdropsResponse) | Airdrops queries airdrop targets. | GET|/merlion/vesting/v1/airdrops|
-| `Airdrop` | [QueryAirdropRequest](#merlion.vesting.v1.QueryAirdropRequest) | [QueryAirdropResponse](#merlion.vesting.v1.QueryAirdropResponse) | Airdrops queries airdrop target for given address. | GET|/merlion/vesting/v1/airdrops/{target_addr}|
-| `Params` | [QueryParamsRequest](#merlion.vesting.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.vesting.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlion/vesting/v1/params|
+| `Airdrops` | [QueryAirdropsRequest](#warmage.vesting.v1.QueryAirdropsRequest) | [QueryAirdropsResponse](#warmage.vesting.v1.QueryAirdropsResponse) | Airdrops queries airdrop targets. | GET|/warmage/vesting/v1/airdrops|
+| `Airdrop` | [QueryAirdropRequest](#warmage.vesting.v1.QueryAirdropRequest) | [QueryAirdropResponse](#warmage.vesting.v1.QueryAirdropResponse) | Airdrops queries airdrop target for given address. | GET|/warmage/vesting/v1/airdrops/{target_addr}|
+| `Params` | [QueryParamsRequest](#warmage.vesting.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.vesting.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmage/vesting/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/vesting/v1/tx.proto"></a>
+<a name="warmage/vesting/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/vesting/v1/tx.proto
+## warmage/vesting/v1/tx.proto
 
 
 
-<a name="merlion.vesting.v1.MsgAddAirdrops"></a>
+<a name="warmage.vesting.v1.MsgAddAirdrops"></a>
 
 ### MsgAddAirdrops
 MsgAddAirdrops represents a message to add airdrop targets.
@@ -3806,14 +3806,14 @@ MsgAddAirdrops represents a message to add airdrop targets.
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 | `sender` | [string](#string) |  |  |
-| `airdrops` | [Airdrop](#merlion.vesting.v1.Airdrop) | repeated |  |
+| `airdrops` | [Airdrop](#warmage.vesting.v1.Airdrop) | repeated |  |
 
 
 
 
 
 
-<a name="merlion.vesting.v1.MsgAddAirdropsResponse"></a>
+<a name="warmage.vesting.v1.MsgAddAirdropsResponse"></a>
 
 ### MsgAddAirdropsResponse
 MsgMintBySwapResponse defines the Msg/AddAirdrops response type.
@@ -3823,7 +3823,7 @@ MsgMintBySwapResponse defines the Msg/AddAirdrops response type.
 
 
 
-<a name="merlion.vesting.v1.MsgExecuteAirdrops"></a>
+<a name="warmage.vesting.v1.MsgExecuteAirdrops"></a>
 
 ### MsgExecuteAirdrops
 
@@ -3839,7 +3839,7 @@ MsgMintBySwapResponse defines the Msg/AddAirdrops response type.
 
 
 
-<a name="merlion.vesting.v1.MsgExecuteAirdropsResponse"></a>
+<a name="warmage.vesting.v1.MsgExecuteAirdropsResponse"></a>
 
 ### MsgExecuteAirdropsResponse
 
@@ -3849,7 +3849,7 @@ MsgMintBySwapResponse defines the Msg/AddAirdrops response type.
 
 
 
-<a name="merlion.vesting.v1.MsgSetAllocationAddress"></a>
+<a name="warmage.vesting.v1.MsgSetAllocationAddress"></a>
 
 ### MsgSetAllocationAddress
 MsgSetAllocationAddress represents a message to set allocation address.
@@ -3866,7 +3866,7 @@ MsgSetAllocationAddress represents a message to set allocation address.
 
 
 
-<a name="merlion.vesting.v1.MsgSetAllocationAddressResponse"></a>
+<a name="warmage.vesting.v1.MsgSetAllocationAddressResponse"></a>
 
 ### MsgSetAllocationAddressResponse
 MsgSetAllocationAddressResponse defines the Msg/SetAllocationAddress response
@@ -3883,29 +3883,29 @@ type.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.vesting.v1.Msg"></a>
+<a name="warmage.vesting.v1.Msg"></a>
 
 ### Msg
 Msg defines the vesting Msg service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `AddAirdrops` | [MsgAddAirdrops](#merlion.vesting.v1.MsgAddAirdrops) | [MsgAddAirdropsResponse](#merlion.vesting.v1.MsgAddAirdropsResponse) | AddAirdrops adds airdrop targets. Should only be called by core team multisig. | GET|/merlion/vesting/v1/tx/add_airdrops|
-| `ExecuteAirdrops` | [MsgExecuteAirdrops](#merlion.vesting.v1.MsgExecuteAirdrops) | [MsgExecuteAirdropsResponse](#merlion.vesting.v1.MsgExecuteAirdropsResponse) | ExecuteAirdrops performs airdrops. Should only be called by core team multisig. | GET|/merlion/vesting/v1/tx/exec_airdrops|
-| `SetAllocationAddress` | [MsgSetAllocationAddress](#merlion.vesting.v1.MsgSetAllocationAddress) | [MsgSetAllocationAddressResponse](#merlion.vesting.v1.MsgSetAllocationAddressResponse) | SetAllocationAddress sets allocation address of team vesting or strategic_reserve_custodian. | GET|/merlion/vesting/v1/tx/set_allocation_address|
+| `AddAirdrops` | [MsgAddAirdrops](#warmage.vesting.v1.MsgAddAirdrops) | [MsgAddAirdropsResponse](#warmage.vesting.v1.MsgAddAirdropsResponse) | AddAirdrops adds airdrop targets. Should only be called by core team multisig. | GET|/warmage/vesting/v1/tx/add_airdrops|
+| `ExecuteAirdrops` | [MsgExecuteAirdrops](#warmage.vesting.v1.MsgExecuteAirdrops) | [MsgExecuteAirdropsResponse](#warmage.vesting.v1.MsgExecuteAirdropsResponse) | ExecuteAirdrops performs airdrops. Should only be called by core team multisig. | GET|/warmage/vesting/v1/tx/exec_airdrops|
+| `SetAllocationAddress` | [MsgSetAllocationAddress](#warmage.vesting.v1.MsgSetAllocationAddress) | [MsgSetAllocationAddressResponse](#warmage.vesting.v1.MsgSetAllocationAddressResponse) | SetAllocationAddress sets allocation address of team vesting or strategic_reserve_custodian. | GET|/warmage/vesting/v1/tx/set_allocation_address|
 
  <!-- end services -->
 
 
 
-<a name="merlion/voter/v1/genesis.proto"></a>
+<a name="warmage/voter/v1/genesis.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/voter/v1/genesis.proto
+## warmage/voter/v1/genesis.proto
 
 
 
-<a name="merlion.voter.v1.GenesisState"></a>
+<a name="warmage.voter.v1.GenesisState"></a>
 
 ### GenesisState
 GenesisState defines the voter module's genesis state.
@@ -3913,14 +3913,14 @@ GenesisState defines the voter module's genesis state.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.voter.v1.Params) |  |  |
+| `params` | [Params](#warmage.voter.v1.Params) |  |  |
 
 
 
 
 
 
-<a name="merlion.voter.v1.Params"></a>
+<a name="warmage.voter.v1.Params"></a>
 
 ### Params
 Params defines the parameters for the module.
@@ -3939,14 +3939,14 @@ Params defines the parameters for the module.
 
 
 
-<a name="merlion/voter/v1/query.proto"></a>
+<a name="warmage/voter/v1/query.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/voter/v1/query.proto
+## warmage/voter/v1/query.proto
 
 
 
-<a name="merlion.voter.v1.QueryParamsRequest"></a>
+<a name="warmage.voter.v1.QueryParamsRequest"></a>
 
 ### QueryParamsRequest
 QueryParamsRequest is request type for the Query/Params RPC method.
@@ -3956,7 +3956,7 @@ QueryParamsRequest is request type for the Query/Params RPC method.
 
 
 
-<a name="merlion.voter.v1.QueryParamsResponse"></a>
+<a name="warmage.voter.v1.QueryParamsResponse"></a>
 
 ### QueryParamsResponse
 QueryParamsResponse is response type for the Query/Params RPC method.
@@ -3964,7 +3964,7 @@ QueryParamsResponse is response type for the Query/Params RPC method.
 
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
-| `params` | [Params](#merlion.voter.v1.Params) |  | params holds all the parameters of this module. |
+| `params` | [Params](#warmage.voter.v1.Params) |  | params holds all the parameters of this module. |
 
 
 
@@ -3977,23 +3977,23 @@ QueryParamsResponse is response type for the Query/Params RPC method.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.voter.v1.Query"></a>
+<a name="warmage.voter.v1.Query"></a>
 
 ### Query
 Query defines the gRPC querier service.
 
 | Method Name | Request Type | Response Type | Description | HTTP Verb | Endpoint |
 | ----------- | ------------ | ------------- | ------------| ------- | -------- |
-| `Params` | [QueryParamsRequest](#merlion.voter.v1.QueryParamsRequest) | [QueryParamsResponse](#merlion.voter.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/merlion/voter/v1/params|
+| `Params` | [QueryParamsRequest](#warmage.voter.v1.QueryParamsRequest) | [QueryParamsResponse](#warmage.voter.v1.QueryParamsResponse) | Parameters queries the parameters of the module. | GET|/warmage/voter/v1/params|
 
  <!-- end services -->
 
 
 
-<a name="merlion/voter/v1/tx.proto"></a>
+<a name="warmage/voter/v1/tx.proto"></a>
 <p align="right"><a href="#top">Top</a></p>
 
-## merlion/voter/v1/tx.proto
+## warmage/voter/v1/tx.proto
 
 
  <!-- end messages -->
@@ -4003,7 +4003,7 @@ Query defines the gRPC querier service.
  <!-- end HasExtensions -->
 
 
-<a name="merlion.voter.v1.Msg"></a>
+<a name="warmage.voter.v1.Msg"></a>
 
 ### Msg
 Msg defines the Msg service.

@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	testkeeper "github.com/merlion-zone/merlion/testutil/keeper"
-	"github.com/merlion-zone/merlion/x/gauge/types"
+	testkeeper "github.com/petri-labs/warmage/testutil/keeper"
+	"github.com/petri-labs/warmage/x/gauge/types"
 	"github.com/stretchr/testify/require"
 )
 

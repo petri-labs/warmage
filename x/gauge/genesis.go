@@ -2,8 +2,8 @@ package gauge
 
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/merlion-zone/merlion/x/gauge/keeper"
-	"github.com/merlion-zone/merlion/x/gauge/types"
+	"github.com/petri-labs/warmage/x/gauge/keeper"
+	"github.com/petri-labs/warmage/x/gauge/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

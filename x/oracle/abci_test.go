@@ -8,10 +8,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
-	merlion "github.com/merlion-zone/merlion/types"
-	"github.com/merlion-zone/merlion/x/oracle"
-	"github.com/merlion-zone/merlion/x/oracle/keeper"
-	"github.com/merlion-zone/merlion/x/oracle/types"
+	warmage "github.com/petri-labs/warmage/types"
+	"github.com/petri-labs/warmage/x/oracle"
+	"github.com/petri-labs/warmage/x/oracle/keeper"
+	"github.com/petri-labs/warmage/x/oracle/types"
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/libs/rand"
 )
@@ -236,7 +236,7 @@ func TestOracleRewardDistribution(t *testing.T) {
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom1, Amount: randomExchangeRate}}, 1)
 
 	rewardsAmt := sdk.NewInt(100000000)
-	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(merlion.AttoLionDenom, rewardsAmt)))
+	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(warmage.AttoMageDenom, rewardsAmt)))
 	require.NoError(t, err)
 
 	oracle.EndBlocker(input.Ctx.WithBlockHeight(1), input.OracleKeeper)
@@ -244,9 +244,9 @@ func TestOracleRewardDistribution(t *testing.T) {
 	votePeriodsPerWindow := uint64(sdk.NewDec(int64(input.OracleKeeper.RewardDistributionWindow(input.Ctx))).QuoInt64(int64(input.OracleKeeper.VotePeriod(input.Ctx))).TruncateInt64())
 	expectedRewardAmt := sdk.NewDecFromInt(rewardsAmt.QuoRaw(2)).QuoInt64(int64(votePeriodsPerWindow)).TruncateInt()
 	rewards := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[0])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards = input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[1])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 }
 
 func TestOracleRewardBand(t *testing.T) {
@@ -297,7 +297,7 @@ func TestOracleRewardBand(t *testing.T) {
 func TestOracleMultiRewardDistribution(t *testing.T) {
 	input, h := setup(t)
 
-	// denom1 and denom2 have the same voting power, but denom2 has been chosen as referenceMer by alphabetical order.
+	// denom1 and denom2 have the same voting power, but denom2 has been chosen as referenceWar by alphabetical order.
 	// Account 1, denom1, denom2
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom1, Amount: randomExchangeRate}, {Denom: denom2, Amount: randomExchangeRate}}, 0)
 
@@ -308,7 +308,7 @@ func TestOracleMultiRewardDistribution(t *testing.T) {
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: randomExchangeRate}}, 2)
 
 	rewardAmt := sdk.NewInt(100000000)
-	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(merlion.AttoLionDenom, rewardAmt)))
+	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(warmage.AttoMageDenom, rewardAmt)))
 	require.NoError(t, err)
 
 	oracle.EndBlocker(input.Ctx.WithBlockHeight(1), input.OracleKeeper)
@@ -317,34 +317,34 @@ func TestOracleMultiRewardDistribution(t *testing.T) {
 
 	expectedRewardAmt := sdk.NewDecFromInt(rewardAmt.QuoRaw(3).MulRaw(2)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
 	expectedRewardAmt2 := sdk.NewDecFromInt(rewardAmt.QuoRaw(3)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
-	expectedRewardAmt3 := sdk.ZeroInt() // even vote power is same denom2 with denom1, denom1 chosen referenceMer because alphabetical order
+	expectedRewardAmt3 := sdk.ZeroInt() // even vote power is same denom2 with denom1, denom1 chosen referenceWar because alphabetical order
 
 	rewards := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[0])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards = input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[1])
-	require.Equal(t, expectedRewardAmt2, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt2, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards = input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[2])
-	require.Equal(t, expectedRewardAmt3, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt3, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 }
 
 func TestOracleExchangeRate(t *testing.T) {
 	input, h := setup(t)
 
 	denom2RandomExchangeRate := sdk.NewDecWithPrec(1000000000, int64(6)).MulInt64(microUnit)
-	usmRandomExchangeRate := sdk.NewDecWithPrec(1000000, int64(6)).MulInt64(microUnit)
+	uswRandomExchangeRate := sdk.NewDecWithPrec(1000000, int64(6)).MulInt64(microUnit)
 
-	// denom2 has been chosen as referenceMer by highest voting power
-	// Account 1, USM, denom2
-	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: merlion.MicroUSMDenom, Amount: usmRandomExchangeRate}, {Denom: denom2, Amount: denom2RandomExchangeRate}}, 0)
+	// denom2 has been chosen as referenceWar by highest voting power
+	// Account 1, USW, denom2
+	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: warmage.MicroUSWDenom, Amount: uswRandomExchangeRate}, {Denom: denom2, Amount: denom2RandomExchangeRate}}, 0)
 
-	// Account 2, USM, denom2
-	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: merlion.MicroUSMDenom, Amount: usmRandomExchangeRate}, {Denom: denom2, Amount: denom2RandomExchangeRate}}, 1)
+	// Account 2, USW, denom2
+	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: warmage.MicroUSWDenom, Amount: uswRandomExchangeRate}, {Denom: denom2, Amount: denom2RandomExchangeRate}}, 1)
 
 	// Account 3, denom2, denom1
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2RandomExchangeRate}, {Denom: denom1, Amount: randomExchangeRate}}, 2)
 
 	rewardAmt := sdk.NewInt(100000000)
-	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(merlion.AttoLionDenom, rewardAmt)))
+	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(warmage.AttoMageDenom, rewardAmt)))
 	require.NoError(t, err)
 
 	oracle.EndBlocker(input.Ctx.WithBlockHeight(1), input.OracleKeeper)
@@ -353,11 +353,11 @@ func TestOracleExchangeRate(t *testing.T) {
 	expectedRewardAmt := sdk.NewDecFromInt(rewardAmt.QuoRaw(5).MulRaw(2)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
 	expectedRewardAmt2 := sdk.NewDecFromInt(rewardAmt.QuoRaw(5).MulRaw(1)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
 	rewards := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[0])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards = input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[1])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards = input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[2])
-	require.Equal(t, expectedRewardAmt2, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt2, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 }
 
 func TestOracleEnsureSorted(t *testing.T) {
@@ -365,22 +365,22 @@ func TestOracleEnsureSorted(t *testing.T) {
 
 	for i := 0; i < 100; i++ {
 		denom2ExchangeRate1 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
-		usmExchangeRate1 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
+		uswExchangeRate1 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
 
 		denom2ExchangeRate2 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
-		usmExchangeRate2 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
+		uswExchangeRate2 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
 
 		denom2ExchangeRate3 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
-		usmExchangeRate3 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
+		uswExchangeRate3 := sdk.NewDecWithPrec(int64(rand.Uint64()%100000000), 6).MulInt64(microUnit)
 
-		// Account 1, USM, Denom2
-		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: merlion.MicroUSMDenom, Amount: usmExchangeRate1}, {Denom: denom2, Amount: denom2ExchangeRate1}}, 0)
+		// Account 1, USW, Denom2
+		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: warmage.MicroUSWDenom, Amount: uswExchangeRate1}, {Denom: denom2, Amount: denom2ExchangeRate1}}, 0)
 
-		// Account 2, USM, Denom2
-		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: merlion.MicroUSMDenom, Amount: usmExchangeRate2}, {Denom: denom2, Amount: denom2ExchangeRate2}}, 1)
+		// Account 2, USW, Denom2
+		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: warmage.MicroUSWDenom, Amount: uswExchangeRate2}, {Denom: denom2, Amount: denom2ExchangeRate2}}, 1)
 
-		// Account 3, USM, Denom2
-		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: merlion.MicroUSMDenom, Amount: denom2ExchangeRate3}, {Denom: denom2, Amount: usmExchangeRate3}}, 2)
+		// Account 3, USW, Denom2
+		makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: warmage.MicroUSWDenom, Amount: denom2ExchangeRate3}, {Denom: denom2, Amount: uswExchangeRate3}}, 2)
 
 		require.NotPanics(t, func() {
 			oracle.EndBlocker(input.Ctx.WithBlockHeight(1), input.OracleKeeper)
@@ -393,12 +393,12 @@ func TestOracleExchangeRateVal5(t *testing.T) {
 
 	denom2ExchangeRate := sdk.NewDecWithPrec(505000, int64(6)).MulInt64(microUnit)
 	denom2ExchangeRateWithErr := sdk.NewDecWithPrec(500000, int64(6)).MulInt64(microUnit)
-	usmExchangeRate := sdk.NewDecWithPrec(505, int64(6)).MulInt64(microUnit)
-	usmExchangeRateWithErr := sdk.NewDecWithPrec(500, int64(6)).MulInt64(microUnit)
+	uswExchangeRate := sdk.NewDecWithPrec(505, int64(6)).MulInt64(microUnit)
+	uswExchangeRateWithErr := sdk.NewDecWithPrec(500, int64(6)).MulInt64(microUnit)
 
-	// denom2 has been chosen as referenceMer by highest voting power
-	// Account 1, denom2, USM
-	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRate}, {Denom: merlion.MicroUSMDenom, Amount: usmExchangeRate}}, 0)
+	// denom2 has been chosen as referenceWar by highest voting power
+	// Account 1, denom2, USW
+	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRate}, {Denom: warmage.MicroUSWDenom, Amount: uswExchangeRate}}, 0)
 
 	// Account 2, denom2
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRate}}, 1)
@@ -406,43 +406,43 @@ func TestOracleExchangeRateVal5(t *testing.T) {
 	// Account 3, denom2
 	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRate}}, 2)
 
-	// Account 4, denom2, USM
-	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRateWithErr}, {Denom: merlion.MicroUSMDenom, Amount: usmExchangeRateWithErr}}, 3)
+	// Account 4, denom2, USW
+	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRateWithErr}, {Denom: warmage.MicroUSWDenom, Amount: uswExchangeRateWithErr}}, 3)
 
-	// Account 5, denom2, USM
-	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRateWithErr}, {Denom: merlion.MicroUSMDenom, Amount: usmExchangeRateWithErr}}, 4)
+	// Account 5, denom2, USW
+	makeAggregatePrevoteAndVote(t, input, h, 0, sdk.DecCoins{{Denom: denom2, Amount: denom2ExchangeRateWithErr}, {Denom: warmage.MicroUSWDenom, Amount: uswExchangeRateWithErr}}, 4)
 
 	rewardAmt := sdk.NewInt(100000000)
-	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(merlion.AttoLionDenom, rewardAmt)))
+	err := input.BankKeeper.MintCoins(input.Ctx, types.ModuleName, sdk.NewCoins(sdk.NewCoin(warmage.AttoMageDenom, rewardAmt)))
 	require.NoError(t, err)
 
 	oracle.EndBlocker(input.Ctx.WithBlockHeight(1), input.OracleKeeper)
 
 	denom2Rate, err := input.OracleKeeper.GetExchangeRate(input.Ctx, denom2)
 	require.NoError(t, err)
-	usm, err := input.OracleKeeper.GetExchangeRate(input.Ctx, merlion.MicroUSMDenom)
+	usw, err := input.OracleKeeper.GetExchangeRate(input.Ctx, warmage.MicroUSWDenom)
 	require.NoError(t, err)
 
 	// legacy version case
-	require.NotEqual(t, usmExchangeRateWithErr, usm)
+	require.NotEqual(t, uswExchangeRateWithErr, usw)
 
 	// new version case
 	require.Equal(t, denom2ExchangeRate, denom2Rate)
-	require.Equal(t, usmExchangeRate, usm)
+	require.Equal(t, uswExchangeRate, usw)
 
 	rewardDistributedWindow := input.OracleKeeper.RewardDistributionWindow(input.Ctx)
 	expectedRewardAmt := sdk.NewDecFromInt(rewardAmt.QuoRaw(8).MulRaw(2)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
 	expectedRewardAmt2 := sdk.NewDecFromInt(rewardAmt.QuoRaw(8).MulRaw(1)).QuoInt64(int64(rewardDistributedWindow)).TruncateInt()
 	rewards := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[0])
-	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards1 := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[1])
-	require.Equal(t, expectedRewardAmt2, rewards1.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt2, rewards1.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards2 := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[2])
-	require.Equal(t, expectedRewardAmt2, rewards2.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt2, rewards2.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards3 := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[3])
-	require.Equal(t, expectedRewardAmt, rewards3.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards3.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 	rewards4 := input.DistrKeeper.GetValidatorOutstandingRewards(input.Ctx.WithBlockHeight(2), keeper.ValAddrs[4])
-	require.Equal(t, expectedRewardAmt, rewards4.Rewards.AmountOf(merlion.AttoLionDenom).TruncateInt())
+	require.Equal(t, expectedRewardAmt, rewards4.Rewards.AmountOf(warmage.AttoMageDenom).TruncateInt())
 }
 
 func TestInvalidVotesSlashing(t *testing.T) {

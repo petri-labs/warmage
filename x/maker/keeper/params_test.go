@@ -1,6 +1,6 @@
 package keeper_test
 
-import "github.com/merlion-zone/merlion/x/maker/types"
+import "github.com/petri-labs/warmage/x/maker/types"
 
 func (suite *KeeperTestSuite) TestParams() {
 	makerKeeper := suite.app.MakerKeeper
